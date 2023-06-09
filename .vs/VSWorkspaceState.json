@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\DjangoWebProject1",
+    "\\DjangoWebProject1\\DjangoWebProject1",
+    "\\DjangoWebProject1\\DjangoWebProject1\\DjangoWebProject1",
+    "\\DjangoWebProject1\\DjangoWebProject1\\obj\\Debug"
   ],
+  "SelectedNode": "\\DjangoWebProject1",
   "PreviewInSolutionExplorer": false
 }
