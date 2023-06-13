@@ -143,11 +143,11 @@ body {
 
 /* ヘッダーのスタイル */
 header {
-    background-color: #5ea183;
-    color: #fff;
-    padding: 10px;
-    display: flex;
-    align-items: center;
+	background-color: #fff;
+	color: #fff;
+	padding: 10px;
+	display: flex;
+	align-items: center;
 }
 
 .header-inner {
@@ -155,6 +155,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.blank {
+	padding-top: 50px; /*ヘッダーの高さ分の空白*/
 }
 
 /* ロゴスタイル */
@@ -175,6 +178,7 @@ header {
     display: flex;
     align-items: center;
     padding-right: 10px;
+	color: #000;
 }
 .user-info span {
     padding-right: 10px;
@@ -188,7 +192,7 @@ header {
 
 /* メイントップ */
 .first-view {
-    height: calc(100vh - 150px);
+    height: calc(100vh - 80px);
     background-image: url(../images/index/bg-main.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -202,8 +206,7 @@ header {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 40px;
-    padding-bottom: 80px;
+    padding: 40px 0 0 0;
     color: #ffffff;
     font-weight: bold;
     text-shadow: 1px 1px 10px #4b2c14;
@@ -696,3 +699,66 @@ header {
 
 }
 
+
+/* プルダウンメニュー */
+.dropdown {
+	margin: 0 0 0 auto;
+	position: relative;
+}
+
+.dropdown__btn {
+	display: block;
+	width: 1.5em;
+	padding: 0.2em;
+	background: none;
+	border: 0;
+}
+
+	.dropdown__btn.is-open::after {
+		content: "";
+		width: 100%;
+		height: 100%;
+		cursor: default;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 4;
+	}
+
+	.dropdown__btn.is-open + .dropdown__body {
+		display: block;
+		z-index: 5;
+	}
+
+.dropdown__body {
+	display: none;
+	width: 250px;
+	background: #fff;
+	box-shadow: 0 2px 6px 2px rgba(60,64,67,0.149), 0 1px 2px 0 rgba(60,64,67,0.302);
+	border-radius: 4px;
+	overflow: hidden;
+	position: absolute;
+	top: 32px;
+	right: 0;
+}
+
+.dropdown__list {
+	margin: 0;
+	padding: 0;
+}
+
+.dropdown__item {
+	display: block;
+}
+
+.dropdown__item-link {
+	display: block;
+	padding: 1em 1.2em;
+	font-size: 0.95em;
+	text-decoration: none;
+	color: #444;
+}
+
+	.dropdown__item-link:hover {
+		background: #fbfbfb;
+	}

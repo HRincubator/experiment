@@ -30,7 +30,21 @@
             </div>
             <div class="user-info">
                 <span>ユーザー名</span>
-                <a href="#"><img src="./images/index/user-icon.png" alt="ユーザーアイコン"></a>
+                <!-- プルダウンメニュー -->
+                <div class="dropdown">
+                    <button class="dropdown__btn" id="dropdown__btn">
+                        <img src="./images/index/user-icon.png" alt="ユーザーアイコン">
+                    </button>
+                    <div class="dropdown__body">
+                        <ul class="dropdown__list">
+                            <li class="dropdown__item"> <a href="#" class="dropdown__item-link"> マイページ</a> </li>
+                            <li class="dropdown__item"> <a href="#" class="dropdown__item-link"> メッセージ</a> </li>
+                            <li class="dropdown__item"> <a href="#" class="dropdown__item-link"> ログアウト</a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end プルダウンメニュー -->
+                <div class="blank"></div>
             </div>
         </header>
         <!-- end header-->
@@ -46,7 +60,20 @@
                         <span class="btn-text ">新規登録はこちら<i class="icon icon-arrow"></i></span>
                         <span class="btn-bg"></span>
                     </a>
+                </div>
             </div>
+
+            <!-- contents1 -->
+                <!-- 4つのイラストと2行ほどのサイト説明文で均等に配置します -->
+            <section id="contents1" class="wrapper">
+                
+            </section>
+            <!-- end contants1 -->
+
+            <!-- contents -->
+                <!-- 3つのコンテンツを均等に配置します。画像と、簡易説明で構成され、画像クリックで各ページに遷移します。 -->
+            <!-- end contants -->
+
         </main>
         <!-- end main -->
         <script src="lib/js/jquery/jquery-1.1.3.1.js "></script>

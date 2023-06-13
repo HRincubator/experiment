@@ -1,0 +1,378 @@
+﻿<!DOCTYPE html>
+
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="/mypage/static/111213/js/perf/stub.js" type="text/javascript"></script>
+    <script src="/mypage/jslibrary/1662649314244/ui-sfdc-javascript-impl/SfdcCore.js" type="text/javascript"></script>
+    <script src="/mypage/resource/1482893300000/jQuery/jquery-3.1.0.min.js" type="text/javascript"></script>
+    <script src="/mypage/static/111213/js/picklist4.js" type="text/javascript"></script>
+    <script src="/mypage/jslibrary/1635874030244/sfdc/VFState.js" type="text/javascript"></script>
+    <script src="/mypage/resource/1482893300000/blockUI" type="text/javascript"></script>
+    <link class="user" href="/mypage/resource/1680253781000/ui/ui/css/base.css" rel="stylesheet" type="text/css">
+    <script>
+(function(UITheme) {
+    UITheme.getUITheme = function() {
+        return UserContext.uiTheme;
+    };
+}(window.UITheme = window.UITheme || {}));</script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reissue.css" />
+
+    <title>パスワード再発行｜マイページ</title>
+</head>
+<body>
+    
+    <style>
+        .howto dt {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .howto a {
+            color: #0099ff;
+            text-decoration: underline;
+        }
+
+        .mLB {
+            margin: 0.6em 0 2em 2em;
+        }
+        /*20190717 USE ID／PW自動応答 add start*/
+        .btnlink {
+            font-size: 13px;
+            -webkit-appearance: push-button;
+            user-select: none;
+            white-space: pre;
+            align-items: flex-start;
+            text-align: center;
+            cursor: default;
+            color: buttontext;
+            background-color: buttonface;
+            box-sizing: border-box;
+            padding: 1px 6px;
+            border-width: 2px;
+            border-style: outset;
+            border-color: buttonface;
+            border-image: initial;
+        }
+
+            .btnlink:hover {
+                color: #000;
+                cursor: pointer;
+            }
+
+        .red {
+            color: red;
+        }
+
+        .f13 {
+            font-size: 13px;
+        }
+        /*20190717 USE ID／PW自動応答 add end*/
+    </style>
+
+    <script>$(function() {
+    if (false) {
+        location.replace('https://www.fit-portal.go.jp/mypage/SiteMaintenanceA');
+    }
+});</script>
+    <form id="forgotPassword:theForm" name="forgotPassword:theForm" method="post" action="/mypage/ForgotPassword" enctype="application/x-www-form-urlencoded">
+        <input type="hidden" name="forgotPassword:theForm" value="forgotPassword:theForm">
+        <span id="forgotPassword:theForm:loading">
+            <span id="forgotPassword:theForm:loading.start" style="display: none"></span>
+            <script type="text/javascript">window.document.getElementById('forgotPassword:theForm:loading.start').onstart=function(){showLoading();};</script><span id="forgotPassword:theForm:loading.stop"></span>
+            <script type="text/javascript">window.document.getElementById('forgotPassword:theForm:loading.stop').onstop=function(){hideLoading();};</script>
+        </span>
+        <script type="text/javascript">window.onload = function() {
+
+            // エラー発生時に画面遷移を行う
+            if (false) {
+                anchorSet('howto01');
+            }
+
+            if (false) {
+                anchorSet('howto02');
+            }
+        }
+
+        // 設定ID部分にページ遷移を行う
+        function anchorSet(targetid) {
+            obj = document.getElementById(targetid);
+            y = obj.offsetTop;
+            scrollTo(0,y);
+        }</script>
+
+
+        <div id="mypage_container">
+            <div class="header_area" id="global_header">
+                <div id="forgotPassword:theForm:j_id5" class="global_nav bg_white">
+                    <div id="forgotPassword:theForm:j_id6" class="global_nav_inner">
+                        <h1 class="mypage_logo">
+                            <a href="https://www.fit-portal.go.jp/mypage"><img src="/mypage/resource/1680253781000/ui/ui/img/site-logo.png" alt="Entrance" height="85" title="再生可能エネルギー電子申請" width="395"></a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="content_area">
+                <div id="forgotPassword:theForm:j_id11" style="margin-bottom:4em;">
+                    <h2>【ログインID・パスワードを忘れた方】</h2>
+                    <dl class="howto">
+                        <dt><a href="#howto01">１．パスワードを忘れた方</a></dt>
+                        <dd class="mLB">再生可能エネルギー電子申請システム（システム）のログインIDを入力して、登録されているメールアドレスへ仮パスワードを再発行することができます。</dd>
+                        <dt><a href="#howto02">２．ログインID・パスワードを忘れた方</a></dt>
+                        <dd class="mLB">設備IDとシステムに登録されているメールアドレスを用いて仮パスワードを再発行することができます。（メールが受信可能となっている必要があります。）</dd>
+
+                        <dd class="mLB">※設備IDが不明な方は、<span><a href="https://www.fit-portal.go.jp/mypage/SearchPlantId">こちら</a></span>で照会を行ってください。（認定中の事業者名、発電設備の設置場所（代表地番）を用いて照会することができます。）</dd>
+                        <dd class="mLB red">
+                            設備ID検索以外の確認方法<br>
+                            買取期間が満了するお客さまには、各電力会社より満了の半年程度前に、郵送により「再生可能エネルギー電気の固定価格買取制度にもとづく買取期間満了のご案内」（買取期間満了のご案内）をお届けしています。設備IDは送付した資料の詳細の覧に記載しております。
+                        </dd>
+
+                        <dt><a href="#howto03">３．上記で解決できなかった方</a></dt>
+
+                        <dd class="mLB">
+                            上記１、２の手順で照会を行えなかった方は、問合せフォームからお問い合わせください。<br>
+                            設備IDが不明の場合は、必ず<span><a href="https://www.fit-portal.go.jp/mypage/SearchPlantId">こちら</a></span>から設備IDを照会した上でお問い合わせを行ってください。
+                        </dd>
+                        <dd class="mLB red">
+                            設備ID検索以外の確認方法<br>
+                            買取期間が満了するお客さまには、各電力会社より満了の半年程度前に、郵送により「再生可能エネルギー電気の固定価格買取制度にもとづく買取期間満了のご案内」（買取期間満了のご案内）をお届けしています。設備IDは送付した資料の詳細の覧に記載しております。
+                        </dd>
+
+                    </dl>
+                </div>
+
+                <h2 id="howto01">１．パスワードを忘れた方</h2>
+                <div class="input_area">
+                    <div>
+                        再生可能エネルギー電子申請システムのログインIDを用いて、仮パスワードの再発行をすることができます。<br><br>
+                        【手順】
+                        <p>１．パスワードを再発行したいログインIDを入力します。</p>
+                        <p>２．再発行ボタンをクリックします。</p>
+                        <p>３．仮パスワードが記載されたメールが登録されているメールアドレスに送信されます。</p>
+                        <p class="mLB">※ログインIDの照会に失敗した場合、メールは送信されません。</p>
+                    </div><div id="forgotPassword:theForm:j_id19">
+                        以下のいずれかに該当する方は、「３．上記で解決できなかった方」の手順でパスワードをお問合せください。<br>
+                        ・メールアドレスをご登録されていない方 <br>
+                        ・ご登録いただいているメールアドレスが不明な方 <br>
+                        ・再発行ボタンをクリックしても、仮パスワード通知メールが届かない方 <br>
+                        <br>
+                    </div>
+                    <table class="form_table">
+                        <tbody>
+                            <tr>
+                                <td class="td_title">ログインID</td>
+                                <td class="td_input">
+                                    <input id="forgotPassword:theForm:username" type="text" name="forgotPassword:theForm:username" value="" class="input_txt w350" maxlength="80" size="55" placeholder="abcd1234"><br>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="btn_area">
+                    <ul>
+                        <li>
+                            <input type="image" src="/mypage/resource/1680253781000/ui/ui/img/btn-reissue.gif" name="forgotPassword:theForm:j_id23" alt="再発行" onclick="showLoading()" class="rollover">
+
+                        </li>
+                    </ul>
+                </div>
+                <h2 id="howto02">２．ログインID・パスワードを忘れた方</h2>
+                <div class="input_area">
+                    <span id="forgotPassword:theForm:j_id27" style="display: none;"></span>
+                    <div>
+                        ログインIDと仮パスワードを、設備IDとログインIDに登録されているメールアドレスを用いて再発行する事ができます。<br>
+                        <br>
+                        【手順】
+                        <p>１．照会したいログインIDの種類を選択します。</p>
+                        <p>２．照会したいログインIDの対象となっている設備IDを入力します。</p>
+                        <p>３．照会したいログインIDのシステムに登録されているメールアドレスを入力します。</p>
+                        <p>４．再発行ボタンをクリックします。</p>
+                        <p>５．ログインIDと仮パスワードを記載されたメールが登録されているメールアドレスに送信されます。</p>
+                        <p class="mLB">※照会に失敗した場合、または、登録されたメールアドレスが異なっている場合は送信されません。</p>
+                    </div>
+                    <div class="link_external">
+                        以下のいずれかに該当する方は、「３．上記で解決できなかった方」の手順でパスワードをお問合せください。<br>
+                        ・メールアドレスをご登録されていない方<br>
+                        ・ご登録いただいているメールアドレスが不明な方<br>
+                        ・再発行ボタンをクリックしても、仮パスワード通知メールが届かない方<br>
+                        <br>
+                    </div>
+                    <table class="form_table">
+                        <tbody>
+
+                            <tr>
+                                <td class="td_title">ログインIDの種類</td>
+                                <td class="td_input">
+                                    <select name="forgotPassword:theForm:j_id32" size="1">
+                                        <option value="登録者用ログインID">登録者用ログインID</option>
+                                        <option value="事業者用ログインID">事業者用ログインID</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="td_title">設備ID</td>
+                                <td class="td_input">
+                                    <input id="forgotPassword:theForm:b" type="text" name="forgotPassword:theForm:b" class="input_txt w350" maxlength="80" size="55" autocomplete="off">
+                                    <span class="link_arrow"><a href="https://www.fit-portal.go.jp/mypage/SearchPlantId">設備ID照会はこちら</a></span><br>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="td_title">メールアドレス</td>
+                                <td class="td_input">
+                                    <input id="forgotPassword:theForm:c" type="text" name="forgotPassword:theForm:c" class="input_txt w350" maxlength="80" size="55" autocomplete="off" placeholder="fit-mail@fit-portal.go.jp"><br>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="btn_area">
+                    <ul>
+                        <li>
+                            <input type="image" src="/mypage/resource/1680253781000/ui/ui/img/btn-reissue.gif" name="forgotPassword:theForm:j_id37" alt="再発行" onclick="showLoading()" class="rollover">
+
+                        </li>
+                    </ul>
+                </div>
+                <h2 id="howto03">３．上記で解決できなかった方</h2>
+
+                <div class="input_area">
+
+                    <div>
+                        上記で解決できなかった方は、以下問合せフォームからお問い合わせください。<br>
+                        設備IDが不明の場合は、必ず<span class="link_external"><a href="https://www.fit-portal.go.jp/mypage/SearchPlantId">こちら</a></span>から設備IDを照会した上でお問い合わせを行ってください。
+                        <br>それでも検索できない場合は、電力会社にお問い合わせもしくは、検針票をご確認ください。<br><br>
+
+                        <span style="color:red; font-weight:bold;">※操作方法等については、<a href="https://www.fit-portal.go.jp/servlet/servlet.FileDownload?file=0150K000009VyDm" style="text-decoration:underline;" target="_blank"><font color="#0099FF">マニュアル</font></a>をご参照ください。</span><br><br>
+
+                        <span style="color:red; font-weight:bold;">※委任状が必要な場合は<a href="https://www.fit-portal.go.jp/servlet/servlet.FileDownload?file=0150K000006oUTn" style="text-decoration:underline;" target="_blank"><font color="#0099FF">こちら</font></a>からダウンロードしてください。</span><br>
+                    </div>
+
+                    <div class="btn_area">
+                        <ul>
+                            <li>
+                                <a href="https://www.fit-portal.go.jp/mypage/IdentificationTempReg" style="display:block"><img src="/mypage/resource/1680253781000/ui/ui/img/btn-inquiry-form.gif" alt="問合せフォーム" class="rollover"></a>
+
+
+
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+            </div>
+            <div class="footer_area">
+                <div class="footer_area_inner">
+                    <p class="copyright">経済産業省　資源エネルギー庁　Copyright (C) Agency for Natural Resources and Energy All rights reserved.</p>
+                </div>
+            </div>
+        </div><span id="forgotPassword:theForm:j_id44">
+            <style>
+                .blockMsg {
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    border-radius: 5px;
+                }
+            </style>
+            <script>/**
+     * Loadingイメージ作成
+     * @param {string} msg Loadingメッセージ
+     */
+    function showLoading(msg) {
+        if(msg == undefined) msg = 'Loading・・・';
+        var $dialog = $('<div/>', {style: 'display: none',
+                                      id: 'loadingMessage',
+                                     css: {padding: '8px'}
+                                  });
+        $dialog.append($('<img/>', {class: 'loadingImg',
+                                      src: '/img/loading.gif',
+                                      css: {verticalAlign: 'middle',
+                                            display: 'inline-block'
+                                           }
+                                   }));
+        $dialog.append($('<span/>', {class: 'loadingDescription',
+                                      text: msg,
+                                       css: {verticalAlign: 'middle',
+                                                   padding: '0 10px',
+                                                fontWeight: 'bold',
+                                                     color: '#444444'
+                                            }
+                                     }));
+
+        $.blockUI({ message: $dialog});
+    }
+
+    /**
+     * Loadingイメージ削除
+     */
+    function hideLoading() {
+        $.unblockUI();
+    }
+
+    /**
+     * Enterキー押下のイベントスキップ（text、checkbox、select-multiple）
+     */
+    $(window).keydown(function(e) {
+        if (!e) e = window.event;
+        if (e.keyCode == 13) {
+            if(e.target.type == 'text' || e.target.type == 'checkbox' || e.target.type == 'select-multiple'
+            || (e.target.type == 'radio' && e.target.name == 'marketOpsion')) return false;
+         }
+    });
+
+    /**
+     * サブミットボタンをdisabledにした後、関数呼び出し
+     * @param {string} className submitボタンのクラス名
+     * @param {string} funcName コールバック関数名
+     */
+    function comExecSubmit(className, funcName) {
+        $("input."+className).prop('disabled' , true);
+        showLoading();
+        eval(funcName+'();');
+        return false;
+    }
+
+    /**
+     * 別ページをiframe使用ダイアログで開く
+     * @param {string} url 開くページのURL
+     * @param {number} width ダイアログ幅（px）
+     * @param {number} height ダイアログ高さ（px）
+     */
+    function openIframeDialog(url, width, height) {
+
+        var $dialog = $('<iframe/>').attr('src', url)
+                                    .css('display', 'none')
+                                    .css('width', width + 'px')
+                                    .css('height', height + 'px')
+                                    .css('border', 'none');
+        $.blockUI({
+            message: $dialog,
+            onOverlayClick: $.unblockUI,
+            css: {
+                width: width,
+                height: height,
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                margin: 'auto'
+            }
+        });
+    }</script>
+        </span><div id="forgotPassword:theForm:j_id50"></div>
+    </form><span id="ajax-view-state-page-container" style="display: none"><span id="ajax-view-state" style="display: none"><input type="hidden" id="com.salesforce.visualforce.ViewState" name="com.salesforce.visualforce.ViewState" value="i:AAAAWXsidCI6IjAwRDI4MDAwMDAxaThuVCIsInYiOiIwMkcwSzAwMDAwMERHNWUiLCJhIjoidmZlbmNyeXB0aW9ua2V5IiwidSI6IjAwNTI4MDAwMDA1ZWZYayJ90kLSIFeftDwrfLKYmIfjA8m2yXAqDWWMZkfIegAAAYiyO2csgVP12hnHczKO+UqSxjaMn0WaizDQSXEXl2RRSOA6qtCtAk/oRNjTX1gJ0IIMttJsoQI7XwzfYkkEh8WtqOdGwP7utQ8vLlM6Ygxal2NrzUSMBKT5e8CTzhCGgdggCPAyC6V0jli377nao2DKqijjBlddrmuuabR55rMfHPhzveUZErmEDBIu93AOCi/KbWGkVWxHQKUNwhG73gXkburlsNtVLO+42iHBJE0rciHwa99Q6P/8/vNGpYcscssxAHbqEk1gXW8UgB0msJwxMNekNHOLyILzcS2HMlIIeWFDfcZOQIJ07kvDdGnC0PSKL8fYmCpzZ8qtPi85a9V44yKgQzhWs6Y594z7ditwVv3hWfVyteCmOJdde5NZmlG8sXUo+w+cB5pDjRr3p45rgYKZbZUzNf+hPV5dMrAtzQWQiOYxHQpXfx+pr33/Cx7d/olmSkTy1O8kIULGof3TZXMFGGF8+mYikGPpR3FMQ0uf0+IcZeuvc1i+5ky+t71uYPHAxqDFKBClprc337l7IrAMTsn5or2Phm3T+wmeFQtncN5NO+OgBYtnvzOxsqep056Wae5AJBCYY+WM7Sfe4lsNLoZH07+MqiSiKhWbqKQfX6CzdGi7j6bzxpq0P08UDWCqRP0BZGwaw1qC1cV8eIB4B97/D73RwiGujtzqyx7wJdoNtG0safZEnC/8+8+MBo0WOBL6MdDD9ZYKNWnroJAQp+QIfnsk8qOwhJXXlrXEgkmQmmAJZCJjcs+27d/qQe3YlCt0pRX03f7HeaYEdrp+pgdvYOb+UUvNnYLcYnhMdZrWX5/e/1f5jlBynL/i+WaEm3n7nsFHLUYYV62LkmXGcxvVSzgb4ChqlCMi/JehKNcNsXqzh5kGuRhcQYmLAsr+q36ZSkDGGHyTR8/FtFSbWKA00lFMLAA6jq6VQPfxQlg+gER0pfcsPgOlB64/ydbBJFFLkqkSIe6Mh5jgCJ/+vXftQayTpveIdOcEM518EIK5vmOAKwZ6qgwA1usQLmQ8bwTJ0BLRMY4Rhg2gKfSqt7aEMQ2UAfK3IUXtk4dbf54hpvhljD1a1LPRgwhLL35buhWEtcbSMdecRuAEbBuHPAH3wlCaWyURvCUElr8MkPaq6IMvNucOmDTka/hEEB/48dr4xkvcEmSA3UT9LEMj1R0IG0Ve657UUEUBTb2L1QHY2+lBAnUaqskSLgJ4fTwJQOnF5IG/EgEM89lKoxOHZow9SusbCdYhCrcNNFVDLWHbax+aMqbXuws5jrH4MeHleEW1GlFZLZcl6B2PRK7tbv6uKpciScc5QHTpgNI20ZeIw6UdJ17qLAznGDXxf60mQ1udRLftFLRRZbZYIbhGjP0DHPK04ChmfSikJ3nfseXnUo7tO4qJ2/kiEhQHbQF7XkpKwyLMQGhalMKbXWaIHJDMAnlwuD6fCiz1497bc0vw/XykK+dvUVYCySU7KyeEgOFqc80hz448hN1ozC4J6QH3hIzgdY3WZ4/oIoV6VwgBXb2eTDiLoPfyRtkB76jD/wRbu1ZIqDNXAK1QeXYij2iD63x1Lebt8EqiOYmWuMQk+xbtYrq3FhSAhYCHzjJnMgNx/ngZHjtcFHw8BKppa6kL2vAOrai0JovzkVXMKuRcYAvs/Mu7uSbDz64ZKqQUqZ4a71w5hdLKon7Z2Eg0puXpnG3ZtiUHJVLT/YZKd2Z61bgKgj+0jSfgGjObEO2VXGXsGsJDE64I3nxesmr2TnSPV3mVO3/W6QoEB52LxqOqpfGufAHEgCuxMn8iUmJLpJ7CTM3iuzuoTBXov0RyabIpiDfyJvmk3IP+xoN3LcUEXhiKqsN7RiftNXWiGDUFh3YFCYZEtSnDvz5S7b/d3Tq2S/6R6y6Zp++PUOPmR+47DYffOocgRQORTG8ev4jRZTU3YXNZC2MtBQwhSTPqOh16KVqgth+v+TwgJzH+uOLX3xuUGPxhCxQFRfRnLgV+sRNirBtxl9qZJbr4YlmEBdMA1PBx/UB75VR6aEveo7wFS+ZwRDPVl7C6Ttpy/SZBqsFTJ25IDY7MmaQJQG9xfK/BKr2lWIg+9hrUnk/fOltESGijG3gebn82zy3mQBwj38D+4C4o4J7M2Ued3AjDJTEjfjsidJ3KbR+h8Kr85Si8Ecxq9kAis08w67QMRfvORLfD0Bx7LnMNd1noKw6cZARgIJqnWvbML1F424SE8yiv297UahBe58jwB4tSlGEx5tnM1IwVWduRB0xGSBIKv82EeokLD2A3BZ6wQ/QjVoPqzQ68t4YnLdFvukRO0a2mV4eYtfubvePG2q52tHOXT9MI8IV5fc8qbLzphcyK97twXMuFDZQIzgJii0owd+HcB9KeOMNygnlFRfJA4E3E5LTVISeo4H4ycW7TpYF3hMstkEfzvN7ICS1QQJLExGdW28Gf6kWCYBq7gh26aGd4gbTz6KBzlLe0vQzjNuVdLxLviiL8Og/675wEDYxECSUXOIC4Z/XIqZHSdyM9wBIKMEDQ1JxSGf55ridz0ahyIr25s07p1PG6+UBXfgUSJclbaIsJqNPkhsLJovcNmu7sbeWU8fBopXUPPKRHRstPTBnldoPC6Sj2j8OiIG7Q/pRuU2+6/9tKBh0DsMb++AxQxRAaGgdZPVUEVxeMKTNxz4WnzzjLiXbx0JWoKL83T8aVjRuWEzaW1dIrxBWZgjcxX5gkuXwkXjl/LxGpE2mejqDp5SZ2y9lKObjCDXeIxnwLLm6wWUa/GCj+QWF1rYAo4rzxuHT4jYRPNrTOkW2arM6/nKQs1jAkA9zlkTrpY6e5xjEQYQdJatnTvP5WK/nFvV36pIVamjvxsIyoRgmzPWh8GGMB+YxpXSQNeHIr7bGHEj6QI2NoX4n1QEWF3y/v89dp0ofcOqvskH78Ercr208+XKzo9pbhNje60XGevHqAQjUF7mD8H0+lsYfs2nDcM73eKgDrtnHGYv2t0rUtRpHGzPe5pZkP6QNinAc82xMUYqOdk96puO55sMBufGpb4qsCb037Sgnk6t2HcbJINCHJCtBhS2gxi5sopndVGhllStUWKEKfE0vxyX69lfa5seKP4/uGx0c76IYJQacyEDb/dhLRg29cLGUXcHtqc046jKMy0QsLHJWL2QjH4/pSV+BtEqK2NtSHFevz4cAJgrFaMKeySoDdtl5gTIWp/51S7Hef1KN54DIE9gL51fOoGDmHDi0DqOd5Jqp4bLcSbMIw8nNdg6w5Z0Yfb7gFSpYbWvRs29ss8chMuJJlrF9m+QzQmD3l2wb8UnG1AyMnF5rUfUDDJIOopddo8Ev/kDTFNxcRRTK9M6yClVUCuQSJ4T7mXIitJwnd/OgmB9SGMii+Y5GkkM8HN7JCO1pCwzyblQjjN7Ba7sPfjyYwLfk82ReXH4jB482ZXOaXYZeITBf/ZdUM4Il3N/a/0KXAdm79zjeGfgEgGEA8RXIsVQsSlVtR6rQlFBUioI5yZ1QtEAbsJouZn5CMOTObzTK6ZZBwjGFtcwyyQ0D6kU7NTEZnpIyQ1GZkdUmYMURZ+vPpgL5meBrr/xjf9xi6BGPF8d8YL0G2TRwCkXb2D8sy6xlVyAE4yeQl6A1e9ZeB4+o1ouHTjCUXRkv9SsVq2b1y/us1GxldE68Iev+BLv0ePSFn9dGRDsW8KVJXDKXCnkhCyTel8H6c5JOVhbkUNPNlbP1Hnna+xXEUrZYL+4PPkWFfgPDIXVUDMqxDGn7LFRHT0PMptwIjvuARArad8LrEmeJ6iOy/AQV8yxYeFRE2Pqo5shjtLWAalTbu1XrmwLoF2xaz2psYunVufgEt4qH3EM3dDnrQ6WrTigEuZaxMhygMT8it02lflLn0Vq7HePwyhqVhaOF9vAZhlj+GF4q2imgzZAW8naEMi6Cq9WldoiWt0kmSswfmnXEXXKw/tS8VPAeOv0XqsIBaKaQcpvGXW/OUOLraVj6c5sZTm6+OHXqr3WOPKawqVWAsPPKB7UFORfiYSzF/0HeD3/lwWkJNMi78bufEOgoWIMWAXlqJHt857ATc0Fq2FaOFw9LdF9L+Doj74llcsnl8v6yt6I4gHBuo2WYR7p5fW0vdEWu5y0fjBn6rQtuFw0w56sA/LtZj1HcJI0CvUEwVMN7ke9AwzZBTSzyjp/j5U93W+JNfk04z0Y43pceCFwo0D+/KKujJvFl0Of/tjd4jnaRqnLSy8J14QVU1wuoxFMZMYBS9IBVCGizQFc598dFcn7Q6RW/Vq2rUBUHUO3t5ztS4VoonbQtLXTQzLzrD90Mmnd3p8hph2fHHCEgOvmjvakcgMVwTxxnKxe9P/0vS0egkskrHVQX/0BUMhxLm5lQycouI+GPCFeMeq0Tj1xg+Iuau4eHdk+4/3pcjmDeTV0diP4DocX5DMKbWZZSnOz9bRmFeBUdl/vcyI04cKdBEEuUsgTMA93T0099KrYEG+DYbhvxUWxoYGf0I96er/dLtksdJUx3FrDU9dUmFT04vDgHb61dpq/Mh7woymNl0hIhOz1llXDXxyxr7d4s9zWb+weumDPboK3lP33SwPInRiLGRWGa0Vlj7y8cpiYO53G1pxQ8HVtRo2d0cb988R+6Ntdm0rpS6RAs/e2tifVfXD3frX41WTAwDUlpSnftg6XEpciikms5wWdbYgHQ0QGv/8Ah9wQRmEEcAOJ9GOYoO1Rr4uDFaB8CVDikbY85Qey8Io7df4rBNO/Og8oIRk0MB6q456GpQg6EnpKrKWtHiGI8+kG5LrMxCCSWD3VgroF4hFcFE/4ob9L+4x2gJvCNqlWEfkfQCAmQtiDOb0+2d+oQqvF4gwR8lcBfVg9lJhiFKKlmUvX2StgUnIsQ0yRJMV06akPr+bi82wkEwuOBckQOs1iNudIvkEhxJeBHiYb02ocd/k+d1eci+P28RKFnPLhq9ywCiYISxhn/PwdQt+aLR0fcX5uVpJpOSzV8J990rpbAlT2Jlt0BkUW0/SI2JjOWJuzqs1k+WuWThbdklBJ/oyphH1tn4HeLz/PA2/eeffSWylIID3F6uaDwbY0TwbwEiVr87rMKCPaxU57bGoiTsg30XKWIxiqOK+1pvBuz3GLxzoyic6c/gqByKp+HbTM20ybBMEaMr9dlBQ1A5BLqL+mxGtKfSp+V95lkHYKO/AC2WFyNkg+ZIQsxcMNUuHu/62bH8/WcWixF9V5ngRznEa02thRR2Z1jDyOL9ecESxy2PlT2xk+8jX8eSwh1HlJUJ+F8jZ5w8xG9k2saLLfyU5I3q6Rf5oHhWtSEOOx/G02o72xuRJl6PdZylP0zJKnvLvDEycXhQCpCG1RJNMY57bXXcs5VtPThQG4WMhzo="><input type="hidden" id="com.salesforce.visualforce.ViewStateVersion" name="com.salesforce.visualforce.ViewStateVersion" value="202306111752270009"><input type="hidden" id="com.salesforce.visualforce.ViewStateMAC" name="com.salesforce.visualforce.ViewStateMAC" value="AGV5SnViMjVqWlNJNklrbHNWemgzZDNSU1NVSlFVVkJrTjJwaFNtODBjMDkyZEVRM1ZHaDBaMnhvV1U0MFZXcE1TSFZzV2tsY2RUQXdNMlFpTENKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUlzSW10cFpDSTZJbnRjSW5SY0lqcGNJakF3UkRJNE1EQXdNREF4YVRodVZGd2lMRndpZGx3aU9sd2lNREpITUVzd01EQXdNREJFUnpWbFhDSXNYQ0poWENJNlhDSjJabk5wWjI1cGJtZHJaWGxjSWl4Y0luVmNJanBjSWpBd05USTRNREF3TURBMVpXWllhMXdpZlNJc0ltTnlhWFFpT2xzaWFXRjBJbDBzSW1saGRDSTZNVFk0TmpZeE56UXhOelV4Tnl3aVpYaHdJam93ZlE9PS4uQ3FEenJhNlBtN2x2bm1RUFd2UE9peG05RjRjenVpQmtsdWpBeGtab2Ztbz0="></span></span>
+    <script type="text/javascript">Sfdc.onReady(function(){
+	SfdcApp && SfdcApp.Visualforce && SfdcApp.Visualforce.VSManager && SfdcApp.Visualforce.VSManager.vfPrepareForms(["forgotPassword:theForm"]);
+
+});</script>
+</body>
+</html>
