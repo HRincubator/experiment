@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>動画教材トップページ</title>
+<meta name="viewport" content="width=device-width">
+
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/coursetop.css">
+<!-- js -->
+<script src="js/main.js" defer></script>
+
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+$(function(){
+
+	$("#menubtn").click(function(){
+		$("#menu").slideToggle();
+	});
+
+});
+</script>
+</head>
+<body class="contents">
+<div class="boxA">
+<div class="boxA-inner">
+<div class="box1">
+	<div class="site">
+	<h1><a href="index.html"><img src="images/logo.png" width="180" height="40" alt="Entrance"></a></h1>
+	</div>
+</div>
+<div class="box2">
+	<button type="button" id="menubtn">
+	<i class="fa fa-bars"></i><span>MENU</span>
+	</button>
+	<nav class="menu" id="menu">
+	<ul>
+	<li><a href="index.html">トップ</a></li>
+	<li><a href="#">ユーザー名</a></li>
+	<li><a href="#">マイページ</a></li>
+	<li><a href="#">メッセージ</a></li>
+	<li><a href="#">ログアウト</a></li>
+	</ul>
+	</nav>
+</div>
+</div>
+</div>
+<div class="box7">
+    <div class="box7-1">
+        <article class="kiji">
+        <div class="bread">
+        <ol>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="coursetop.html">動画教材トップページ</a></li>
+        </ol>
+        </div>
+        <h1>動画教材トップページ</h1>
+
+        <h2>学習の進め方</h2>
+        <p class="lead">目立たせたい文があれば、ここに記載します。</p>
+        <p>学習の進め方についての文章を記載します。</p>
+
+        <h2>単元の一覧</h2>
+        <ul class="coursemenu">
+            <li>メインメニュー
+              <ul>
+                <div class="menu1">
+                    <li>公開１
+                        <ul>
+                            <li>-テスト１</li>
+                            <li>-下層メニュー2</li>
+                        </ul>
+                    </li>
+                </div>
+                <div class="menu2">
+                    <li>公開２
+                        <ul>
+                            <li>-テスト２</li>
+                            <li>-下層メニュー2</li>
+                        </ul>
+                    </li>
+                </div>
+            </li>
+        </ul>
+        
+        </article>
+    </div>
+
+    <div class="box7-2">
+        <aside class="sidemenu">
+        <h1><i class="fa fa-caret-square-o-down"></i>単元一覧</h1>
+        <ul>
+        <li><a href="courseinfo.html">公開１</a>
+            <ul>
+                <li><a href="#">テスト１</a></li>
+            </ul>
+        </li>
+        <li><a href="#">公開２</a>
+            <ul>
+                <li><a href="#">テスト２</a></li>
+            </ul>
+        </li>
+        <li><a href="#">公開３</a>
+            <ul>
+                <li><a href="#">テスト３</a></li>
+            </ul>
+        </li>
+        <li><a href="#">単元４🔒</a>
+            <ul>
+                <li><a href="#">テスト４🔒</a></li>
+            </ul>
+        </li>
+        <li><a href="#">単元５🔒</a>
+            <ul>
+                <li><a href="#">テスト５🔒</a></li>
+            </ul>
+        </li>
+        <li><a href="#">単元６🔒</a>
+            <ul>
+                <li><a href="#">テスト６🔒</a></li>
+            </ul>
+        </li>
+        </aside>
+    </div>
+</div>
+<div class="box5">
+<div class="box5-inner">
+	<div class="copyright">
+	<p>Copyright &copy; Entrance 2023/6/12</p>
+	</div>
+</div>
+</div>
+</body>
+</html>
