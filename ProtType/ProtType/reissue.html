@@ -15,15 +15,16 @@
             font-family: "Inter", sans-serif;
         }
     </style>
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js"
-            defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
 </head>
 <body class="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
     <div class="max-w-screen-xl m-0 sm:m-20 bg-white shadow sm:rounded-lg flex justify-center flex-1">
         <div class="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
             <div>
-                <img src="images/logo.png"
-                     class="w-32 mx-auto" />
+                <a href="index.html">
+                    <img src="images/logo.png"
+                         class="w-32 mx-auto" />
+                </a>
             </div>
             <div class="mt-12 flex flex-col items-center">
                 <h1 class="text-2xl xl:text-3xl font-extrabold">
@@ -41,14 +42,14 @@
                         <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mb-5"
                                type="email"
                                placeholder="Email" />
-                        <p>パスワード</p>
+                        <p>新しいパスワードの入力</p>
                         <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mb-5"
                                type="password"
                                placeholder="Password" />
-                        <p>パスワード</p>
+                        <p>パスワードの再入力</p>
                         <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mb-5"
                                type="password"
-                               placeholder="Password" />
+                               placeholder="Re:Password" />
                         <button class="mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
                             <svg class="w-6 h-6 -ml-2"
                                  fill="none"
@@ -64,17 +65,6 @@
                                 パスワードの再発行
                             </span>
                         </button>
-                        <p class="mt-6 text-xs text-gray-600 text-center">
-                            私は
-                            <a href="#" class="border-b border-gray-500 border-dotted">
-                                Entranceの利用規約
-                            </a>
-                            と
-                            <a href="#" class="border-b border-gray-500 border-dotted">
-                                プライバシーポリシー
-                            </a>
-                            を厳守することに同意します
-                        </p>
                     </div>
                 </div>
             </div>
