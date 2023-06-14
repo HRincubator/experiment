@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 
-<html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,11 +10,11 @@
     <!-- reset css -->
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
     <!-- css -->
-    <link rel="stylesheet" href="css/record.css" />
+    <link rel="stylesheet" href="css/mypage.css" />
+    <!-- js -->
+    <script src="js/main.js" defer></script>
 
-    <title>Entrance | 成績</title>
-
-
+    <title>Entrance | マイページ</title>
 </head>
 <body>
     <header class="header">
@@ -77,37 +77,43 @@
         </nav>
     </header>
 
-    <main class="main">
-
-        <!-- 成績 -->
-        <section class="hero is-light">
-            <!-- パンくずリスト -->
-            <nav class="breadcrumb" aria-label="breadcrumbs">
-                <ul>
-                    <li>
-                        <a href="index.html">
-                            <span class="icon is-small">
-                                <i class="fas fa-home" aria-hidden="true"></i>
-                            </span>
-                            <span>トップ</span>
-                        </a>
-                    </li>
-                    <li class="is-active">
-                        <a href="#">
-                            <span class="icon is-small">
-                                <i class="fas fa-book" aria-hidden="true"></i>
-                            </span>
-                            <span>成績</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- パンくずリスト.end -->
-            <div class="hero-body">
-                <p class="title">成績</p>
-            </div>
-        </section>
-        <!-- 成績.end -->
-    </main>
+    <div class="container">
+        <div class="tabs is-centered">
+            <ul class="tab-list">
+                <li class="tab-item is-active">
+                    <a>
+                        <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
+                        <span>Pictures</span>
+                    </a>
+                </li>
+                <li class="tab-item">
+                    <a>
+                        <span class="icon is-small"><i class="fas fa-music" aria-hidden="true"></i></span>
+                        <span>Music</span>
+                    </a>
+                </li>
+                <li class="tab-item">
+                    <a>
+                        <span class="icon is-small"><i class="fas fa-film" aria-hidden="true"></i></span>
+                        <span>Videos</span>
+                    </a>
+                </li>
+                <li class="tab-item">
+                    <a>
+                        <span class="icon is-small"><i class="far fa-file-alt" aria-hidden="true"></i></span>
+                        <span>Documents</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-container">
+            <div class="tab-content active">ユーザー情報の内容</div>
+            <div class="tab-content">履歴書の内容</div>
+            <div class="tab-content">メール通知の内容</div>
+            <div class="tab-content">退会の内容</div>
+        </div>
+    </div>
+        <!--=============== MAIN JS ===============-->
+        <script src="js/main.js"></script>
 </body>
 </html>
