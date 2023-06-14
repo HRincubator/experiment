@@ -1,81 +1,154 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>Entrance | トップ</title>
-        <meta name="description" content="Entranceはプログラミング講座サービスです" />
-        <meta name="format-detection" content="telephone=no" />
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Entrance | トップ</title>
+    <meta name="description" content="Entranceはプログラミング講座サービスです" />
+    <meta name="format-detection" content="telephone=no" />
 
-        <!-- favicon -->
-        <!-- <link rel="shortcut icon" href="favicon.ico" /> -->
+    <!-- favicon -->
+    <!-- <link rel="shortcut icon" href="favicon.ico" /> -->
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
 
-        <!-- google fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/btn.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
-        <!-- css -->
-        <link rel="stylesheet" href="css/reset.css" />
-        <link rel="stylesheet" href="css/btn.css" />
-        <link rel="stylesheet" href="css/style.css" />
-        <!-- js -->
-        <script src="js/main.js" defer></script>
-    </head>
-    <body>
-        <!-- header-->
-        <header class="header">
-            <div class="logo">
-                <a href="#"><img src="./images/logo.png" alt="ロゴ"></a>
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- js -->
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <!-- header-->
+    <header class="header">
+        <div class="logo">
+            <a href="#"><img src="./images/logo.png" alt="ロゴ"></a>
+        </div>
+
+        <div class="user-info">
+            <span><a href="login.html" class="login-link">ログイン</a></span>
+            <!-- プルダウンメニュー -->
+            <div class="dropdown">
+                <button class="dropdown__btn" id="dropdown__btn">
+                    <img class="icon-img" src="./images/index/user-icon.png" alt="ユーザーアイコン">
+                </button>
+                <div class="dropdown__body">
+                    <ul class="dropdown__list">
+                        <li class="dropdown__item"> <a href="#" class="dropdown__item-link"> マイページ</a> </li>
+                        <li class="dropdown__item"> <a href="#" class="dropdown__item-link"> メッセージ</a> </li>
+                        <li class="dropdown__item"> <a href="login.html" class="dropdown__item-link"> ログアウト</a> </li>
+                    </ul>
+                </div>
             </div>
+            <!-- end プルダウンメニュー -->
+            <div class="blank"></div>
+        </div>
+    </header>
+    <!-- end header-->
+    <!-- main -->
+    <main class="main">
+        <div class="first-view">
+            <div class="first-view-text">
+                <h1>新しい時代を、<br>あなたと始める。</h1>
+                <p>皆さまの挑戦を、私たちは応援しています。</p>
+                <p>完全未経験者からIT業界へ挑戦するエントランス。</p><br>
+                <a class="btn btn-medium btn-color02 btn-hover08" href="signup.html">
+                    <span class="btn-text ">新規登録はこちら<i class="icon icon-arrow"></i></span>
+                    <span class="btn-bg"></span>
+                </a>
+            </div>
+        </div>
 
-            <div class="user-info">
-                <span><a href="login.html" class="login-link">ログイン</a></span>
-                <!-- プルダウンメニュー -->
-                <div class="dropdown">
-                    <button class="dropdown__btn" id="dropdown__btn">
-                        <img src="./images/index/user-icon.png" alt="ユーザーアイコン">
-                    </button>
-                    <div class="dropdown__body">
-                        <ul class="dropdown__list">
-                            <li class="dropdown__item"> <a href="#" class="dropdown__item-link"> マイページ</a> </li>
-                            <li class="dropdown__item"> <a href="#" class="dropdown__item-link"> メッセージ</a> </li>
-                            <li class="dropdown__item"> <a href="login.html" class="dropdown__item-link"> ログアウト</a> </li>
-                        </ul>
+        <!-- contents1 -->
+        <!-- 4つのイラストと2行ほどのサイト説明文で均等に配置します -->
+        <!-- end contants1 -->
+        <!-- servise -->
+        <!--==================== DISCOVER ====================-->
+        <section class="discover section" id="discover">
+            <h2 class="section__title">Entranceのサービス</h2>
+
+            <div class="discover__container container swiper-container">
+                <div class="swiper-wrapper">
+                    <!--==================== DISCOVER 1 ====================-->
+                    <div class="discover__card swiper-slide">
+                        <a href="coursetop.html"><img src="assets/img/discover1.jpg" alt="" class="discover__img"></a>
+                        <div class="discover__data">
+                            <h2 class="discover__title">動画教材</h2>
+                            <span class="discover__description">テキストテキストテキスト</span>
+                        </div>
+                    </div>
+
+                    <!--==================== DISCOVER 2 ====================-->
+                    <div class="discover__card swiper-slide">
+                        <a href="testtop.html"><img src="assets/img/discover2.jpg" alt="" class="discover__img"></a>
+                        <div class="discover__data">
+                            <h2 class="discover__title">テスト</h2>
+                            <span class="discover__description">テキストテキストテキスト</span>
+                        </div>
+                    </div>
+
+                    <!--==================== DISCOVER 3 ====================-->
+                    <div class="discover__card swiper-slide">
+                        <a href="record.html"><img src="assets/img/discover3.jpg" alt="" class="discover__img"></a>
+                        <div class="discover__data">
+                            <h2 class="discover__title">成績</h2>
+                            <span class="discover__description">テキストテキストテキスト</span>
+                        </div>
                     </div>
                 </div>
-                <!-- end プルダウンメニュー -->
-                <div class="blank"></div>
             </div>
-        </header>
-        <!-- end header-->
+        </section>
 
-        <!-- main -->
-        <main class="main">
-            <div class="first-view">
-                <div class="first-view-text">
-                  <h1>新しい時代を、<br>あなたと始める。</h1>
-                  <p>皆さまの挑戦を、私たちは応援しています。</p>
-                  <p>完全未経験者からIT業界へ挑戦するエントランス。</p><br>
-                    <a class="btn btn-medium btn-color02 btn-hover08" href="signup.html">
-                        <span class="btn-text ">新規登録はこちら<i class="icon icon-arrow"></i></span>
-                        <span class="btn-bg"></span>
-                    </a>
+
+        <!--==================== VIDEO ====================-->
+        <section class="video section">
+            <h2 class="section__title">紹介動画</h2>
+
+            <div class="video__container container">
+                <p class="video__description">
+                    会社紹介動画やサービス紹介動画があれば
+                </p>
+
+                <div class="video__content">
+                    <video id="video-file">
+                        <source src="assets/video/video.mp4" type="video/mp4">
+                    </video>
+
+                    <button class="button button--flex video__button" id="video-button">
+                        <i class="ri-play-line video__button-icon" id="video-icon"></i>
+                    </button>
                 </div>
             </div>
+        </section>
+        <!-- end contants -->
 
-            <!-- contents1 -->
-                <!-- 4つのイラストと2行ほどのサイト説明文で均等に配置します -->
-            <!-- end contants1 -->
+    </main>
+    <!-- end main -->
+    <script src="lib/js/jquery/jquery-1.1.3.1.js "></script>
+    <script src="js/script.js "></script>
 
-            <!-- servise -->
-                <!-- 3つのコンテンツを均等に配置します。画像と、簡易説明で構成され、画像クリックで各ページに遷移します。 -->
+    <!--=============== SCROLL REVEAL===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
 
-            <!-- end contants -->
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
 
-        </main>
-        <!-- end main -->
-        <script src="lib/js/jquery/jquery-1.1.3.1.js "></script>
-        <script src="js/script.js "></script>
-    </body>
+    <!--=============== MAIN JS ===============-->
+    <script src="js/main.js"></script>
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+</body>
 </html>

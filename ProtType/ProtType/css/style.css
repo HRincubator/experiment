@@ -292,136 +292,6 @@ header {
 	font-size: 12px}
 
 
-/* お知らせ */
-.news	{padding: 20px;
-	border: solid 5px #dddddd}
-
-.news h1	{margin-top: 0;
-	margin-bottom: 5px;
-	font-size: 18px;
-	color: #666666}
-
-.news ul	{margin: 0;
-	padding: 0;
-	list-style: none}
-
-.news li a	{display: block;
-	padding: 5px;
-	border-bottom: dotted 2px #dddddd;
-	color: #000000;
-	font-size: 14px;
-	text-decoration: none}
-
-.news li a:hover	{background-color: #eeeeee}
-
-.news time	{color: #888888;
-	font-weight: bold}
-
-.news a:after	{content: "";
-	display: block;
-	clear: both}
-
-.news time	{float: left;
-	width: 60px}
-
-.news .text	{float: none;
-	width: auto;
-	margin-left: 60px}
-
-
-/* SNSメニュー */
-.follow ul	{margin: 0;
-	padding: 0;
-	list-style: none}
-
-.follow li a	{display: block;
-	margin-bottom: 10px;
-	padding: 10px;
-	border-radius: 4px;
-	color: #ffffff;
-	font-size: 14px;
-	text-decoration: none}
-
-.follow li a:hover	{opacity: 0.8}
-
-.follow-tw	{background-color: #63bafb}
-.follow-fb	{background-color: #5288f7}
-.follow-gp	{background-color: #f65d4a}
-
-.follow i	{margin-right: 10px;
-	font-size: 24px;
-	vertical-align: middle}
-
-
-/* 補足説明 */
-.follow-info	{margin-top: 0;
-	margin-bottom: 20px;
-	padding: 10px;
-	background-color: #dddddd;
-	font-size: 14px;
-	text-align: center}
-
-.follow-info {
-	position: relative;
-	background: #dddddd;
-}
-.follow-info:after {
-	top: 100%;
-	left: 50%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-	border-color: rgba(221, 221, 221, 0);
-	border-top-color: #dddddd;
-	border-width: 15px;
-	margin-left: -15px;
-}
-
-
-
-/* 記事 */
-.kiji h1	{margin-top: 0;
-	margin-bottom: 20px;
-	padding-left: 20px;
-	border-left: solid 20px #c50018;
-	font-size: 36px;
-	font-weight: normal}
-
-.kiji h2	{margin-top: 50px;
-	margin-bottom: 20px;
-	border-bottom: solid 1px #dddddd;
-	font-size: 28px;
-	font-weight: normal}
-
-.kiji h2 i	{margin-right: 7px;
-	color: #888888}
-
-.kiji p	{max-width: 640px;
-	margin-top: 0;
-	margin-bottom: 20px}
-
-.kiji .lead	{max-width: 100%;
-	font-size: 20px;
-	color: #666666}
-
-.coursevideo	{max-width: 100%;
-	height: auto;
-	margin-bottom: 20px}
-
-/* 本文 */
-.honbun	{margin-top: 40px;
-	-moz-column-count: 2;
-	-moz-column-gap: 40px;
-	-webkit-column-count: 2;
-	-webkit-column-gap: 40px;
-	column-count: 2;
-	column-gap: 40px}
-
-
-
 
 /* パンくずリスト */
 .bread	{margin-bottom: 20px}
@@ -476,12 +346,6 @@ header {
 
 .sidemenu li a:hover	{background-color: #eeeeee}
 
-
-
-/* コピーライト */
-.copyright p	{margin: 0;
-	color: #666666;
-	font-size: 14px}
 
 
 /* BOX Aの下に罫線を挿入（コンテンツページのみ） */
@@ -539,12 +403,6 @@ header {
 .catch	{padding: 5px 10px;
 	font-size: 12px}
 
-/* 記事 */
-.kiji h1	{font-size: 26px}
-
-.kiji h2	{font-size: 20px}
-
-.kiji .lead	{font-size: 16px}
 
 }
 

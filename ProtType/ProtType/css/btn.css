@@ -26,41 +26,6 @@ html, body {
     .box .box-body {
       padding: 40px 0; }
   
-  /* ===================================================================
-  
-  header style
-  
-  =================================================================== */
-  #header {
-    background-color: #DDD;
-    width: 100%;
-    position: fixed;
-    z-index: 10; }
-    #header .logo {
-      float: left; }
-    #header .nav {
-      float: right; }
-      #header .nav ul {
-        margin-right: 20px; }
-        #header .nav ul li {
-          float: left;
-          list-style-type: none;
-          margin-right: 10px; }
-          #header .nav ul li:last-child {
-            margin-right: none; }
-  
-  /* ===================================================================
-  
-  footer style
-  
-  =================================================================== */
-  #footer {
-    border-radius: 3px; }
-  
-  .inner {
-    width: 960px;
-    margin: 0 auto; }
-  
   .btn {
     display: inline-block;
     position: relative;
