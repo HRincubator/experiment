@@ -11,6 +11,8 @@
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
     <!-- css -->
     <link rel="stylesheet" href="css/record.css" />
+    <!-- js -->
+    <script src="js/main.js" defer></script>
 
     <title>Entrance | 成績</title>
 
@@ -79,8 +81,8 @@
 
     <main class="main">
 
-        <!-- 成績 -->
-        <section class="hero is-light">
+        <div class="container">
+            <!-- 成績 -->
             <!-- パンくずリスト -->
             <nav class="breadcrumb" aria-label="breadcrumbs">
                 <ul>
@@ -103,10 +105,42 @@
                 </ul>
             </nav>
             <!-- パンくずリスト.end -->
-            <div class="hero-body">
-                <p class="title">成績</p>
+            <p class="title">成績</p>
+            <div class="tabs is-centered">
+                <ul class="tab-list">
+                    <li class="tab-item is-active">
+                        <a>
+                            <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
+                            <span>All</span>
+                        </a>
+                    </li>
+                    <li class="tab-item">
+                        <a>
+                            <span class="icon is-small"><i class="fas fa-music" aria-hidden="true"></i></span>
+                            <span>動画教材進捗</span>
+                        </a>
+                    </li>
+                    <li class="tab-item">
+                        <a>
+                            <span class="icon is-small"><i class="fas fa-film" aria-hidden="true"></i></span>
+                            <span>確認テスト成績</span>
+                        </a>
+                    </li>
+                    <li class="tab-item">
+                        <a>
+                            <span class="icon is-small"><i class="far fa-file-alt" aria-hidden="true"></i></span>
+                            <span>タブ4</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </section>
+            <div class="tab-container box has-background-primary-light">
+                <div class="tab-content active">動画教材進捗・確認テスト成績</div>
+                <div class="tab-content">動画教材進捗</div>
+                <div class="tab-content">確認テスト成績</div>
+                <div class="tab-content">退会の内容</div>
+            </div>
+        </div>
         <!-- 成績.end -->
     </main>
 </body>
