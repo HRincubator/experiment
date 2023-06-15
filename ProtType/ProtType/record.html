@@ -43,21 +43,21 @@
                     <div class="navbar-item">
                         <div class="buttons">
                             <a class="button is-primary" href="signup.html">
-                                <strong>Sign up</strong>
+                                <strong>新規登録</strong>
                             </a>
                             <a class="button is-light" href="login.html">
-                                Log in
+                                ログイン
                             </a>
                         </div>
                     </div>
                     <!-- ユーザーアイコンnavbar -->
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
-                            <img src="images/index/user-icon.png" />
+                            <img src="images/index/user-icon.png" />ゲスト
                         </a>
 
                         <div class="navbar-dropdown  is-right">
-                            <a class="navbar-item" href="mypage.html">
+                            <a class="navbar-item" href="login.html">
                                 マイページ
                             </a>
                             <a class="navbar-item">
@@ -129,16 +129,43 @@
                     <li class="tab-item">
                         <a>
                             <span class="icon is-small"><i class="far fa-file-alt" aria-hidden="true"></i></span>
-                            <span>タブ4</span>
+                            <span>タグ</span>
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="tab-container box has-background-primary-light">
-                <div class="tab-content active">動画教材進捗・確認テスト成績</div>
-                <div class="tab-content">動画教材進捗</div>
+            <div class="tab-container">
+                <div class="tab-content active">
+                    <!-- wrapper -->
+                    <div class="tile is-ancestor">
+                        <!-- left要素 -->
+                        <div class="tile is-vertical is-parent">
+                            <p class="title is-5">動画教材進捗</p>
+                            <div class="tile is-child box">
+
+                                <div class="subtitle field">
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- right要素 -->
+                        <div class="tile is-5 is-vertical is-parent">
+                            <p class="title is-5">確認テスト成績</p>
+                            <div class="tile is-child box">
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- wrapper.end -->
+                </div>
+
+
+                <div class="tab-content">
+                    <p class="title is-5">動画教材進捗</p>
+                    <div class="box"></div>
+                </div>
                 <div class="tab-content">確認テスト成績</div>
-                <div class="tab-content">退会の内容</div>
+                <div class="tab-content">タグ</div>
             </div>
         </div>
         <!-- 成績.end -->

@@ -37,21 +37,10 @@
                 </div>
                 <!-- 右寄せnavbar -->
                 <div class="navbar-end">
-
-                    <div class="navbar-item">
-                        <div class="buttons">
-                            <a class="button is-primary" href="signup.html">
-                                <strong>Sign up</strong>
-                            </a>
-                            <a class="button is-light" href="login.html">
-                                Log in
-                            </a>
-                        </div>
-                    </div>
                     <!-- ユーザーアイコンnavbar -->
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
-                            <img src="images/index/user-icon.png" />
+                            <img src="images/index/user-icon.png" />User_1
                         </a>
 
                         <div class="navbar-dropdown  is-right">
@@ -78,22 +67,153 @@
     </header>
 
     <section class="section">
+        <!-- wrapper -->
         <div class="tile is-ancestor">
+            <!-- left要素 -->
             <div class="tile is-4 is-vertical is-parent">
+                <p class="title">アカウント</p>
                 <div class="tile is-child box">
-                    <p class="title">One</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut.</p>
-                </div>
+                    <!-- アカウントアイコン（変更可） -->
+                    <div class="title is-centered file">
+                        <label class="file-label">
+                            <input class="file-input" type="file" name="file-selection">
+                            <img class="image is-96x96 is-rounded" src="images/index/user-icon.png" />
+                        </label>
+                    </div>
+                    <!-- アカウントアイコン（変更可）.end -->
 
+                    <div class="subtitle field">
+                        <!-- history-nav -->
+                        <nav class="level">
+                            <div class="level-item has-text-centered">
+                                <div>
+                                    <p class="heading">動画視聴時間</p>
+                                    <p class="title">5.6H</p>
+                                </div>
+                            </div>
+                            <div class="level-item has-text-centered">
+                                <div>
+                                    <p class="heading">テストクリア数</p>
+                                    <p class="title">3</p>
+                                </div>
+                            </div>
+                        </nav>
+                        <!-- history-nav.end -->
+                        <!-- plofile -->
+                        <div class="field">
+                            <label class="label">ユーザー名</label>
+                            <p>@User_1</p>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">メールアドレス</label>
+                            <p>example@example.com</p>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">電話番号</label>
+                            <p>08013459876</p>
+                        </div>
+
+                        <div class="field is-right">
+                            <button class="button js-modal-trigger" data-target="account-setting-modal">アカウント設定</button>
+                            <button class="button js-modal-trigger" data-target="mail-setting-modal">通知設定</button>
+                        </div>
+                        <!-- plofile.end -->
+                    </div>
+                </div>
             </div>
-            <div class="tile is-parent">
-                <div class="tile is-child">
-                    <p class="title">Three</p>
+            <!-- right要素 -->
+            <div class="tile is-vertical is-parent">
+                <p class="title">履歴書</p>
+                <div class="tile is-child box">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
                     <p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at volutpat tortor.</p>
                 </div>
             </div>
         </div>
+        <!-- wrapper.end -->
     </section>
+
+    <!-- modal -->
+    <!-- account-setting-modal -->
+    <div id="account-setting-modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">アカウント設定</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <!-- Content ... -->
+                <form class="box">
+                    <div class="field">
+                        <label class="label">現在のユーザー名</label>
+                        <p>@User_1</p>
+                    </div>
+                    <div class="field">
+                        <label class="label">新規ユーザー名</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="User_1">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">現在のメールアドレス</label>
+                        <p>example@example.com</p>
+                    </div>
+                    <div class="field">
+                        <label class="label">新規メールアドレス</label>
+                        <div class="control">
+                            <input class="input" type="email" placeholder="example@example.com">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">現在のパスワード</label>
+                        <div class="control">
+                            <input class="input" type="password" placeholder="old">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">新規パスワード</label>
+                        <div class="control">
+                            <input class="input" type="password" placeholder="new">
+                        </div>
+                    </div>
+                </form>
+                <a href="quit.html">退会</a>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success">変更を保存</button>
+                <button class="button">キャンセル</button>
+            </footer>
+        </div>
+    </div>
+    <!-- mail-setting-modal -->
+    <div id="mail-setting-modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">通知設定</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <!-- Content ... -->
+                <div class="field">
+                    <input id="switchRoundedSuccess" type="checkbox" name="switchRoundedSuccess" class="switch is-rounded is-success" checked="checked">
+                    <label for="switchRoundedSuccess">メッセージの通知</label>
+                </div>
+                <div class="field">
+                    <input id="switchRoundedSuccess" type="checkbox" name="switchRoundedSuccess" class="switch is-rounded is-success" checked="checked">
+                    <label for="switchRoundedSuccess">お知らせの通知</label>
+                </div>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success">変更を保存</button>
+                <button class="button">キャンセル</button>
+            </footer>
+        </div>
+    </div>
+    <!-- modal.end -->
 </body>
 </html>

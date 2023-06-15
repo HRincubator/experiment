@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\css",
+    "\\images\\index",
+    "\\js",
     "\\scss"
   ],
-  "SelectedNode": "\\scss\\record.scss",
   "PreviewInSolutionExplorer": false
 }
