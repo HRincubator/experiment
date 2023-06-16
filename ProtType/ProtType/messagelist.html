@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- reset css -->
+    <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+    <!-- css -->
+    <link rel="stylesheet" href="css/messagelist.css" />
+    <!-- js -->
+    <script src="js/main.js" defer></script>
+
+    <title>Entrance | メッセージ一覧</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <img src="images/logo.png">
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <!-- 左側に要素を追加したい場合 -->
+                </div>
+                <!-- 右寄せnavbar -->
+                <div class="navbar-end">
+                    <!-- ユーザーアイコンnavbar -->
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            <img src="images/index/user-icon.png" />User_1
+                        </a>
+
+                        <div class="navbar-dropdown  is-right">
+                            <a class="navbar-item" href="mypage.html">
+                                マイページ
+                            </a>
+                            <a class="navbar-item" href="messagelist.html">
+                                メッセージ
+                            </a>
+                            <a class="navbar-item" href="login.html">
+                                ログアウト
+                            </a>
+                            <hr class="navbar-divider">
+                            <a class="navbar-item">
+                                Report an issue
+                            </a>
+                        </div>
+                    </div>
+                    <!-- ユーザーアイコンnavbar.end -->
+                </div>
+                <!-- 右寄せnavbar.end -->
+            </div>
+        </nav>
+    </header>
+    <!-- section -->
+    <section class="section">
+        <!-- パンくずリスト -->
+        <nav class="breadcrumb is-size-7" aria-label="breadcrumbs">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="icon is-small">
+                            <i class="fas fa-home" aria-hidden="true"></i>
+                        </span>
+                        <span>トップ</span>
+                    </a>
+                </li>
+                <li class="is-active">
+                    <a href="messagelist.html">
+                        <span class="icon is-small">
+                            <i class="fas fa-home" aria-hidden="true"></i>
+                        </span>
+                        <span>メッセージ一覧</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- パンくずリスト.end -->
+        <!-- list -->
+        <p class="title is-size-4">メッセージ一覧</p>
+        <!-- search -->
+        <div class="field has-addons m-5">
+            <div class="control">
+                <input class="input" type="text" placeholder="メールを検索">
+            </div>
+            <div class="control">
+                <a class="button is-info">
+                    検索
+                </a>
+            </div>
+        </div>
+        <!-- search.end -->
+        <div class="container box">
+            <p class="title is-size-5 has-text-success">受信トレイ</p>
+            <div class="field menu-list">
+                <a href="messageinfo.html">
+                    <p class="has-text-black has-text-weight-semibold">プロトタイプを作成中のお知らせ</p>
+                    <p class="is-size-7">
+                        User_1さん
+                        こんにちは。このたびはEntranceに登録していただき誠にありがとうございます。
+                        本メールでは登録されて間もない方向けに、学習に便利なトピックスをご紹介いたします。
+                    </p>
+                </a>
+            </div>
+            <div class="field menu-list">
+                <a href="messageinfo.html">
+                    <p class="has-text-black has-text-weight-semibold">Entranceに登録いただきありがとうございます</p>
+                    <p class="is-size-7">
+                        User_1さん
+                        こんにちは。このたびはEntranceに登録していただき誠にありがとうございます。
+                        本メールでは登録されて間もない方向けに、学習に便利なトピックスをご紹介いたします。
+                    </p>
+                </a>
+            </div>
+        </div><br />
+        <div class="container box">
+            <p class="title is-size-5 has-text-success">送信トレイ</p>
+            <div class="field menu-list">
+                <a href="messageinfo.html">
+                    <p class="has-text-black has-text-weight-semibold">プロトタイプを作成中のお知らせ</p>
+                    <p class="is-size-7">
+                        User_1さん
+                        こんにちは。このたびはEntranceに登録していただき誠にありがとうございます。
+                        本メールでは登録されて間もない方向けに、学習に便利なトピックスをご紹介いたします。
+                    </p>
+                </a>
+            </div>
+        </div>
+        <!-- list.end -->
+    </section>
+    <!-- section.end -->
+</body>
+</html>

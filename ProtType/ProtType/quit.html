@@ -48,7 +48,7 @@
                             <a class="navbar-item" href="mypage.html">
                                 マイページ
                             </a>
-                            <a class="navbar-item">
+                            <a class="navbar-item" href="messagelist.html">
                                 メッセージ
                             </a>
                             <a class="navbar-item" href="login.html">
@@ -67,6 +67,36 @@
         </nav>
     </header>
     <section class="section">
+        <!-- パンくずリスト -->
+        <nav class="breadcrumb is-size-7" aria-label="breadcrumbs">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="icon is-small">
+                            <i class="fas fa-home" aria-hidden="true"></i>
+                        </span>
+                        <span>トップ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="mypage.html">
+                        <span class="icon is-small">
+                            <i class="fas fa-home" aria-hidden="true"></i>
+                        </span>
+                        <span>マイページ</span>
+                    </a>
+                </li>
+                <li class="is-active">
+                    <a href="#">
+                        <span class="icon is-small">
+                            <i class="fas fa-book" aria-hidden="true"></i>
+                        </span>
+                        <span>退会</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- パンくずリスト.end -->
         <div class="content">
             <h2>退会前のアンケートにご協力ください。</h2>
             <p>当社サービスをご利用いただき誠にありがとうございました。</p>
@@ -118,10 +148,10 @@
                     <textarea class="textarea has-fixed-size is-success" placeholder="その他"></textarea><br />
                 </div>
             </div>
-                <button class="button is-danger js-modal-trigger" data-target="quit-modal">退会</button>
-            
+            <button class="button is-danger js-modal-trigger" data-target="quit-modal">退会</button>
+
         </div>
-</section>
+    </section>
 
     <div id="quit-modal" class="modal">
         <div class="modal-background"></div>
