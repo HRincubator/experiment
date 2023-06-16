@@ -19,6 +19,7 @@
 
 </head>
 <body>
+    <!-- header -->
     <header class="header">
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
@@ -39,28 +40,17 @@
                 </div>
                 <!-- 右寄せnavbar -->
                 <div class="navbar-end">
-
-                    <div class="navbar-item">
-                        <div class="buttons">
-                            <a class="button is-primary" href="signup.html">
-                                <strong>新規登録</strong>
-                            </a>
-                            <a class="button is-light" href="login.html">
-                                ログイン
-                            </a>
-                        </div>
-                    </div>
                     <!-- ユーザーアイコンnavbar -->
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
-                            <img src="images/index/user-icon.png" />ゲスト
+                            <img src="images/index/user-icon.png" />User_1
                         </a>
 
                         <div class="navbar-dropdown  is-right">
-                            <a class="navbar-item" href="login.html">
+                            <a class="navbar-item" href="mypage.html">
                                 マイページ
                             </a>
-                            <a class="navbar-item">
+                            <a class="navbar-item" href="messagelist.html">
                                 メッセージ
                             </a>
                             <a class="navbar-item" href="login.html">
@@ -78,97 +68,33 @@
             </div>
         </nav>
     </header>
-
-    <main class="main">
-
-        <div class="container">
-            <!-- 成績 -->
-            <!-- パンくずリスト -->
-            <nav class="breadcrumb is-size-7" aria-label="breadcrumbs">
-                <ul>
-                    <li>
-                        <a href="index.html">
-                            <span class="icon is-small">
-                                <i class="fas fa-home" aria-hidden="true"></i>
-                            </span>
-                            <span>トップ</span>
-                        </a>
-                    </li>
-                    <li class="is-active">
-                        <a href="#">
-                            <span class="icon is-small">
-                                <i class="fas fa-book" aria-hidden="true"></i>
-                            </span>
-                            <span>成績</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- パンくずリスト.end -->
-            <p class="title">成績</p>
-            <div class="tabs is-centered">
-                <ul class="tab-list">
-                    <li class="tab-item is-active">
-                        <a>
-                            <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
-                            <span>All</span>
-                        </a>
-                    </li>
-                    <li class="tab-item">
-                        <a>
-                            <span class="icon is-small"><i class="fas fa-music" aria-hidden="true"></i></span>
-                            <span>動画教材進捗</span>
-                        </a>
-                    </li>
-                    <li class="tab-item">
-                        <a>
-                            <span class="icon is-small"><i class="fas fa-film" aria-hidden="true"></i></span>
-                            <span>確認テスト成績</span>
-                        </a>
-                    </li>
-                    <li class="tab-item">
-                        <a>
-                            <span class="icon is-small"><i class="far fa-file-alt" aria-hidden="true"></i></span>
-                            <span>タグ</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="tab-container">
-                <div class="tab-content active">
-                    <!-- wrapper -->
-                    <div class="tile is-ancestor">
-                        <!-- left要素 -->
-                        <div class="tile is-vertical is-parent">
-                            <p class="title is-5">動画教材進捗</p>
-                            <div class="tile is-child box">
-
-                                <div class="subtitle field">
-
-                                </div>
-                            </div>
-                        </div>
-                        <!-- right要素 -->
-                        <div class="tile is-5 is-vertical is-parent">
-                            <p class="title is-5">確認テスト成績</p>
-                            <div class="tile is-child box">
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- wrapper.end -->
-                </div>
-
-
-                <div class="tab-content">
-                    <p class="title is-5">動画教材進捗</p>
-                    <div class="box"></div>
-                </div>
-                <div class="tab-content">確認テスト成績</div>
-                <div class="tab-content">タグ</div>
-            </div>
-        </div>
-        <!-- 成績.end -->
-    </main>
+    <!-- header.end -->
+    
+    <!-- section -->
+    <section class="section">
+        <!-- パンくずリスト -->
+        <nav class="breadcrumb is-size-7" aria-label="breadcrumbs">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="icon is-small">
+                            <i class="fas fa-home" aria-hidden="true"></i>
+                        </span>
+                        <span>トップ</span>
+                    </a>
+                </li>
+                <li class="is-active">
+                    <a href="messagelist.html">
+                        <span class="icon is-small">
+                            <i class="fas fa-home" aria-hidden="true"></i>
+                        </span>
+                        <span>成績</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- パンくずリスト.end -->
+    </section>
+    <!-- section.end -->
 </body>
 </html>
