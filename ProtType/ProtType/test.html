@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- reset css -->
+    <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+    <!-- css -->
+    <link rel="stylesheet" href="css/test.css" />
+    <!-- js -->
+    <script src="js/main.js" defer></script>
+
+    <title>Entrance | テスト実施</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <img src="images/logo.png">
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <!-- 左側に要素を追加したい場合 -->
+                </div>
+                <!-- 右寄せnavbar -->
+                <div class="navbar-end">
+                    <!-- ユーザーアイコンnavbar -->
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            <img src="images/index/user-icon.png" />User_1
+                        </a>
+
+                        <div class="navbar-dropdown  is-right">
+                            <a class="navbar-item" href="mypage.html">
+                                マイページ
+                            </a>
+                            <a class="navbar-item" href="messagelist.html">
+                                メッセージ
+                            </a>
+                            <a class="navbar-item" href="login.html">
+                                ログアウト
+                            </a>
+                            <hr class="navbar-divider">
+                            <a class="navbar-item">
+                                Report an issue
+                            </a>
+                        </div>
+                    </div>
+                    <!-- ユーザーアイコンnavbar.end -->
+                </div>
+                <!-- 右寄せnavbar.end -->
+            </div>
+        </nav>
+    </header>
+    <!-- header.end -->
+
+    <section class="section">
+        <!-- パンくずリスト -->
+        <nav class="breadcrumb is-size-7" aria-label="breadcrumbs">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="icon is-small">
+                            <i class="fas fa-home" aria-hidden="true"></i>
+                        </span>
+                        <span>トップ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <span class="icon is-small">
+                            <i class="fas fa-book" aria-hidden="true"></i>
+                        </span>
+                        <span>テストトップ</span>
+                    </a>
+                </li>
+                <li class="is-active">
+                    <a href="#">
+                        <span class="icon is-small">
+                            <i class="fas fa-book" aria-hidden="true"></i>
+                        </span>
+                        <span>テスト実施</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- パンくずリスト.end -->
+        <div class="container">
+            <p class="title is-5">テスト概要</p>
+            <p class="subtitle is-6 pb-6">テキストテキストテキスト</p>
+        </div>
+        <!-- test-container -->
+        <!-- q1 -->
+        <div class="container box has-background-light">
+            <p class="title is-6">設問1</p>
+            <p class="subtitle is-6">問題文が表示されています。テキストテキストテキスト</p>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="option1" /> A: 選択肢1</li>
+                <li><input type="radio" name="q1" value="option2" /> B: 選択肢2</li>
+                <li><input type="radio" name="q1" value="option3" /> C: 選択肢3</li>
+                <li><input type="radio" name="q1" value="option4" /> D: 選択肢4</li>
+            </ul>
+        </div>
+        <!-- q2 -->
+        <div class="container box has-background-light">
+            <p class="title is-6">設問2</p>
+            <p class="subtitle is-6">問題文が表示されています。テキストテキストテキスト</p>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="option1" /> A: 選択肢1</li>
+                <li><input type="radio" name="q2" value="option2" /> B: 選択肢2</li>
+                <li><input type="radio" name="q2" value="option3" /> C: 選択肢3</li>
+                <li><input type="radio" name="q2" value="option4" /> D: 選択肢4</li>
+            </ul>
+        </div>
+        <!-- test-container.end -->
+        <div class="field has-text-right mt-6">
+            <button class="button is-primary js-modal-trigger" data-target="send-modal">回答送信</button>
+        </div>
+    </section>
+    <!-- section.end -->
+
+    <!-- send-modal -->
+    <div id="send-modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">この内容で回答を送信してもよろしいでしょうか。</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <!-- Content ... -->
+                <div class="content">
+                    <p>入力した回答でよろしければ、下記の <strong>[回答送信]</strong> をクリックしてください。</p>
+                    <ul class="custom-list">
+                        <li>A</li>
+                        <li>C</li>
+                    </ul>
+                </div>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-primary js-modal-trigger" data-target="send-decision-modal">回答送信</button>
+                <button class="button">キャンセル</button>
+            </footer>
+        </div>
+    </div>
+    <div id="send-decision-modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <section class="modal-card-body">
+                <!-- Content ... -->
+                <p>回答を送信しました。</p>
+            </section>
+        </div>
+    </div>
+    <!-- send-modal.end -->
+</body>
+</html>

@@ -1,0 +1,9 @@
+﻿.custom-list li:nth-child(1)::before {
+    list-style-type:none;
+    content: "設問1";
+    margin-right: 0.5em;
+}
+.custom-list li:nth-child(2)::before {
+    content: "設問2";
+    margin-right: 0.5em;
+}
