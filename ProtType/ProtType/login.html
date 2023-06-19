@@ -3,33 +3,44 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+    <!-- reset css -->
+    <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
     <!-- css -->
-    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/login.css" />
+    <!-- js -->
+    <script src="js/main.js" defer></script>
 
     <title>Entrance | ログインフォーム</title>
 </head>
 <body>
-    <div class="form-wrapper">
-        <h1>ログインフォーム</h1>
-        <form>
-            <div class="form-item">
-                <label for="email"></label>
-                <input type="email" name="email" required="required" placeholder="メールアドレス"></input>
+    <div class="section">
+        <div class="tile is-ancestor is-justify-content-center">
+            <div class="tile is-4 is-vertical is-parent box">
+                <div class="tile is-child">
+                    <h1>ログインフォーム</h1>
+                    <form>
+                        <div class="form-item">
+                            <label for="email"></label>
+                            <input type="email" name="email" required="required" placeholder="メールアドレス" />
+                        </div>
+                        <div class="form-item">
+                            <label for="password"></label>
+                            <input type="password" name="password" required="required" placeholder="パスワード" />
+                        </div>
+                        <div class="button-panel">
+                            <input type="submit" class="button has-background-primary" title="Sign In" value="ログイン" />
+                        </div>
+                    </form>
+                    <div class="form-footer">
+                        <p><a href="signup.html">新規登録がまだの方はこちらから</a></p>
+                        <p><a href="reissue.html">パスワードを忘れてしまった方はこちら</a></p>
+                    </div>
+                </div>
             </div>
-            <div class="form-item">
-                <label for="password"></label>
-                <input type="password" name="password" required="required" placeholder="パスワード"></input>
-            </div>
-            <div class="button-panel">
-                <input type="submit" class="button" title="Sign In" value="ログイン"></input>
-            </div>
-        </form>
-        <div class="form-footer">
-            <p><a href="signup.html">新規登録がまだの方はこちらから</a></p>
-            <p><a href="reissue.html">パスワードを忘れてしまった方はこちら</a></p>
         </div>
-    </div>
+        </div>
 </body>
 </html>
