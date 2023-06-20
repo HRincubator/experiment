@@ -8,4 +8,9 @@
     "inputFile": "scss/record.scss",
     "outputFile": "css/record.css"
   }
+ ,
+  {
+    "inputFile": "scss/top.scss",
+    "outputFile": "css/top.css"
+  }
 ]

@@ -21,7 +21,7 @@
     <header class="header">
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a class="navbar-item" href="index.html">
+                <a class="navbar-item" href="top.html">
                     <img src="images/logo.png">
                 </a>
 
@@ -73,7 +73,7 @@
         <nav class="breadcrumb is-size-7" aria-label="breadcrumbs">
             <ul>
                 <li>
-                    <a href="index.html">
+                    <a href="top.html">
                         <span class="icon is-small">
                             <i class="fas fa-home" aria-hidden="true"></i>
                         </span>
@@ -96,13 +96,13 @@
             <ul class="tab-list">
                 <li class="tab-item is-active">
                     <a>
-                        <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
+                        <span class="icon is-small"><i class='fas fa-file fa-sm' aria-hidden="true"></i></span>
                         <span>履歴書</span>
                     </a>
                 </li>
                 <li class="tab-item">
                     <a>
-                        <span class="icon is-small"><i class="fas fa-music" aria-hidden="true"></i></span>
+                        <span class="icon is-small"><i class='fas fa-file-alt fa-sm' aria-hidden="true"></i></span>
                         <span>職務経歴書</span>
                     </a>
                 </li>
@@ -189,6 +189,25 @@
                                         </label>
                                     </div>
                                 </div>
+                                <div class="field">
+                                    <label class="label">職務経歴書</label>
+                                    <div id="read-file1" class="file has-name is-small">
+                                        <label class="file-label">
+                                            <input class="file-input" type="file" name="resume">
+                                            <span class="file-cta">
+                                                <span class="file-icon">
+                                                    <i class="fas fa-upload"></i>
+                                                </span>
+                                                <span class="file-label">
+                                                    ファイルを選択…
+                                                </span>
+                                            </span>
+                                            <span class="file-name">
+                                                No file uploaded
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
 
                                 <script>
                                     const fileInput = document.querySelector('#read-file1 input[type=file]');
@@ -210,7 +229,7 @@
                     </div>
                     <!-- leftbox.end -->
                     <!-- rightbox -->
-                    <div class="tile is-vertical is-parent box">
+                    <div class="tile is-vertical is-parent box active">
                         <div class="columns">
                             <div class="column">
                                 <p class="title is-size-4">履歴書</p>
@@ -218,7 +237,7 @@
                                 <input class="input mt-1" type="text" placeholder="氏名">
                             </div>
                             <div class="column is-one-fifth">
-                                <p class="is-size-7">令和　5年　6月　19日　現在</p>
+                                <time class="is-size-7" datetime="2023-06-20">令和　5年　6月　20日　現在</time>
                                 <!-- dropdown -->
                                 <div class="dropdown is-hoverable is-right mt-5 is-pulled-right">
                                     <div class="dropdown-trigger">
@@ -467,6 +486,25 @@
                                         </label>
                                     </div>
                                 </div>
+                                <div class="field">
+                                    <label class="label">職務経歴書</label>
+                                    <div id="read-file1" class="file has-name is-small">
+                                        <label class="file-label">
+                                            <input class="file-input" type="file" name="resume">
+                                            <span class="file-cta">
+                                                <span class="file-icon">
+                                                    <i class="fas fa-upload"></i>
+                                                </span>
+                                                <span class="file-label">
+                                                    ファイルを選択…
+                                                </span>
+                                            </span>
+                                            <span class="file-name">
+                                                No file uploaded
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
 
                                 <script>
                                     const fileInput = document.querySelector('#read-file1 input[type=file]');
@@ -496,7 +534,7 @@
                                 <input class="input mt-1" type="text" placeholder="氏名">
                             </div>
                             <div class="column is-one-fifth">
-                                <p class="is-size-7">令和　5年　6月　19日　現在</p>
+                                <time class="is-size-7" datetime="2023-06-20">令和　5年　6月　20日　現在</time>
                                 <!-- dropdown -->
                                 <div class="dropdown is-hoverable is-right mt-5 is-pulled-right">
                                     <div class="dropdown-trigger">
