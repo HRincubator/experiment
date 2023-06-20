@@ -92,277 +92,582 @@
         </nav>
         <!-- パンくずリスト.end -->
         <!-- wrapper -->
-        <div class="tile is-ancestor">
-            <!-- left要素 -->
-            <div class="tile is-4 is-vertical is-parent">
-                <p class="title is-size-5">プロフィール</p>
-                <div class="tile is-child">
-                    <!-- アカウントアイコン（変更可） -->
-                    <div class="title is-centered file">
-                        <label class="file-label">
-                            <input class="file-input" type="file" name="file-selection">
-                            <img class="image is-96x96 is-rounded" src="images/index/user-icon.png" />
-                        </label>
-                    </div>
-                    <!-- アカウントアイコン（変更可）.end -->
-
-                    <div class="subtitle field">
-                        <div class="field">
-                            <p class="is-size-7 has-text-centered">2023年6月1日に登録</p>
-                        </div>
-                        <!-- history-nav -->
-                        <nav class="level">
-
-                            <div class="level-item has-text-centered">
-                                <div>
-                                    <p class="heading">総完了数</p>
-                                    <p class="title is-size-4">3</p>
-                                </div>
-                            </div>
-                            <div class="level-item has-text-centered">
-                                <div>
-                                    <p class="heading">動画視聴時間</p>
-                                    <p class="title is-size-4">5.6H</p>
-                                </div>
-                            </div>
-                            <div class="level-item has-text-centered">
-                                <div>
-                                    <p class="heading">学習日数</p>
-                                    <p class="title is-size-4">1D</p>
-                                </div>
-                            </div>
-                        </nav>
-                        <!-- history-nav.end -->
-                        <!-- plofile -->
-                        <div class="field">
-                            <label class="label">ユーザー名</label>
-                            <p>@User_1</p>
-                        </div>
-
-                        <div class="field">
-                            <label class="label">メールアドレス</label>
-                            <p>example@example.com</p>
-                        </div>
-
-                        <div class="field">
-                            <label class="label">電話番号</label>
-                            <p>08013459876</p>
-                        </div>
-                        <!-- read-file -->
-                        <div class="field">
-                            <label class="label">履歴書</label>
-                            <div id="read-file1" class="file has-name is-small">
+        <div class="tabs is-centered is-four-fifths">
+            <ul class="tab-list">
+                <li class="tab-item is-active">
+                    <a>
+                        <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
+                        <span>履歴書</span>
+                    </a>
+                </li>
+                <li class="tab-item">
+                    <a>
+                        <span class="icon is-small"><i class="fas fa-music" aria-hidden="true"></i></span>
+                        <span>職務経歴書</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- tabcontainer -->
+        <div class="tab-container">
+            <!-- tab1 -->
+            <div class="tab-content active">
+                <!-- wrapper -->
+                <div class="tile is-ancestor">
+                    <!-- leftbox -->
+                    <div class="tile is-4 is-vertical is-parent">
+                        <p class="title is-size-5">プロフィール</p>
+                        <div class="tile is-child">
+                            <!-- アカウントアイコン（変更可） -->
+                            <div class="title is-centered file">
                                 <label class="file-label">
-                                    <input class="file-input" type="file" name="resume">
-                                    <span class="file-cta">
-                                        <span class="file-icon">
-                                            <i class="fas fa-upload"></i>
-                                        </span>
-                                        <span class="file-label">
-                                            ファイルを選択…
-                                        </span>
-                                    </span>
-                                    <span class="file-name">
-                                        No file uploaded
-                                    </span>
+                                    <input class="file-input" type="file" name="file-selection">
+                                    <img class="image is-96x96 is-rounded" src="images/index/user-icon.png" />
                                 </label>
                             </div>
-                        </div>
+                            <!-- アカウントアイコン（変更可）.end -->
 
-                        <script>
-                            const fileInput = document.querySelector('#read-file1 input[type=file]');
-                            fileInput.onchange = () => {
-                                if (fileInput.files.length > 0) {
-                                    const fileName = document.querySelector('#read-file1 .file-name');
-                                    fileName.textContent = fileInput.files[0].name;
-                                }
-                            }
-                        </script>
-                        <!-- read-file.end -->
-                        <div class="field has-text-right mt-6">
-                            <button class="button js-modal-trigger" data-target="account-setting-modal">アカウント設定</button>
-                            <button class="button js-modal-trigger" data-target="mail-setting-modal">通知設定</button>
-                        </div>
-                        <!-- plofile.end -->
-                    </div>
-                </div>
-            </div>
-            <!-- right要素 -->
-            <div class="tile is-vertical is-parent box">
-                <div class="columns">
-                    <div class="column">
-                        <p class="title is-size-4">履歴書</p>
-                        <input class="input is-small" type="text" placeholder="ふりがな">
-                        <input class="input mt-1" type="text" placeholder="氏名">
-                    </div>
-                    <div class="column is-one-fifth">
-                        <p class="is-size-7">令和　5年　6月　19日　現在</p>
-                        <!-- dropdown -->
-                        <div class="dropdown is-hoverable is-right mt-5 is-pulled-right">
-                            <div class="dropdown-trigger">
-                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                                    <span>性別</span>
-                                    <span class="icon is-small">
-                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                    </span>
-                                </button>
-                            </div>
-                            <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                                <div class="dropdown-content">
-                                    <a class="dropdown-item">男性</a>
-                                    <a class="dropdown-item">女性</a>
+                            <div class="subtitle field">
+                                <div class="field">
+                                    <p class="is-size-7 has-text-centered">2023年6月1日に登録</p>
                                 </div>
+                                <!-- history-nav -->
+                                <nav class="level">
+
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="heading">総完了数</p>
+                                            <p class="title is-size-4">3</p>
+                                        </div>
+                                    </div>
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="heading">動画視聴時間</p>
+                                            <p class="title is-size-4">5.6H</p>
+                                        </div>
+                                    </div>
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="heading">学習日数</p>
+                                            <p class="title is-size-4">1D</p>
+                                        </div>
+                                    </div>
+                                </nav>
+                                <!-- history-nav.end -->
+                                <!-- plofile -->
+                                <div class="field">
+                                    <label class="label">ユーザー名</label>
+                                    <p>@User_1</p>
+                                </div>
+
+                                <div class="field">
+                                    <label class="label">メールアドレス</label>
+                                    <p>example@example.com</p>
+                                </div>
+
+                                <div class="field">
+                                    <label class="label">電話番号</label>
+                                    <p>08013459876</p>
+                                </div>
+                                <!-- read-file -->
+                                <div class="field">
+                                    <label class="label">履歴書</label>
+                                    <div id="read-file1" class="file has-name is-small">
+                                        <label class="file-label">
+                                            <input class="file-input" type="file" name="resume">
+                                            <span class="file-cta">
+                                                <span class="file-icon">
+                                                    <i class="fas fa-upload"></i>
+                                                </span>
+                                                <span class="file-label">
+                                                    ファイルを選択…
+                                                </span>
+                                            </span>
+                                            <span class="file-name">
+                                                No file uploaded
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <script>
+                                    const fileInput = document.querySelector('#read-file1 input[type=file]');
+                                    fileInput.onchange = () => {
+                                        if (fileInput.files.length > 0) {
+                                            const fileName = document.querySelector('#read-file1 .file-name');
+                                            fileName.textContent = fileInput.files[0].name;
+                                        }
+                                    }
+                                </script>
+                                <!-- read-file.end -->
+                                <div class="field has-text-right mt-6">
+                                    <button class="button js-modal-trigger" data-target="account-setting-modal">アカウント設定</button>
+                                    <button class="button js-modal-trigger" data-target="mail-setting-modal">通知設定</button>
+                                </div>
+                                <!-- plofile.end -->
                             </div>
                         </div>
-                        <!-- dropdown.end -->
                     </div>
-                    <div class="column is-one-fifth">
-                        <figure class="image is-128x128">
-                            <label class="file-label">
-                                <input class="file-input" type="file" name="file-selection">
-                                <img src="https://bulma.io/images/placeholders/128x128.png">
-                            </label>
-                        </figure>
+                    <!-- leftbox.end -->
+                    <!-- rightbox -->
+                    <div class="tile is-vertical is-parent box">
+                        <div class="columns">
+                            <div class="column">
+                                <p class="title is-size-4">履歴書</p>
+                                <input class="input is-small" type="text" placeholder="ふりがな">
+                                <input class="input mt-1" type="text" placeholder="氏名">
+                            </div>
+                            <div class="column is-one-fifth">
+                                <p class="is-size-7">令和　5年　6月　19日　現在</p>
+                                <!-- dropdown -->
+                                <div class="dropdown is-hoverable is-right mt-5 is-pulled-right">
+                                    <div class="dropdown-trigger">
+                                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                                            <span>性別</span>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                                        <div class="dropdown-content">
+                                            <a class="dropdown-item">男性</a>
+                                            <a class="dropdown-item">女性</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- dropdown.end -->
+                            </div>
+                            <div class="column is-one-fifth">
+                                <figure class="image is-128x128">
+                                    <label class="file-label">
+                                        <input class="file-input" type="file" name="file-selection">
+                                        <img src="https://bulma.io/images/placeholders/128x128.png">
+                                    </label>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column">
+                                <input class="input is-small" type="text" placeholder="ふりがな">
+                                <input class="input mt-1" type="text" placeholder="現住所">
+                            </div>
+                            <div class="column is-3">
+                                <input class="input is-small" type="text" placeholder="生年月日">
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column">
+                                <input class="input is-small" type="text" placeholder="TEL" />
+                            </div>
+                            <div class="column">
+                                <input class="input is-small" type="text" placeholder="携帯電話" />
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column">
+                                <input class="input is-small" type="text" placeholder="e-mail">
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column">
+                                <input class="input is-small" type="text" placeholder="ふりがな">
+                                <textarea class="textarea has-fixed-size mt-1" rows="2" placeholder="連絡先　〒"></textarea>
+                            </div>
+                        </div>
+                        <!-- 学歴・職歴欄 -->
+                        <div class="columns mb-0">
+                            <div class="column is-2 pb-0">
+                                <p>年</p>
+                            </div>
+                            <div class="column is-1 pb-0">
+                                <p>月</p>
+                            </div>
+                            <div class="column pb-0">
+                                <p>学歴・職歴</p>
+                            </div>
+                        </div>
+                        <hr class="dropdown-divider">
+                        <div class="columns">
+                            <div class="column is-2 pr-0">
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                            </div>
+                            <div class="column is-1 px-0">
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                            </div>
+                            <div class="column pl-0">
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                            </div>
+                        </div>
+                        <!-- 免許・資格欄 -->
+                        <div class="columns mb-0">
+                            <div class="column is-2 pb-0">
+                                <p>年</p>
+                            </div>
+                            <div class="column is-1 pb-0">
+                                <p>月</p>
+                            </div>
+                            <div class="column pb-0">
+                                <p>免許・資格</p>
+                            </div>
+                        </div>
+                        <hr class="dropdown-divider">
+                        <div class="columns">
+                            <div class="column is-2 pr-0">
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                            </div>
+                            <div class="column is-1 px-0">
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                            </div>
+                            <div class="column pl-0">
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                            </div>
+                        </div>
+                        <div class="control mb-5">
+                            <textarea class="textarea has-fixed-size" rows="6" placeholder="自己PR"></textarea>
+                        </div>
+                        <div class="control mb-5">
+                            <textarea class="textarea has-fixed-size" rows="6" placeholder="志望動機"></textarea>
+                        </div>
+                        <div class="columns">
+                            <div class="column pr-0 is-one-third">
+                                <input class="input" type="text" placeholder="最寄り駅" />
+                            </div>
+                            <div class="column px-1">
+                                <input class="input" type="text" placeholder="扶養家族（配偶者を除く）" />
+                            </div>
+                            <div class="column px-0">
+                                <input class="input" type="text" placeholder="配偶者の有無" />
+                            </div>
+                            <div class="column pl-1">
+                                <input class="input" type="text" placeholder="配偶者の扶養義務" />
+                            </div>
+                        </div>
+                        <div class="control mb-5">
+                            <textarea class="textarea has-fixed-size" rows="6" placeholder="自由欄"></textarea>
+                        </div>
                     </div>
+
+
                 </div>
-                <div class="columns">
-                    <div class="column">
-                        <input class="input is-small" type="text" placeholder="ふりがな">
-                        <input class="input mt-1" type="text" placeholder="現住所">
-                    </div>
-                    <div class="column is-3">
-                        <input class="input is-small" type="text" placeholder="生年月日">
-                    </div>
-                </div>
-                <div class="columns">
-                    <div class="column">
-                        <input class="input is-small" type="text" placeholder="TEL" />
-                    </div>
-                    <div class="column">
-                        <input class="input is-small" type="text" placeholder="携帯電話" />
-                    </div>
-                </div>
-                <div class="columns">
-                    <div class="column">
-                        <input class="input is-small" type="text" placeholder="e-mail">
-                    </div>
-                </div>
-                <div class="columns">
-                    <div class="column">
-                        <input class="input is-small" type="text" placeholder="ふりがな">
-                        <textarea class="textarea has-fixed-size mt-1" rows="2" placeholder="連絡先　〒"></textarea>
-                    </div>
-                </div>
-                <!-- 学歴・職歴欄 -->
-                <div class="columns mb-0">
-                    <div class="column is-2 pb-0">
-                        <p>年</p>
-                    </div>
-                    <div class="column is-1 pb-0">
-                        <p>月</p>
-                    </div>
-                    <div class="column pb-0">
-                        <p>学歴・職歴</p>
-                    </div>
-                </div>
-                <hr class="dropdown-divider">
-                <div class="columns">
-                    <div class="column is-2 pr-0">
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                    </div>
-                    <div class="column is-1 px-0">
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                    </div>
-                    <div class="column pl-0">
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                    </div>
-                </div>
-                <!-- 免許・資格欄 -->
-                <div class="columns mb-0">
-                    <div class="column is-2 pb-0">
-                        <p>年</p>
-                    </div>
-                    <div class="column is-1 pb-0">
-                        <p>月</p>
-                    </div>
-                    <div class="column pb-0">
-                        <p>免許・資格</p>
-                    </div>
-                </div>
-                <hr class="dropdown-divider">
-                <div class="columns">
-                    <div class="column is-2 pr-0">
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                    </div>
-                    <div class="column is-1 px-0">
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                    </div>
-                    <div class="column pl-0">
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                        <input class="input is-small" type="text" />
-                    </div>
-                </div>
-                <div class="control mb-5">
-                    <textarea class="textarea has-fixed-size" rows="6" placeholder="自己PR"></textarea>
-                </div>
-                <div class="control mb-5">
-                    <textarea class="textarea has-fixed-size" rows="6" placeholder="志望動機"></textarea>
-                </div>
-                <div class="columns">
-                    <div class="column pr-0 is-one-third">
-                        <input class="input" type="text" placeholder="最寄り駅" />
-                    </div>
-                    <div class="column px-1">
-                        <input class="input" type="text" placeholder="扶養家族（配偶者を除く）" />
-                    </div>
-                    <div class="column px-0">
-                        <input class="input" type="text" placeholder="配偶者の有無" />
-                    </div>
-                    <div class="column pl-1">
-                        <input class="input" type="text" placeholder="配偶者の扶養義務" />
-                    </div>
-                </div>
-                <div class="control mb-5">
-                    <textarea class="textarea has-fixed-size" rows="6" placeholder="自由欄"></textarea>
-                </div>
+                <!-- wrapper.end -->
             </div>
+
+            <!-- tab2 -->
+            <div class="tab-content">
+                <div class="tile is-ancestor">
+                    <!-- leftbox -->
+                    <div class="tile is-4 is-vertical is-parent">
+                        <p class="title is-size-5">プロフィール</p>
+                        <div class="tile is-child">
+                            <!-- アカウントアイコン（変更可） -->
+                            <div class="title is-centered file">
+                                <label class="file-label">
+                                    <input class="file-input" type="file" name="file-selection">
+                                    <img class="image is-96x96 is-rounded" src="images/index/user-icon.png" />
+                                </label>
+                            </div>
+                            <!-- アカウントアイコン（変更可）.end -->
+
+                            <div class="subtitle field">
+                                <div class="field">
+                                    <p class="is-size-7 has-text-centered">2023年6月1日に登録</p>
+                                </div>
+                                <!-- history-nav -->
+                                <nav class="level">
+
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="heading">総完了数</p>
+                                            <p class="title is-size-4">3</p>
+                                        </div>
+                                    </div>
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="heading">動画視聴時間</p>
+                                            <p class="title is-size-4">5.6H</p>
+                                        </div>
+                                    </div>
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="heading">学習日数</p>
+                                            <p class="title is-size-4">1D</p>
+                                        </div>
+                                    </div>
+                                </nav>
+                                <!-- history-nav.end -->
+                                <!-- plofile -->
+                                <div class="field">
+                                    <label class="label">ユーザー名</label>
+                                    <p>@User_1</p>
+                                </div>
+
+                                <div class="field">
+                                    <label class="label">メールアドレス</label>
+                                    <p>example@example.com</p>
+                                </div>
+
+                                <div class="field">
+                                    <label class="label">電話番号</label>
+                                    <p>08013459876</p>
+                                </div>
+                                <!-- read-file -->
+                                <div class="field">
+                                    <label class="label">履歴書</label>
+                                    <div id="read-file1" class="file has-name is-small">
+                                        <label class="file-label">
+                                            <input class="file-input" type="file" name="resume">
+                                            <span class="file-cta">
+                                                <span class="file-icon">
+                                                    <i class="fas fa-upload"></i>
+                                                </span>
+                                                <span class="file-label">
+                                                    ファイルを選択…
+                                                </span>
+                                            </span>
+                                            <span class="file-name">
+                                                No file uploaded
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <script>
+                                    const fileInput = document.querySelector('#read-file1 input[type=file]');
+                                    fileInput.onchange = () => {
+                                        if (fileInput.files.length > 0) {
+                                            const fileName = document.querySelector('#read-file1 .file-name');
+                                            fileName.textContent = fileInput.files[0].name;
+                                        }
+                                    }
+                                </script>
+                                <!-- read-file.end -->
+                                <div class="field has-text-right mt-6">
+                                    <button class="button js-modal-trigger" data-target="account-setting-modal">アカウント設定</button>
+                                    <button class="button js-modal-trigger" data-target="mail-setting-modal">通知設定</button>
+                                </div>
+                                <!-- plofile.end -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- leftbox.end -->
+                    <!-- rightbox -->
+                    <div class="tile is-vertical is-parent box">
+                        <div class="columns">
+                            <div class="column">
+                                <p class="title is-size-4">職務経歴書</p>
+                                <input class="input is-small" type="text" placeholder="ふりがな">
+                                <input class="input mt-1" type="text" placeholder="氏名">
+                            </div>
+                            <div class="column is-one-fifth">
+                                <p class="is-size-7">令和　5年　6月　19日　現在</p>
+                                <!-- dropdown -->
+                                <div class="dropdown is-hoverable is-right mt-5 is-pulled-right">
+                                    <div class="dropdown-trigger">
+                                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                                            <span>性別</span>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                                        <div class="dropdown-content">
+                                            <a class="dropdown-item">男性</a>
+                                            <a class="dropdown-item">女性</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- dropdown.end -->
+                            </div>
+                            <div class="column is-one-fifth">
+                                <figure class="image is-128x128">
+                                    <label class="file-label">
+                                        <input class="file-input" type="file" name="file-selection">
+                                        <img src="https://bulma.io/images/placeholders/128x128.png">
+                                    </label>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column">
+                                <input class="input is-small" type="text" placeholder="ふりがな">
+                                <input class="input mt-1" type="text" placeholder="現住所">
+                            </div>
+                            <div class="column is-3">
+                                <input class="input is-small" type="text" placeholder="生年月日">
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column">
+                                <input class="input is-small" type="text" placeholder="TEL" />
+                            </div>
+                            <div class="column">
+                                <input class="input is-small" type="text" placeholder="携帯電話" />
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column">
+                                <input class="input is-small" type="text" placeholder="e-mail">
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column">
+                                <input class="input is-small" type="text" placeholder="ふりがな">
+                                <textarea class="textarea has-fixed-size mt-1" rows="2" placeholder="連絡先　〒"></textarea>
+                            </div>
+                        </div>
+                        <!-- 学歴・職歴欄 -->
+                        <div class="columns mb-0">
+                            <div class="column is-2 pb-0">
+                                <p>年</p>
+                            </div>
+                            <div class="column is-1 pb-0">
+                                <p>月</p>
+                            </div>
+                            <div class="column pb-0">
+                                <p>学歴・職歴</p>
+                            </div>
+                        </div>
+                        <hr class="dropdown-divider">
+                        <div class="columns">
+                            <div class="column is-2 pr-0">
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                            </div>
+                            <div class="column is-1 px-0">
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                            </div>
+                            <div class="column pl-0">
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                            </div>
+                        </div>
+                        <!-- 免許・資格欄 -->
+                        <div class="columns mb-0">
+                            <div class="column is-2 pb-0">
+                                <p>年</p>
+                            </div>
+                            <div class="column is-1 pb-0">
+                                <p>月</p>
+                            </div>
+                            <div class="column pb-0">
+                                <p>免許・資格</p>
+                            </div>
+                        </div>
+                        <hr class="dropdown-divider">
+                        <div class="columns">
+                            <div class="column is-2 pr-0">
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                            </div>
+                            <div class="column is-1 px-0">
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                            </div>
+                            <div class="column pl-0">
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                                <input class="input is-small" type="text" />
+                            </div>
+                        </div>
+                        <div class="control mb-5">
+                            <textarea class="textarea has-fixed-size" rows="6" placeholder="自己PR"></textarea>
+                        </div>
+                        <div class="control mb-5">
+                            <textarea class="textarea has-fixed-size" rows="6" placeholder="志望動機"></textarea>
+                        </div>
+                        <div class="columns">
+                            <div class="column pr-0 is-one-third">
+                                <input class="input" type="text" placeholder="最寄り駅" />
+                            </div>
+                            <div class="column px-1">
+                                <input class="input" type="text" placeholder="扶養家族（配偶者を除く）" />
+                            </div>
+                            <div class="column px-0">
+                                <input class="input" type="text" placeholder="配偶者の有無" />
+                            </div>
+                            <div class="column pl-1">
+                                <input class="input" type="text" placeholder="配偶者の扶養義務" />
+                            </div>
+                        </div>
+                        <div class="control mb-5">
+                            <textarea class="textarea has-fixed-size" rows="6" placeholder="自由欄"></textarea>
+                        </div>
+                    </div>
+                    <!-- right.end -->
+                </div>
+                <!-- wrapper.end -->
+            </div>
+            <!-- tab2.end -->
         </div>
-        <!-- wrapper.end -->
+        <!-- tabcontainer.end -->
     </section>
 
     <!-- modal -->
