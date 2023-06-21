@@ -13,4 +13,9 @@
     "inputFile": "scss/top.scss",
     "outputFile": "css/top.css"
   }
+  ,
+  {
+    "inputFile": "scss/common.scss",
+    "outputFile": "css/common.css"
+  }
 ]

@@ -9,6 +9,8 @@
 
     <!-- reset css -->
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+    <!-- common css -->
+    <link rel="stylesheet" href="css/common.css" />
 
     <!-- js -->
     <script src="js/main.js" defer></script>
@@ -17,38 +19,75 @@
 </head>
 <body>
     <!-- signup__section -->
-    <section class="section has-background-white-ter">
-        <div class="tile is-ancestor">
+    <section class="hero is-fullheight">
+        <div class="hero-body tile is-ancestor has-background-success-light">
             <div class="tile is-parent is-justify-content-center">
-                <article class="tile is-child box is-6">
+                <article class="tile is-child box is-5">
                     <div class="content">
                         <div class="has-text-centered">
-                            <a class="title" href="top.html"><img src="images/logo.png"></a>
-                            <p class="subtitle mt-4">登録フォーム</p>
-                            <hr class="navbar-divider"><br />
+                            <p class="title mt-5 pb-3 is-4">アカウントを作成</p>
+                            <p class="subtitle is-7 has-text-grey">すでにアカウントをお持ちですか？ <a href="login.html">ログイン</a></p>
+                            <hr class="custom-divider"><br />
                         </div>
-                        <p>
-                            氏名
-                            <input class="input" type="text" placeholder="氏名">
-                        </p>
-                        <p>
-                            生年月日
-                            <input class="input" type="text" placeholder="生年月日">
-                        </p>
-                        <p>
-                            電話番号
-                            <input class="input" type="text" placeholder="電話番号">
-                        </p>
-                        <p>
-                            メールアドレス
-                            <input class="input" type="email" placeholder="メールアドレス">
-                        </p>
-                        <p>
-                            パスワード
-                            <input class="input" type="password" placeholder="パスワード">
-                        </p>
+                        <!-- Name -->
+                        <div class="field my-4">
+                            <p class="control has-icons-left has-icons-right">
+                                <input class="input" type="text" placeholder="Name">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <!-- Birth -->
+                        <div class="field my-4">
+                            <p class="control has-icons-left has-icons-right">
+                                <input class="input" type="text" placeholder="Birth">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-birthday-cake"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <!-- TEL -->
+                        <div class="field my-4">
+                            <p class="control has-icons-left has-icons-right">
+                                <input class="input" type="text" placeholder="TEL">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-phone"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <!-- Email -->
+                        <div class="field my-4">
+                            <p class="control has-icons-left has-icons-right">
+                                <input class="input" type="email" placeholder="Email">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <!-- Password -->
+                        <div class="field my-4">
+                            <p class="control has-icons-left">
+                                <input class="input" type="password" placeholder="Password">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <!-- gender -->
+                        <div class="control my4">
+                            <label class="radio">
+                                <input type="radio" name="rsvp">
+                                男性
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="rsvp">
+                                女性
+                            </label>
+                        </div><br />
+                        <!-- button -->
                         <div class="has-text-centered">
-                            <button class="button js-modal-trigger is-primary" data-target="signup-modal">
+                            <button class="button js-modal-trigger is-primary is-fullwidth" data-target="signup-modal">
                                 <strong>新規登録</strong>
                             </button>
                         </div>
