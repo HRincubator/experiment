@@ -71,7 +71,7 @@
     </header>
     <!-- header.end -->
 
-    <section class="section has-background-success-light">
+    <section class="section">
         <!-- パンくずリスト -->
         <nav class="breadcrumb is-size-7" aria-label="breadcrumbs">
             <ul>
@@ -107,86 +107,68 @@
                         </label>
                     </div>
                     <!-- アカウントアイコン（変更可）.end -->
-
                     <div class="subtitle field">
                         <div class="field">
-                            <p class="is-size-7 has-text-centered mt-6">2023年6月1日に登録</p>
+                            <p class="is-size-7 has-text-centered mt-6 pr-4">2023年6月1日に登録</p>
                         </div>
-                        <!-- history-nav -->
-                        <nav class="level mb-6">
-                            <div class="level-item has-text-centered">
-                                <div>
-                                    <p class="heading">テスト完了数</p>
-                                    <p class="title is-size-5">3/20本</p>
-                                </div>
-                            </div>
-                            <div class="level-item has-text-centered">
-                                <div>
-                                    <p class="heading">動画視聴数</p>
-                                    <p class="title is-size-5">6/20本</p>
-                                </div>
-                            </div>
-                            <div class="level-item has-text-centered">
-                                <div>
-                                    <p class="heading">学習日数</p>
-                                    <p class="title is-size-5">1日</p>
-                                </div>
-                            </div>
-                        </nav>
-                        <!-- history-nav.end -->
                         <!-- plofile -->
-                        <div class="conteiner mx-6">
-                            <div class="field">
-                                <label class="label mb-1">ユーザー名</label>
-                                <p>@User_1</p>
-                            </div>
-
-                            <div class="field">
-                                <label class="label">メールアドレス</label>
-                                <p>example@example.com</p>
-                            </div>
-
-                            <div class="field">
-                                <label class="label">電話番号</label>
-                                <p>08013459876</p>
-                            </div>
-                            <!-- read-file -->
-                            <div class="field">
-                                <label class="label">履歴書</label>
-                                <div id="read-file1" class="file has-name is-small">
-                                    <label class="file-label">
-                                        <input class="file-input" type="file" name="resume">
-                                        <span class="file-cta">
-                                            <span class="file-icon">
-                                                <i class="fas fa-upload"></i>
-                                            </span>
-                                            <span class="file-label">
-                                                ファイルを選択…
-                                            </span>
-                                        </span>
-                                        <span class="file-name">
-                                            No file uploaded
-                                        </span>
-                                    </label>
+                        <div class="conteiner mx-3 pt-5">
+                            <div class="columns">
+                                <div class="column">
+                                    <div class="field">
+                                        <label class="label mb-0">ユーザー名</label>
+                                        <p class="mt-2">@User_1</p>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="field">
+                                        <label class="label mb-0">メールアドレス</label>
+                                        <p class="mt-2">example@example.com</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="field">
-                                <label class="label">職務経歴書</label>
-                                <div id="read-file1" class="file has-name is-small">
-                                    <label class="file-label">
-                                        <input class="file-input" type="file" name="resume">
-                                        <span class="file-cta">
-                                            <span class="file-icon">
-                                                <i class="fas fa-upload"></i>
-                                            </span>
-                                            <span class="file-label">
-                                                ファイルを選択…
-                                            </span>
-                                        </span>
-                                        <span class="file-name">
-                                            No file uploaded
-                                        </span>
-                                    </label>
+                            <div class="columns">
+                                <div class="column">
+                                    <div class="field">
+                                        <label class="label">履歴書</label>
+                                        <div id="read-file1" class="file has-name is-small">
+                                            <label class="file-label">
+                                                <input class="file-input" type="file" name="resume">
+                                                <span class="file-cta">
+                                                    <span class="file-icon">
+                                                        <i class="fas fa-upload"></i>
+                                                    </span>
+                                                    <span class="file-label">
+                                                        ファイルを選択…
+                                                    </span>
+                                                </span>
+                                                <span class="file-name">
+                                                    No file uploaded
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="field">
+                                        <label class="label">職務経歴書</label>
+                                        <div id="read-file1" class="file has-name is-small">
+                                            <label class="file-label">
+                                                <input class="file-input" type="file" name="resume">
+                                                <span class="file-cta">
+                                                    <span class="file-icon">
+                                                        <i class="fas fa-upload"></i>
+                                                    </span>
+                                                    <span class="file-label">
+                                                        ファイルを選択…
+                                                    </span>
+                                                </span>
+                                                <span class="file-name">
+                                                    No file uploaded
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -199,19 +181,79 @@
                                     }
                                 }
                             </script>
-                            <!-- read-file.end -->
-                            <div class="field has-text-right mt-6">
-                                <button class="button js-modal-trigger is-primary mr-2" data-target="account-setting-modal">アカウント設定</button>
-                                <button class="button js-modal-trigger" data-target="mail-setting-modal">通知設定</button>
-                            </div>
                             <!-- plofile.end -->
-                        </div>
-                        <div class="container has-text-centered mt-4 is-size-6">
-                            <input type="submit" class="has-text-info js-modal-trigger" data-target="quit-modal" value="アカウントを削除される場合はこちら" />
                         </div>
                     </div>
                 </div>
+                <div class="tile is-child">
+                </div>
             </div>
+            <!-- right-sidebars -->
+            <div class="tile is-3 is-vertical is-parent">
+                <!-- status -->
+                <div class="tile is-child box">
+                    <p class="title is-5 has-text-grey pl-3 pt-3">学習ステータス</p>
+                    <p class="has-text-centered is-size-3"><i class="fas fa-medal has-text-warning-dark"></i> ブロンズ</p>
+                    <div class="container mt-4">
+                        <div class="columns mb-0">
+                            <div class="column">
+                                <p><i class="fas fa-calendar has-text-warning"></i>　学習日数</p>
+                            </div>
+                            <div class="column has-text-right">
+                                <p>5日</p>
+                            </div>
+                        </div>
+                        <div class="columns mb-0">
+                            <div class="column">
+                                <p><i class="fas fa-award has-text-warning"></i>　講座視聴本数</p>
+                            </div>
+                            <div class="column has-text-right">
+                                <p>5 / 20本</p>
+                            </div>
+                        </div>
+                        <div class="columns mb-0">
+                            <div class="column">
+                                <p><i class="fas fa-trophy has-text-warning"></i>　テスト完了数</p>
+                            </div>
+                            <div class="column has-text-right">
+                                <p>5 / 20本</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- status.end -->
+                <!-- side-menu -->
+                <div class="tile is-child box">
+                    <aside class="menu">
+                        <p class="menu-label">
+                            設定
+                        </p>
+                        <ul class="menu-list">
+                            <li><a class="js-modal-trigger" data-target="account-setting-modal">アカウント設定</a></li>
+                            <li><a class="js-modal-trigger" data-target="mail-setting-modal">通知設定</a></li>
+                        </ul>
+                        <p class="menu-label">
+                            コンテンツ
+                        </p>
+                        <ul class="menu-list">
+                            <li><a href="coursetop.html">動画教材一覧</a></li>
+                            <li><a href="testtop.html">テスト一覧</a></li>
+                        </ul>
+                        <p class="menu-label">
+                            その他
+                        </p>
+                        <ul class="menu-list">
+                            <li><a>ヘルプ</a></li>
+                            <li><a>利用規約</a></li>
+                            <li><a class="has-text-danger js-modal-trigger" data-target="quit-modal">退会</a></li>
+                        </ul>
+                    </aside>
+                </div>
+                <!-- side-menu.end -->
+                <div class="tile is-child">
+                </div>
+            </div>
+            <!-- right-sidebars.end -->
         </div>
         <!-- wrapper.end -->
     </section>
@@ -332,5 +374,49 @@
         </div>
     </div>
     <!-- modal.end -->
+    <!-- footer -->
+    <footer class="footer has-background-grey-lighter pb-3">
+        <!-- content -->
+        <div class="content has-text-derk">
+            <!-- columns -->
+            <div class="columns">
+                <!-- left-content -->
+                <div class="column is-two-fifths">
+                    <a class="tile box is-5 p-2 ml-6" href="top.html">
+                        <img src="images/logo.png">
+                    </a>
+                </div>
+                <!-- left-content.end -->
+                <!-- right-content -->
+                <div class="column">
+                    <p class="title is-6">サービス</p>
+                    <div class="is-size-7 ml-3">
+                        <p>動画教材一覧</p>
+                        <p>テスト一覧</p>
+                        <p>ヘルプ</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <p class="title is-6">サポート</p>
+                    <div class="is-size-7 ml-3">
+                        <p>運営会社</p>
+                        <p>採用情報</p>
+                        <p>利用規約</p>
+                        <p>特定商取引法に基づく表示</p>
+                        <p>プライバシーポリシー</p>
+                    </div>
+                </div>
+                <!-- right-content.end -->
+            </div>
+            <!-- columns.end -->
+            <!-- copylight -->
+            <p class="has-text-centered mt-6">
+                <small>© Entrance Co. Ltd. 2023</small>
+            </p>
+            <!-- copylight.end -->
+        </div>
+        <!-- content.end -->
+    </footer>
+    <!-- footer.end -->
 </body>
 </html>

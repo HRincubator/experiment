@@ -30,7 +30,7 @@
                             <p class="subtitle is-7 has-text-grey">すでにアカウントをお持ちですか？ <a href="login.html">ログイン</a></p><br />
                         </div>
                         <!-- UserName -->
-                        <div class="field my-4">
+                        <div class="field my-2">
                             <p class="control has-icons-left has-icons-right">
                                 <input class="input" type="text" placeholder="ユーザー名">
                                 <span class="icon is-small is-left">
@@ -38,17 +38,8 @@
                                 </span>
                             </p>
                         </div>
-                        <!-- Name -->
-                        <div class="field my-4">
-                            <p class="control has-icons-left has-icons-right">
-                                <input class="input" type="text" placeholder="氏名">
-                                <span class="icon is-small is-left">
-                                    <i class="fas fa-user"></i>
-                                </span>
-                            </p>
-                        </div>
                         <!-- Birth -->
-                        <div class="field my-4">
+                        <div class="field my-2">
                             <p class="control has-icons-left has-icons-right">
                                 <input class="input" type="text" placeholder="生年月日">
                                 <span class="icon is-small is-left">
@@ -56,17 +47,8 @@
                                 </span>
                             </p>
                         </div>
-                        <!-- TEL -->
-                        <div class="field my-4">
-                            <p class="control has-icons-left has-icons-right">
-                                <input class="input" type="text" placeholder="電話番号">
-                                <span class="icon is-small is-left">
-                                    <i class="fas fa-phone"></i>
-                                </span>
-                            </p>
-                        </div>
                         <!-- Email -->
-                        <div class="field my-4">
+                        <div class="field my-2">
                             <p class="control has-icons-left has-icons-right">
                                 <input class="input" type="email" placeholder="メールアドレス">
                                 <span class="icon is-small is-left">
@@ -75,7 +57,7 @@
                             </p>
                         </div>
                         <!-- Password -->
-                        <div class="field my-4">
+                        <div class="field my-2">
                             <p class="control has-icons-left">
                                 <input class="input" type="password" placeholder="パスワード">
                                 <span class="icon is-small is-left">
@@ -84,20 +66,28 @@
                             </p>
                         </div>
                         <!-- gender -->
-                        <div class="control my4">
-                            <label class="radio">
-                                <input type="radio" name="rsvp">
-                                男性
-                            </label>
-                            <label class="radio">
-                                <input type="radio" name="rsvp">
-                                女性
-                            </label>
-                        </div><br />
+                        <!-- dropdown -->
+                        <div class="dropdown is-hoverable mb-5 is-pulled-left">
+                            <div class="dropdown-trigger">
+                                <button class="button" aria-haspopup="true" aria-controls="dropdown-men">
+                                    <span>性別</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                                <div class="dropdown-content">
+                                    <a class="dropdown-item">男性</a>
+                                    <a class="dropdown-item">女性</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- dropdown.end -->
                         <!-- button -->
                         <div class="has-text-centered">
                             <button class="button js-modal-trigger is-primary is-fullwidth" data-target="signup-modal">
-                                <strong>新規登録</strong>
+                                <strong>登録</strong>
                             </button>
                         </div>
                     </div>
