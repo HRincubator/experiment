@@ -6,6 +6,7 @@
 }
 .fv__hero {
     background-image: url("../images/fv-main.png");
+    min-height: 100vh;
     background-size: cover;
     position: relative;
     z-index: 0;
