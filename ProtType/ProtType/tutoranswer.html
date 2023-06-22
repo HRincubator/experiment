@@ -9,12 +9,12 @@
 
     <!-- reset css -->
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
-    <!-- css -->
-    <link rel="stylesheet" href="css/test.css" />
+    <!-- common css -->
+    <link rel="stylesheet" href="css/common.css" />
     <!-- js -->
     <script src="js/main.js" defer></script>
 
-    <title>Entrance | 回答ページ</title>
+    <title>Entrance | 解答</title>
 </head>
 <body>
     <!-- header -->
@@ -88,75 +88,40 @@
                         <span>テストトップ</span>
                     </a>
                 </li>
-                <li class="is-active">
-                    <a href="#">
+                <li>
+                    <a href="test.html">
                         <span class="icon is-small">
                             <i class="fas fa-pen" aria-hidden="true"></i>
                         </span>
                         <span>回答</span>
                     </a>
                 </li>
+                <li class="is-active">
+                    <a href="#">
+                        <span class="icon is-small">
+                            <i class="fas fa-spell-check" aria-hidden="true"></i>
+                        </span>
+                        <span>解答</span>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- パンくずリスト.end -->
-        <div class="container">
-            <p class="title is-5">テスト概要</p>
-            <p class="subtitle is-6 pb-6">テキストテキストテキスト</p>
-        </div>
         <!-- test-container -->
-        <!-- q1 -->
-        <div class="container box has-background-light">
-            <p class="title is-6">設問1</p>
-            <p class="subtitle is-6">問題文が表示されています。テキストテキストテキスト</p>
-            <ul class="options">
-                <li><input type="radio" name="q1" value="option1" /> A: 選択肢1</li>
-                <li><input type="radio" name="q1" value="option2" /> B: 選択肢2</li>
-                <li><input type="radio" name="q1" value="option3" /> C: 選択肢3</li>
-                <li><input type="radio" name="q1" value="option4" /> D: 選択肢4</li>
-            </ul>
+        <div class="container my-5">
+            <p class="title is-5">手動採点</p>
         </div>
-        <!-- q2 -->
-        <div class="container box has-background-light">
-            <p class="title is-6">設問2</p>
-            <p class="subtitle is-6">問題文が表示されています。テキストテキストテキスト</p>
-            <ul class="options">
-                <li><input type="radio" name="q2" value="option1" /> A: 選択肢1</li>
-                <li><input type="radio" name="q2" value="option2" /> B: 選択肢2</li>
-                <li><input type="radio" name="q2" value="option3" /> C: 選択肢3</li>
-                <li><input type="radio" name="q2" value="option4" /> D: 選択肢4</li>
-            </ul>
+        <div class="container">
+            <p class="ml-6">
+                チューターに解答を提出しました。<br />
+                採点が完了次第、メッセージが送られます。<br />
+                今しばらくお待ち下さい。
+            </p>
         </div>
-        <!-- test-container.end -->
-        <div class="field has-text-right mt-6">
-            <button class="button is-primary js-modal-trigger" data-target="send-modal">回答送信</button>
+        <div class="container field has-text-right mt-6 mr-6 pr-6">
+            <a class="button is-primary js-modal-trigger" href="coursetop.html">動画教材</a>
+            <a class="button is-primary js-modal-trigger" href="record.html">成績</a>
         </div>
     </section>
-    <!-- section.end -->
-
-    <!-- send-modal -->
-    <div id="send-modal" class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title">この内容で回答を送信してもよろしいでしょうか。</p>
-                <button class="delete" aria-label="close"></button>
-            </header>
-            <section class="modal-card-body">
-                <!-- Content ... -->
-                <div class="content">
-                    <p>入力した回答でよろしければ、下記の <strong>[回答送信]</strong> をクリックしてください。</p>
-                    <ul class="custom-list">
-                        <li>A</li>
-                        <li>C</li>
-                    </ul>
-                </div>
-            </section>
-            <footer class="modal-card-foot">
-                <a class="button is-primary js-modal-trigger" href="answer.html">回答送信</a>
-                <button class="button">キャンセル</button>
-            </footer>
-        </div>
-    </div>
-    <!-- send-modal.end -->
 </body>
 </html>
