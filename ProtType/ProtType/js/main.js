@@ -89,3 +89,47 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// 文字起こしを表示
+/*document.addEventListener("DOMContentLoaded", function () {
+    var video = document.getElementById("courseVideo");
+    var transcriptionElement = document.getElementById("transcription");
+
+    video.addEventListener("timeupdate", function () {
+        var currentTime = video.currentTime;
+
+        // 時間に応じて表示するテキストを設定
+        var textToShow = "";
+        if (currentTime >= 0 && currentTime < 5) {
+            textToShow = "text1";
+        } else if (currentTime >= 5 && currentTime < 10) {
+            textToShow = "text2";
+        }
+
+        // テキストを表示
+        transcriptionElement.textContent = textToShow;
+    });
+});*/
+
+
+// お気に入りボタンをクリックしたときの処理
+const favoriteButtons = document.querySelectorAll('.favorite-button');
+
+favoriteButtons.forEach(button => {
+    let isFavorite = false; // 初期値はお気に入りではない
+
+    button.addEventListener('click', () => {
+        const icon = button.querySelector('.icon i');
+
+        if (isFavorite) {
+            icon.classList.remove('fas');
+            icon.classList.add('far');
+            button.classList.remove('is-favorite');
+            isFavorite = false;
+        } else {
+            icon.classList.remove('far');
+            icon.classList.add('fas');
+            button.classList.add('is-favorite');
+            isFavorite = true;
+        }
+    });
+});

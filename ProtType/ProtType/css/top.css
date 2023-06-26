@@ -3,6 +3,15 @@
   text-align: center;
 }
 
+.about__section img {
+  max-width: 130px;
+}
+
+.service__section {
+  width: 70%;
+  margin: 0 auto 0 auto;
+}
+
 .fv__hero {
   background-image: url("../images/fv-main.png");
   background-size: cover;

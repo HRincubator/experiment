@@ -10,14 +10,14 @@
     <link rel="icon" href="images/favicon.ico">
     <!-- reset css -->
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+    <!-- common css -->
+    <link rel="stylesheet" href="css/common.css" />
     <!-- css -->
     <link rel="stylesheet" href="css/record.css" />
     <!-- js -->
     <script src="js/main.js" defer></script>
 
     <title>Entrance | 成績</title>
-
-
 </head>
 <body>
     <!-- header -->
@@ -70,9 +70,8 @@
         </nav>
     </header>
     <!-- header.end -->
-    
     <!-- section -->
-    <section class="section">
+    <section class="section record__section my-0 py-0" style="overflow:hidden">
         <!-- パンくずリスト -->
         <nav class="breadcrumb is-size-7" aria-label="breadcrumbs">
             <ul>
@@ -95,121 +94,388 @@
             </ul>
         </nav>
         <!-- パンくずリスト.end -->
-        <div class="tile is-ancestor">
-            <div class="tile is-parent is-justify-content-center">
-                <article class="tile is-child box is-9">
-                    <p class="title is-size-4">動画教材進捗</p>
-                    <div class="content">
-                        <dl>
-                            <!-- 第1部 -->
-                            <dt>
+        <!-- main-container -->
+        <div class="container custom-container">
+            <!-- tabbar -->
+            <div class="tabs custom-tabs is-centered">
+                <ul class="tab-list">
+                    <li class="tab-item is-active">
+                        <a>
+                            <span class="icon is-small"><i class="fas fa-map" aria-hidden="true"></i></span>
+                            <span>一覧</span>
+                        </a>
+                    </li>
+                    <li class="tab-item">
+                        <a>
+                            <span class="icon is-small"><i class="fas fa-book" aria-hidden="true"></i></span>
+                            <span>学習中講座</span>
+                        </a>
+                    </li>
+                    <li class="tab-item">
+                        <a>
+                            <span class="icon is-small"><i class="fas fa-graduation-cap" aria-hidden="true"></i></span>
+                            <span>修了講座</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- tabbar.end -->
+            <!-- tabcontent -->
+            <div class="tab-container">
+                <!-- tab1 -->
+                <div class="tab-content active">
+                    <!-- tile-wrapper -->
+                    <div class="tile is-ancestor">
+                        <div class="tile is-parent is-justify-content-center">
+                            <div class="tile is-child is-9">
+                                <!-- Content... -->
                                 <div class="columns">
                                     <div class="column">
-                                        <p class="is-size-5 has-text-weight-semibold">第1部 様々な基本機能</p>
-                                    </div>
-                                    <div class="column">
-                                        <progress class="progress is-primary" value="100" max="100">100%</progress>
+                                        <p class="is-size-5 has-text-weight-semibold">
+                                            <span class="icon">
+                                                <i class="fas fa-trophy has-text-warning" aria-hidden="true"></i>
+                                            </span>
+                                            第1部 様々な基本機能
+                                            <span class="icon">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </p>
                                     </div>
                                 </div>
-                            </dt>
-                            <dd>
-                                <!-- 第1章 -->
-                                <div class="columns mb-1">
+                                <div class="columns">
                                     <div class="column is-three-fifths pb-0">
                                         <p>第1章 文字列の操作</p>
                                     </div>
-                                    <div class="column is-1 py-0">
+                                    <div class="column is-1">
                                         <p class="has-text-primary">100%</p>
                                     </div>
-                                    <div class="column pt-0">
+                                    <div class="column">
                                         <progress class="progress is-primary is-small" value="100" max="100">100%</progress>
                                     </div>
                                 </div>
-                                <div class="columns mb-1">
-                                    <div class="column py-0 is-3">
-                                        <ul>
-                                            <li style="list-style-type: none;"><i class="fas fa-check"></i> テスト実施済み</li>
-                                        </ul>
+                                <div class="columns">
+                                    <div class="column is-3">
+                                        <span class="tag is-medium is-rounded has-text-weight-medium">
+                                            <span class="icon mr-1">
+                                                <i class="fas fa-box-open" aria-hidden="true"></i>
+                                            </span>
+                                            実施済み
+                                        </span>
                                     </div>
                                     <div class="column">
                                         <p>95点</p>
                                     </div>
                                 </div>
-                                <div class="columns mb-1">
+                                <div class="columns">
                                     <div class="column is-three-fifths pb-0">
                                         <p>第2章 日付と時間の取扱</p>
                                     </div>
                                     <div class="column is-1 py-0">
                                         <p class="has-text-primary">100%</p>
                                     </div>
-                                    <div class="column pt-0">
+                                    <div class="column">
                                         <progress class="progress is-primary is-small" value="100" max="100">100%</progress>
                                     </div>
                                 </div>
-                                <div class="columns mb-1">
+                                <div class="columns">
+                                    <div class="column is-3">
+                                        <span class="tag is-medium is-rounded has-text-weight-medium">
+                                            <span class="icon mr-1">
+                                                <i class="fas fa-box-open" aria-hidden="true"></i>
+                                            </span>
+                                            実施済み
+                                        </span>
+                                    </div>
+                                    <div class="column">
+                                        <p>80点</p>
+                                    </div>
+                                </div>
+                                <div class="columns">
                                     <div class="column is-three-fifths pb-0">
+                                        <p>第3章 コレクション</p>
+                                    </div>
+                                    <div class="column is-1">
+                                        <p class="has-text-primary">100%</p>
+                                    </div>
+                                    <div class="column">
+                                        <progress class="progress is-primary is-small" value="100" max="100">100%</progress>
+                                    </div>
+                                </div>
+                                <div class="columns">
+                                    <div class="column is-3">
+                                        <span class="tag is-medium is-rounded has-text-weight-medium">
+                                            <span class="icon mr-1">
+                                                <i class="fas fa-box-open" aria-hidden="true"></i>
+                                            </span>
+                                            実施済み
+                                        </span>
+                                    </div>
+                                    <div class="column">
+                                        <p>100点</p>
+                                    </div>
+                                </div>
+                                <!-- 第2部 -->
+                                <div class="columns">
+                                    <div class="column">
+                                        <p class="is-size-5 has-text-weight-semibold">
+                                            第2部 外部資産へのアクセス
+                                            <span class="icon">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="columns">
+                                    <div class="column is-three-fifths pb-0">
+                                        <p>第1章 ファイル操作</p>
+                                    </div>
+                                    <div class="column is-1">
+                                        <p class="has-text-primary">80%</p>
+                                    </div>
+                                    <div class="column">
+                                        <progress class="progress is-primary is-small" value="80" max="100">80%</progress>
+                                    </div>
+                                </div>
+                                <div class="columns">
+                                    <div class="column is-3">
+                                        <span class="tag is-medium is-rounded has-text-weight-medium">
+                                            <span class="icon mr-1">
+                                                <i class="fas fa-box" aria-hidden="true"></i>
+                                            </span>
+                                            未実施
+                                        </span>
+                                    </div>
+                                    <div class="column">
+                                        <p class="title">-</p>
+                                    </div>
+                                </div>
+                                <div class="columns">
+                                    <div class="column is-three-fifths pb-0">
+                                        <p>第2章 様々なファイル形式</p>
+                                    </div>
+                                    <div class="column is-1">
+                                        <p class="has-text-primary">0%</p>
+                                    </div>
+                                    <div class="column">
+                                        <progress class="progress is-primary is-small" value="0" max="100">0%</progress>
+                                    </div>
+                                </div>
+                                <div class="columns">
+                                    <div class="column is-3">
+                                        <span class="tag is-medium is-rounded has-text-weight-medium">
+                                            <span class="icon mr-1">
+                                                <i class="fas fa-box" aria-hidden="true"></i>
+                                            </span>
+                                            未実施
+                                        </span>
+                                    </div>
+                                    <div class="column">
+                                        <p class="title">-</p>
+                                    </div>
+                                </div>
+                                <!-- Content.end -->
+                                <!-- Buttons -->
+                                <div class="buttons mt-6">
+                                    <a class="button is-primary" href="coursetop.html">
+                                        <strong>動画教材</strong>
+                                    </a>
+                                    <a class="button is-light" href="testtop.html">
+                                        <strong>テスト</strong>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tile-wrapper.end -->
+                </div>
+                <!-- tab2 -->
+                <div class="tab-content">
+                    <!-- tile-wrapper -->
+                    <div class="tile is-ancestor">
+                        <div class="tile is-parent is-justify-content-center">
+                            <div class="tile is-child is-9">
+                                <!-- Content... -->
+                                <div class="columns has-text-centered mt-3">
+                                    <div class="column">
+                                        <p class="title mt-6 has-text-grey is-size-5">学習中講座はありません。</p>
+                                        <!-- Buttons -->
+                                        <div class="section">
+                                            <div class="buttons">
+                                                <a class="button is-primary" href="coursetop.html">
+                                                    <strong>動画教材</strong>
+                                                </a>
+                                                <a class="button is-light" href="testtop.html">
+                                                    <strong>テスト</strong>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column is-4">
+                                        <figure class="image is-128x128">
+                                            <img src="images/goal.png" />
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tile-wrapper.end -->
+                </div>
+                <!-- tab3 -->
+                <div class="tab-content">
+                    <!-- tile-wrapper -->
+                    <div class="tile is-ancestor">
+                        <div class="tile is-parent is-justify-content-center">
+                            <div class="tile is-child is-9">
+                                <!-- Content... -->
+                                <div class="columns">
+                                    <div class="column">
+                                        <p class="is-size-5 has-text-weight-semibold">
+                                            <span class="icon">
+                                                <i class="fas fa-trophy has-text-warning" aria-hidden="true"></i>
+                                            </span>
+                                            第1部 様々な基本機能
+                                            <span class="icon">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="columns">
+                                    <div class="column is-three-fifths">
+                                        <p>第1章 文字列の操作</p>
+                                    </div>
+                                    <div class="column is-1">
+                                        <p class="has-text-primary">100%</p>
+                                    </div>
+                                    <div class="column">
+                                        <progress class="progress is-primary is-small" value="100" max="100">100%</progress>
+                                    </div>
+                                </div>
+                                <div class="columns">
+                                    <div class="column is-3">
+                                        <span class="tag is-medium is-rounded has-text-weight-medium">
+                                            <span class="icon mr-1">
+                                                <i class="fas fa-box-open" aria-hidden="true"></i>
+                                            </span>
+                                            実施済み
+                                        </span>
+                                    </div>
+                                    <div class="column">
+                                        <p>95点</p>
+                                    </div>
+                                </div>
+                                <div class="columns">
+                                    <div class="column is-three-fifths pb-0">
+                                        <p>第2章 日付と時間の取扱</p>
+                                    </div>
+                                    <div class="column is-1 py-0">
+                                        <p class="has-text-primary">100%</p>
+                                    </div>
+                                    <div class="column">
+                                        <progress class="progress is-primary is-small" value="100" max="100">100%</progress>
+                                    </div>
+                                </div>
+                                <div class="columns">
+                                    <div class="column is-3">
+                                        <span class="tag is-medium is-rounded has-text-weight-medium">
+                                            <span class="icon mr-1">
+                                                <i class="fas fa-box-open" aria-hidden="true"></i>
+                                            </span>
+                                            実施済み
+                                        </span>
+                                    </div>
+                                    <div class="column">
+                                        <p>80点</p>
+                                    </div>
+                                </div>
+                                <div class="columns">
+                                    <div class="column is-three-fifths">
                                         <p>第3章 コレクション</p>
                                     </div>
                                     <div class="column is-1 py-0">
                                         <p class="has-text-primary">100%</p>
                                     </div>
-                                    <div class="column pt-0">
+                                    <div class="column">
                                         <progress class="progress is-primary is-small" value="100" max="100">100%</progress>
                                     </div>
                                 </div>
-                            </dd>
-                            <!-- 第2部 -->
-                            <dt>
-                                <div class="columns mb-1">
-                                    <div class="column">
-                                        <p class="is-size-5 has-text-weight-semibold">第2部 外部資産へのアクセス</p>
+                                <div class="columns">
+                                    <div class="column is-3">
+                                        <span class="tag is-medium is-rounded has-text-weight-medium">
+                                            <span class="icon mr-1">
+                                                <i class="fas fa-box-open" aria-hidden="true"></i>
+                                            </span>
+                                            実施済み
+                                        </span>
                                     </div>
                                     <div class="column">
-                                        <progress class="progress is-primary" value="40" max="100">40%</progress>
+                                        <p>100点</p>
                                     </div>
                                 </div>
-                            </dt>
-                            <dd>
-                                <div class="columns mb-1">
-                                    <div class="column is-three-fifths pb-0">
-                                        <p>第1章 ファイル操作</p>
-                                    </div>
-                                    <div class="column is-1 py-0">
-                                        <p class="has-text-primary">80%</p>
-                                    </div>
-                                    <div class="column pt-0">
-                                        <progress class="progress is-primary is-small" value="80" max="100">80%</progress>
-                                    </div>
+                                <!-- Buttons -->
+                                <div class="buttons mt-6">
+                                    <a class="button is-primary" href="coursetop.html">
+                                        <strong>動画教材</strong>
+                                    </a>
+                                    <a class="button is-light" href="testtop.html">
+                                        <strong>テスト</strong>
+                                    </a>
                                 </div>
-                                <div class="columns mb-1">
-                                    <div class="column is-three-fifths pb-0">
-                                        <p>第2章 様々なファイル形式</p>
-                                    </div>
-                                    <div class="column is-1 py-0">
-                                        <p class="has-text-primary">0%</p>
-                                    </div>
-                                    <div class="column pt-0">
-                                        <progress class="progress is-primary is-small" value="0" max="100">0%</progress>
-                                    </div>
-                                </div>
-                            </dd>
-                        </dl>
+                            </div>
+                        </div>
                     </div>
-                </article>
+                    <!-- tile-wrapper.end -->
+                </div>
             </div>
+            <!-- tabcontent.end -->
         </div>
-        <!-- Buttons -->
-        <div class="section">
-            <div class="buttons is-right mr-6">
-                <a class="button is-primary" href="coursetop.html">
-                    <strong>動画教材</strong>
-                </a>
-                <a class="button is-light" href="testtop.html">
-                    <strong>テスト</strong>
-                </a>
-            </div>
-        </div>
+        <!-- main-container.end -->
     </section>
     <!-- section.end -->
+    <!-- footer -->
+    <footer class="footer has-background-white-ter pb-3">
+        <!-- content -->
+        <div class="content has-text-derk">
+            <!-- columns -->
+            <div class="columns">
+                <!-- left-content -->
+                <div class="column is-two-fifths">
+                    <a class="tile box is-5 p-2 ml-6" href="top.html">
+                        <img src="images/logo.png">
+                    </a>
+                </div>
+                <!-- left-content.end -->
+                <!-- right-content -->
+                <div class="column">
+                    <p class="title is-6">サービス</p>
+                    <div class="is-size-7 ml-3">
+                        <p>動画教材一覧</p>
+                        <p>テスト一覧</p>
+                        <p>ヘルプ</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <p class="title is-6">サポート</p>
+                    <div class="is-size-7 ml-3">
+                        <p>運営会社</p>
+                        <p>採用情報</p>
+                        <p>利用規約</p>
+                        <p>特定商取引法に基づく表示</p>
+                        <p>プライバシーポリシー</p>
+                    </div>
+                </div>
+                <!-- right-content.end -->
+            </div>
+            <!-- columns.end -->
+            <!-- copylight -->
+            <p class="has-text-centered mt-6">
+                <small>© Entrance Co. Ltd. 2023</small>
+            </p>
+            <!-- copylight.end -->
+        </div>
+        <!-- content.end -->
+    </footer>
+    <!-- footer.end -->
 </body>
 </html>

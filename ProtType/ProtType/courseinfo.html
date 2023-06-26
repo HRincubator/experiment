@@ -1,8 +1,8 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- icon -->
     <link rel="icon" href="images/favicon.ico">
@@ -103,8 +103,8 @@
         <!-- パンくずリスト.end -->
         <!-- tile -->
         <div class="tile is-ancestor">
-            <!-- side-tile -->
-            <div class="tile is-3 is-vertical is-parent">
+            <!-- side__tile -->
+            <div class="tile is-3 is-vertical is-parent side__tile">
                 <!-- tabs -->
                 <div class="tabs is-boxed">
                     <ul class="tab-list is-size-7">
@@ -173,25 +173,30 @@
                     </div>
                 </div>
             </div>
-            <!-- side-tile.end -->
+            <!-- side__tile.end -->
             <!-- main-tile -->
             <div class="tile is-parent">
                 <div class="tile is-child pl-4">
                     <p class="title">講座視聴ページ</p><br />
                     <div class="column is-four-fifths mb-6">
-                        <video src="images/course/videos/course-sample.mp4" class="coursevideo" controls></video>
-                    </div><br />
+                        <!-- video -->
+                        <video src="images/course/videos/course-sample.mp4" class="coursevideo" id="courseVideo" controls></video>
+                    </div>
+
+                    <!-- video-info -->
                     <p class="title has-text-weight-normal is-4 mb-3">動画情報</p>
                     <hr class="dropdown-divider">
                     <p class="subtitle is-5">１－１．データ型について</p>
                     <p class="pb-6 mb-6">動画情報の本文を記載する場所になります。ここは、動画情報欄になります。</p>
                     <br />
-
+                    <!-- video-info.end -->
+                    <!-- memo -->
                     <p class="title has-text-weight-normal is-4 mb-3">メモ欄</p>
                     <hr class="dropdown-divider">
                     <div class="control">
                         <textarea class="textarea has-fixed-size" placeholder="メモ欄" rows="7"></textarea>
                     </div>
+                    <!-- memo.end -->
                 </div>
             </div>
             <!-- main-title.end -->

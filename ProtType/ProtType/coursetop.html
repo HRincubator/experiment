@@ -97,8 +97,8 @@
         <!-- パンくずリスト.end -->
         <!-- tile -->
         <div class="tile is-ancestor">
-            <!-- side-tile -->
-            <div class="tile is-3 is-vertical is-parent">
+            <!-- side__tile -->
+            <div class="tile is-3 is-vertical is-parent side__tile">
                 <!-- tabs -->
                 <div class="tabs is-boxed">
                     <ul class="tab-list is-size-7">
@@ -202,15 +202,323 @@
                         全てを完璧に覚えるまで頑張るよりも一周したら先へ進み、行き詰まったら復習するやり方をお勧めします。<br />
                         <br />所要時間の目安： 20時間
                     </p>
-
+                    <!-- course-info -->
                     <p class="title has-text-weight-normal is-4 my-3">単元一覧</p>
                     <hr class="dropdown-divider">
-                    <p>単元一覧について</p>
+                    <!-- first-level -->
+                    <div class="box">
+                        <p class="title is-size-6">入門編</p>
+                        <!-- card -->
+                        <div class="columns">
+                            <!-- card1 -->
+                            <div class="column">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="image is-2by1">
+                                            <a href="courseinfo.html"><img src="images/programming.png" alt="Placeholder image"></a>
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="media">
+                                            <div class="media-content">
+                                                <div class="columns">
+                                                    <div class="column">
+                                                        <p class="title is-6">第0部 開発環境の構築</p>
+                                                        <p class="subtitle is-7">所要目安時間：-</p>
+                                                    </div>
+                                                    <div class="column is-2">
+                                                        <button class="favorite-button">
+                                                            <span class="icon">
+                                                                <i class="far fa-star"></i>
+                                                            </span>
+                                                            <span class="favorite-text">お気に入り</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+                                            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card2 -->
+                            <div class="column">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="image is-2by1">
+                                            <a href="courseinfo.html"><img src="images/test.png" alt="Placeholder image"></a>
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="media">
+                                            <div class="media-content">
+                                                <div class="columns">
+                                                    <div class="column">
+                                                        <p class="title is-6">第1部 様々な基本機能</p>
+                                                        <p class="subtitle is-7">所要目安時間：3h</p>
+                                                    </div>
+                                                    <div class="column is-2">
+                                                        <button class="favorite-button">
+                                                            <span class="icon">
+                                                                <i class="far fa-star"></i>
+                                                            </span>
+                                                            <span class="favorite-text">お気に入り</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+                                            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column"></div>
+                        </div>
+                        <!-- card.end -->
+                    </div>
+                    <!-- second-level -->
+                    <div class="box">
+                        <p class="title is-size-6">基礎編</p>
+                        <!-- card -->
+                        <div class="columns">
+                            <!-- card1 -->
+                            <div class="column">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="image is-2by1">
+                                            <a href="courseinfo.html"><img src="images/programming.png" alt="Placeholder image"></a>
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="media">
+                                            <div class="media-content">
+                                                <div class="columns">
+                                                    <div class="column">
+                                                        <p class="title is-6">第1部 様々な基本機能</p>
+                                                        <p class="subtitle is-7">所要目安時間：3h</p>
+                                                    </div>
+                                                    <div class="column is-2">
+                                                        <button class="favorite-button">
+                                                            <span class="icon">
+                                                                <i class="far fa-star"></i>
+                                                            </span>
+                                                            <span class="favorite-text">お気に入り</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+                                            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card2 -->
+                            <div class="column">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="image is-2by1">
+                                            <a href="courseinfo.html"><img src="images/test.png" alt="Placeholder image"></a>
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="media">
+                                            <div class="media-content">
+                                                <div class="columns">
+                                                    <div class="column">
+                                                        <p class="title is-6">第2部 外部資産へのアクセス</p>
+                                                        <p class="subtitle is-7">所要目安時間：3h</p>
+                                                    </div>
+                                                    <div class="column is-2">
+                                                        <button class="favorite-button">
+                                                            <span class="icon">
+                                                                <i class="far fa-star"></i>
+                                                            </span>
+                                                            <span class="favorite-text">お気に入り</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+                                            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card3 -->
+                            <div class="column">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="image is-2by1">
+                                            <a href="courseinfo.html"><img src="images/record.png" alt="Placeholder image"></a>
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="media">
+                                            <div class="media-content">
+                                                <div class="columns">
+                                                    <div class="column">
+                                                        <p class="title is-6">第3部 テキスト</p>
+                                                        <p class="subtitle is-7">所要目安時間：3h</p>
+                                                    </div>
+                                                    <div class="column is-2">
+                                                        <button class="favorite-button">
+                                                            <span class="icon">
+                                                                <i class="far fa-star"></i>
+                                                            </span>
+                                                            <span class="favorite-text">お気に入り</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+                                            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card.end -->
+                    </div>
+                    <!-- third-level -->
+                    <div class="box">
+                        <p class="title is-size-6">実践編</p>
+                        <!-- card -->
+                        <div class="columns">
+                            <!-- card1 -->
+                            <div class="column">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="image is-2by1">
+                                            <a href="courseinfo.html"><img src="images/programming.png" alt="Placeholder image"></a>
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="media">
+                                            <div class="media-content">
+                                                <div class="columns">
+                                                    <div class="column">
+                                                        <p class="title is-6">第4部 テキスト</p>
+                                                        <p class="subtitle is-7">所要目安時間：3h</p>
+                                                    </div>
+                                                    <div class="column is-2">
+                                                        <button class="favorite-button">
+                                                            <span class="icon">
+                                                                <i class="far fa-star"></i>
+                                                            </span>
+                                                            <span class="favorite-text">お気に入り</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+                                            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card2 -->
+                            <div class="column">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="image is-2by1">
+                                            <a href="courseinfo.html"><img src="images/test.png" alt="Placeholder image"></a>
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="media">
+                                            <div class="media-content">
+                                                <div class="columns">
+                                                    <div class="column">
+                                                        <p class="title is-6">第5部 テキスト</p>
+                                                        <p class="subtitle is-7">所要目安時間：3h</p>
+                                                    </div>
+                                                    <div class="column is-2">
+                                                        <button class="favorite-button">
+                                                            <span class="icon">
+                                                                <i class="far fa-star"></i>
+                                                            </span>
+                                                            <span class="favorite-text">お気に入り</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+                                            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card3 -->
+                            <div class="column"></div>
+                        </div>
+                        <!-- card.end -->
+                    </div>
                 </div>
             </div>
             <!-- main-title.end -->
         </div>
         <!-- tile.end -->
     </section>
+    <!-- footer -->
+    <footer class="footer has-background-white-ter pb-3">
+        <!-- content -->
+        <div class="content has-text-derk">
+            <!-- columns -->
+            <div class="columns">
+                <!-- left-content -->
+                <div class="column is-two-fifths">
+                    <a class="tile box is-5 p-2 ml-6" href="top.html">
+                        <img src="images/logo.png">
+                    </a>
+                </div>
+                <!-- left-content.end -->
+                <!-- right-content -->
+                <div class="column">
+                    <p class="title is-6">サービス</p>
+                    <div class="is-size-7 ml-3">
+                        <p>動画教材一覧</p>
+                        <p>テスト一覧</p>
+                        <p>ヘルプ</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <p class="title is-6">サポート</p>
+                    <div class="is-size-7 ml-3">
+                        <p>運営会社</p>
+                        <p>採用情報</p>
+                        <p>利用規約</p>
+                        <p>特定商取引法に基づく表示</p>
+                        <p>プライバシーポリシー</p>
+                    </div>
+                </div>
+                <!-- right-content.end -->
+            </div>
+            <!-- columns.end -->
+            <!-- copylight -->
+            <p class="has-text-centered mt-6">
+                <small>© Entrance Co. Ltd. 2023</small>
+            </p>
+            <!-- copylight.end -->
+        </div>
+        <!-- content.end -->
+    </footer>
+    <!-- footer.end -->
 </body>
 </html>

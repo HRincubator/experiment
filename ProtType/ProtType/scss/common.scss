@@ -11,3 +11,46 @@
         }
     }
 }
+.side__tile {
+    min-height: 80vh;
+}
+
+.favorite-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+
+    &.is-favorite .icon i {
+        color: yellow;
+
+        &:before {
+            color: yellow;
+        }
+    }
+
+    .icon {
+        margin-right: 4px;
+    }
+
+    .favorite-text {
+        opacity: 0;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        white-space: nowrap;
+        pointer-events: none;
+        transition: opacity 0.2s ease;
+    }
+
+    &:hover .favorite-text {
+        opacity: 1;
+    }
+}

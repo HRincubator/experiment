@@ -1,1 +1,1 @@
-﻿*{box-sizing:border-box}.container{max-width:600px;margin:0 auto;padding:30px}.tab-container{padding:20px;line-height:2;height:300px}.tab-container .tab-content{display:none}.tab-container .tab-content.active{display:block}
+﻿.record__section{min-height:120vh}.custom-container{max-width:800px}.custom-tabs{width:70%;margin:0 auto 0 auto}.tab-container{padding:20px;line-height:2;height:300px}.tab-container .tab-content{display:none}.tab-container .tab-content.active{display:block}

@@ -2,18 +2,15 @@
   {
     "inputFile": "scss/mypage.scss",
     "outputFile": "css/mypage.css"
-  }
-,
+  },
   {
     "inputFile": "scss/record.scss",
     "outputFile": "css/record.css"
-  }
- ,
+  },
   {
     "inputFile": "scss/top.scss",
     "outputFile": "css/top.css"
-  }
-  ,
+  },
   {
     "inputFile": "scss/common.scss",
     "outputFile": "css/common.css"
