@@ -12,6 +12,8 @@
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
     <!-- css -->
     <link rel="stylesheet" href="css/messagelist.css" />
+    <!-- common css -->
+    <link rel="stylesheet" href="css/common.css" />
     <!-- js -->
     <script src="js/main.js" defer></script>
 
@@ -93,55 +95,148 @@
         <!-- パンくずリスト.end -->
         <!-- list -->
         <p class="title is-size-4">メッセージ一覧</p>
-        <!-- search -->
-        <div class="field has-addons m-5">
-            <div class="control">
-                <input class="input" type="text" placeholder="メールを検索">
+
+        <!-- messagelist__section -->
+        <section class="messagelist__section container">
+            <div class="columns" id="mail-app">
+                <!-- sidebar -->
+                <aside class="column is-2 aside hero is-fullheight">
+                    <div>
+                        <div class="has-text-centered">
+                        </div>
+                        <div class="main">
+                            <a href="#" class="item active"><span class="icon"><i class="fa fa-inbox"></i></span><span class="name">受信</span></a>
+                            <a href="#" class="item"><span class="icon"><i class="fas fa-paper-plane"></i></span><span class="name">送信</span></a>
+                            <a href="#" class="item"><span class="icon"><i class="fas fa-file"></i></span><span class="name">下書き</span></a>
+                            <a href="#" class="item"><span class="icon"><i class="fa fa-star"></i></span><span class="name">星付き</span></a>
+                            <a href="#" class="item"><span class="icon"><i class="fas fa-trash-alt"></i></span><span class="name">ゴミ箱</span></a>
+                        </div>
+                    </div>
+                </aside>
+                <!-- sidebar.end -->
+                <!-- main -->
+                <div class="column is-9">
+                    <p class="title is-size-5 has-text-success mb-0">受信トレイ</p>
+                    <!-- search -->
+                    <div class="field has-addons m-5">
+                        <div class="control">
+                            <input class="input" type="text" placeholder="メールを検索">
+                        </div>
+                        <div class="control">
+                            <a class="button is-info">
+                                検索
+                            </a>
+                        </div>
+                    </div>
+                    <!-- search.end -->
+                    <div class="inbox-messages ml-5" id="inbox-messages">
+                        <div v-for="(msg, index) in messages" class="card" v-bind:id="'msg-card-'+index" v-on:click="showMessage(msg,index)" v-bind:data-preview-id="index">
+                            <div class="card-content field menu-list">
+                                <article class="post">
+                                        <!--<div class="msg-header">
+                                            <span class="msg-from"><small>From:--> <!--{{ msg.from }}--><!--Admin_1</small></span>
+                                            <span class="msg-timestamp"></span>
+                                            <span class="msg-attachment"><i class="fa fa-paperclip"></i></span>
+                                        </div>-->
+                                    <div class="columns">
+                                        <div class="column">
+                                            <a href="messageinfo.html">
+                                                <div class="msg-subject">
+                                                    <span class="msg-subject">
+                                                        <strong id="fake-subject-1">
+                                                            <!--{{ msg.subject }}-->
+                                                            Entranceにご登録いただきありがとうございます
+                                                        </strong>
+                                                    </span>
+                                                </div>
+                                                <div class="msg-snippet">
+                                                    <p id="fake-snippet-1" class="subtitle is-size-7">
+                                                        <!--{{ msg.snippet }}-->
+                                                        User_1さん
+                                                        こんにちは。このたびはEntranceに登録していただき誠にありがとうございます。
+                                                        本メールでは登録されて間もない方向けに、学習に便利なトピックスをご紹介いたします。
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="column has-text-right mt-6  mr-6 is-1">
+                                            <button class="favorite-button">
+                                                <span class="icon">
+                                                    <i class="far fa-star"></i>
+                                                </span>
+                                                <span class="favorite-text">お気に入り</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="post">
+                                        <!--<div class="msg-header">
+                                            <span class="msg-from"><small>From:--> <!--{{ msg.from }}--><!--Admin_1</small></span>
+                                            <span class="msg-timestamp"></span>
+                                            <span class="msg-attachment"><i class="fa fa-paperclip"></i></span>
+                                        </div>-->
+                                    <div class="columns">
+                                        <div class="column">
+                                            <a href="messageinfo.html">
+                                                <div class="msg-subject">
+                                                    <span class="msg-subject">
+                                                        <strong id="fake-subject-1">
+                                                            <!--{{ msg.subject }}-->
+                                                            プロトタイプを作成中のお知らせ
+                                                        </strong>
+                                                    </span>
+                                                </div>
+                                                <div class="msg-snippet">
+                                                    <p id="fake-snippet-1" class="subtitle is-size-7">
+                                                        <!--{{ msg.snippet }}-->
+                                                        User_1さん
+                                                        こんにちは。このたびはEntranceに登録していただき誠にありがとうございます。
+                                                        本メールでは登録されて間もない方向けに、学習に便利なトピックスをご紹介いたします。
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="column has-text-right mt-6  mr-6 is-1">
+                                            <button class="favorite-button">
+                                                <span class="icon">
+                                                    <i class="far fa-star"></i>
+                                                </span>
+                                                <span class="favorite-text">お気に入り</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 送信用<div class="box content">
+                        <article class="post">
+                            <h4>Bulma: How do you center a button in a box?</h4>
+                            <div class="media">
+                                <div class="media-left">
+                                    <p class="image is-32x32">
+                                        <img src="http://bulma.io/images/placeholders/128x128.png">
+                                    </p>
+                                </div>
+                                <div class="media-content">
+                                    <div class="content">
+                                        <p>
+                                            <a href="#">@jsmith</a> replied 34 minutes ago &nbsp;
+                                            <span class="tag">Question</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="media-right">
+                                    <span class="has-text-grey-light"><i class="fa fa-comments"></i> 1</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>-->
+                </div>
             </div>
-            <div class="control">
-                <a class="button is-info">
-                    検索
-                </a>
-            </div>
-        </div>
-        <!-- search.end -->
-        <div class="container box">
-            <p class="title is-size-5 has-text-success">受信トレイ</p>
-            <div class="field menu-list">
-                <a href="messageinfo.html">
-                    <p class="has-text-black has-text-weight-semibold">プロトタイプを作成中のお知らせ</p>
-                    <p class="is-size-7">
-                        User_1さん
-                        こんにちは。このたびはEntranceに登録していただき誠にありがとうございます。
-                        本メールでは登録されて間もない方向けに、学習に便利なトピックスをご紹介いたします。
-                    </p>
-                </a>
-            </div>
-            <div class="field menu-list">
-                <a href="messageinfo.html">
-                    <p class="has-text-black has-text-weight-semibold">Entranceに登録いただきありがとうございます</p>
-                    <p class="is-size-7">
-                        User_1さん
-                        こんにちは。このたびはEntranceに登録していただき誠にありがとうございます。
-                        本メールでは登録されて間もない方向けに、学習に便利なトピックスをご紹介いたします。
-                    </p>
-                </a>
-            </div>
-        </div><br />
-        <div class="container box">
-            <p class="title is-size-5 has-text-success">送信トレイ</p>
-            <div class="field menu-list">
-                <a href="messageinfo.html">
-                    <p class="has-text-black has-text-weight-semibold">プロトタイプを作成中のお知らせ</p>
-                    <p class="is-size-7">
-                        User_1さん
-                        こんにちは。このたびはEntranceに登録していただき誠にありがとうございます。
-                        本メールでは登録されて間もない方向けに、学習に便利なトピックスをご紹介いたします。
-                    </p>
-                </a>
-            </div>
-        </div>
-        <!-- list.end -->
+            <!-- main.end -->
+        </section>
+        <!-- messagelist__section.end -->
     </section>
     <!-- section.end -->
 </body>
