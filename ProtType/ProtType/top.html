@@ -12,6 +12,8 @@
 
     <!-- reset css -->
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+    <!-- common css -->
+    <link rel="stylesheet" href="css/common.css" />
     <!-- css -->
     <link rel="stylesheet" href="css/top.css" />
     <!-- js -->
@@ -41,7 +43,6 @@
                 </div>
                 <!-- 右寄せnavbar -->
                 <div class="navbar-end">
-
                     <div class="navbar-item">
                         <div class="buttons">
                             <a class="button is-primary" href="signup.html">
@@ -58,7 +59,7 @@
                             <img src="images/index/user-icon.png" />ゲスト
                         </a>
 
-                        <div class="navbar-dropdown  is-right">
+                        <div class="navbar-dropdown  is-right" id="navMenu">
                             <a class="navbar-item" href="mypage.html">
                                 マイページ
                             </a>
@@ -84,13 +85,15 @@
     <!-- hero -->
     <section class="hero is-link is-fullheight-with-navbar has-background-primary fv__hero">
         <div class="hero-body">
-            <div>
-                <p class="title">
-                    完全未経験者から<br />IT業界へ挑戦する。
+            <div class="hero-content">
+                <p class="title is-size-2">
+                    完全未経験から<br />IT業界へ挑戦する。
                 </p>
-                <p class="subtitle mt-3">
-                    皆さまの挑戦を、私たちは応援しています。<br />
-                    完全未経験者からIT業界へ挑戦するエントランス。
+                <p class="subtitle">
+                    <span class="has-text-weight-semibold">
+                        皆さまの挑戦を、私たちは応援しています。<br />
+                        完全未経験からIT業界へ挑戦するエントランス。
+                    </span>
                 </p>
             </div>
         </div>
@@ -99,7 +102,7 @@
 
     <!-- about__section -->
     <section class="section about__section">
-        <p class="title section__title mb-6">Entranceの特徴</p>
+        <p class="title section__title mb-6">About</p>
         <div class="container mx-auto pt-1">
             <div class="columns my-6">
                 <div class="column">
@@ -157,7 +160,7 @@
     <!-- about__section.end -->
     <!-- service-section -->
     <section class="section service__section">
-        <p class="title section__title mb-6">Entranceのサービス</p>
+        <p class="title section__title mb-6">Service</p>
         <!-- service-card -->
         <div class="columns">
             <!-- card1 -->
@@ -227,6 +230,13 @@
         <!-- service-card.end -->
     </section>
     <!-- service-section.end -->
+
+    <!-- news__section -->
+    <!--<section class="section news__section container">
+        <p class="title section__title mb-6">News</p>
+    </section>-->
+    <!-- news__section.end -->
+
     <!-- footer -->
     <footer class="footer has-background-white-ter pb-3">
         <!-- content -->

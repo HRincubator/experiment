@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- icon -->
+    <link rel="icon" href="images/favicon.ico">
+    <!-- reset css -->
+    <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+    <!-- css -->
+    <link rel="stylesheet" href="css/messagelist.css" />
+    <!-- common css -->
+    <link rel="stylesheet" href="css/common.css" />
+    <!-- js -->
+    <script src="js/main.js" defer></script>
+
+    <title>Entrance | 送信済み</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="top.html">
+                    <img src="images/logo.png">
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <!-- 左側に要素を追加したい場合 -->
+                </div>
+                <!-- 右寄せnavbar -->
+                <div class="navbar-end">
+                    <!-- ユーザーアイコンnavbar -->
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            <img src="images/index/user-icon.png" />User_1
+                        </a>
+
+                        <div class="navbar-dropdown  is-right">
+                            <a class="navbar-item" href="mypage.html">
+                                マイページ
+                            </a>
+                            <a class="navbar-item" href="messagelist.html">
+                                メッセージ
+                            </a>
+                            <a class="navbar-item" href="login.html">
+                                ログアウト
+                            </a>
+                            <hr class="navbar-divider">
+                            <a class="navbar-item">
+                                Report an issue
+                            </a>
+                        </div>
+                    </div>
+                    <!-- ユーザーアイコンnavbar.end -->
+                </div>
+                <!-- 右寄せnavbar.end -->
+            </div>
+        </nav>
+    </header>
+    <!-- section -->
+    <section class="section messagelist__section pb-0 pl-0">
+        <!-- パンくずリスト -->
+        <nav class="breadcrumb is-size-7" aria-label="breadcrumbs">
+            <ul>
+                <li>
+                    <a href="top.html">
+                        <span class="icon is-small">
+                            <i class="fas fa-home" aria-hidden="true"></i>
+                        </span>
+                        <span>トップ</span>
+                    </a>
+                </li>
+                <li class="is-active">
+                    <a href="messagelist.html">
+                        <span class="icon is-small">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                        </span>
+                        <span>メッセージ一覧</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- パンくずリスト.end -->
+        <div class="columns" id="mail-app">
+            <!-- sidebar -->
+            <aside class="column is-2 aside hero is-fullheight">
+                <button class="button is-fullwidth is-primary mt-3 ml-1">
+                    <span class="icon pr-2"><i class="fas fa-pen"></i></span><span class="name">新規作成</span>
+                </button>
+                <div>
+                    <div class="has-text-centered">
+                    </div>
+                    <div class="main">
+                        <a href="messagelist.html" class="item active"><span class="icon"><i class="fa fa-inbox"></i></span><span class="name">受信</span></a>
+                        <a href="messagesend.html" class="item"><span class="icon"><i class="fas fa-paper-plane"></i></span><span class="name">送信</span></a>
+                        <a href="#" class="item"><span class="icon"><i class="fas fa-file"></i></span><span class="name">下書き</span></a>
+                        <a href="#" class="item"><span class="icon"><i class="fa fa-star"></i></span><span class="name">星付き</span></a>
+                        <a href="#" class="item"><span class="icon"><i class="fas fa-trash-alt"></i></span><span class="name">ゴミ箱</span></a>
+                    </div>
+                </div>
+            </aside>
+            <!-- sidebar.end -->
+            <!-- main -->
+            <div class="column">
+                <p class="title is-size-5 has-text-success mb-0">送信済み</p>
+                <!-- search -->
+                <div class="field has-addons m-5">
+                    <div class="control">
+                        <input class="input" type="text" placeholder="メールを検索">
+                    </div>
+                    <div class="control">
+                        <a class="button is-info">
+                            検索
+                        </a>
+                    </div>
+                </div>
+                <!-- search.end -->
+                <div class="inbox-messages" id="inbox-messages">
+                    <div v-for="(msg, index) in messages" class="card" v-bind:id="'msg-card-'+index" v-on:click="showMessage(msg,index)" v-bind:data-preview-id="index">
+                        <div class="box content">
+                            <article class="post">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <button class="favorite-button">
+                                            <span class="icon">
+                                                <i class="far fa-star is-small"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <a href="messageinfo.html">
+                                                <div class="msg-subject py-0">
+                                                    <span class="msg-subject">
+                                                        <strong id="fake-subject-1">
+                                                            <!--{{ msg.subject }}-->
+                                                            動画が再生されない不具合について
+                                                        </strong>
+                                                    </span>
+                                                </div>
+                                                <div class="msg-snippet">
+                                                    <p id="fake-snippet-1" class="subtitle is-size-7">
+                                                        <!--{{ msg.snippet }}-->
+                                                        第1章の動画教材視聴画面にて、動画が再生されないのですが、不具合の可能性があるため、確認・修正をお願いします。
+                                                        ...
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="media-right">
+                                        <p class="is-size-7">
+                                            6月29日 &nbsp;
+                                            <span class="tag">不具合</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main.end -->
+    </section>
+    <!-- section.end -->
+</body>
+</html>

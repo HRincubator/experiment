@@ -1,7 +1,25 @@
-﻿.section {
+﻿@import 'https://fonts.googleapis.com/css?family=Cinzel';
 
-    &__title {
-        text-align: center;
+.hero-content {
+    p {
+        padding-bottom: 0.75rem;
+        font-family: 'Cinzel', serif;
+        text-shadow: 0 0 10px rgba(0,0,0,.4);
+        color: #ffffff;
+    }
+
+    a {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        color: #fff;
+        text-decoration: none;
+        position: absolute;
+        bottom: 3%;
+        padding: 0 3%;
+        font-size: 12px;
+        line-height: 1.3;
+        text-shadow: 0 0 3px rgba(0,0,0,.5);
     }
 }
 .about__section {
@@ -32,6 +50,18 @@
         left: -5px;
         right: -5px;
         bottom: -5px;
-        z-index: -1; /*重なり順序を一番下にしておく*/
+        z-index: -2; /*重なり順序を一番下にしておく*/
+    }
+
+    &::after {
+        content:'';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom : 0;
+        background-color: black;
+        opacity: 0.3;
+        z-index: -1;
     }
 }

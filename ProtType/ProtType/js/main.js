@@ -133,3 +133,62 @@ favoriteButtons.forEach(button => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach(el => {
+        el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+        });
+    });
+
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.dropdown'), 0);
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach(el => {
+        el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+        });
+    });
+
+});
+
+// プロフィール画像の選択時に呼び出される関数
+function handleProfileImageSelect(event) {
+    const file = event.target.files[0]; // 選択されたファイルを取得
+    if (file) {
+        const reader = new FileReader();
+        // ファイルの読み込みが完了したときの処理
+        reader.onload = function () {
+            const profileIcon = document.getElementById('profile-icon');
+            profileIcon.src = reader.result; // 読み込んだアイコンを画像に表示
+        };
+
+        reader.readAsDataURL(file); // フィルのデータをDataURLとして読み込む
+    }
+}

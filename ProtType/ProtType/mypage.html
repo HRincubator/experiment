@@ -99,10 +99,11 @@
                 <div class="tile is-child box">
                     <!-- アカウントアイコン（変更可） -->
                     <p class="title is-5 has-text-grey pl-5 pt-5">プロフィール</p>
+
                     <div class="title is-centered file">
                         <label class="file-label">
                             <input class="file-input" type="file" name="file-selection">
-                            <img class="image is-96x96 is-rounded" src="images/index/user-icon.png" />
+                            <img class="image is-96x96 is-rounded" src="images/index/user-icon.png" id="profile-icon" />
                             <i class="fas fa-camera is-size-5 has-text-grey"></i>
                         </label>
                     </div>
@@ -113,20 +114,25 @@
                         </div>
                         <!-- plofile -->
                         <div class="conteiner mx-3 pt-5">
+                            <!-- UserName -->
                             <div class="columns">
-                                <div class="column">
-                                    <div class="field">
-                                        <label class="label mb-0">ユーザー名</label>
-                                        <p class="mt-2">@User_1</p>
-                                    </div>
+                                <div class="column is-4">
+                                    <p class="is-size-6">ユーザー名</p>
                                 </div>
                                 <div class="column">
-                                    <div class="field">
-                                        <label class="label mb-0">メールアドレス</label>
-                                        <p class="mt-2">example@example.com</p>
-                                    </div>
+                                    <p>User_1</p>
                                 </div>
                             </div>
+                            <!-- MailAddress -->
+                            <div class="columns">
+                                <div class="column is-4">
+                                    <p class="is-size-6">メールアドレス</p>
+                                </div>
+                                <div class="column">
+                                    <p>example@example.com</p>
+                                </div>
+                            </div>
+
                             <div class="columns">
                                 <div class="column">
                                     <div class="field">
@@ -197,7 +203,10 @@
                     <div class="container mt-4">
                         <div class="columns mb-0">
                             <div class="column">
-                                <p><i class="fas fa-calendar has-text-warning"></i>　学習日数</p>
+                                <p>
+                                    <span class="icon"><i class="fas fa-calendar has-text-warning"></i></span>
+                                    <span>学習日数</span>
+                                </p>
                             </div>
                             <div class="column has-text-right">
                                 <p>5日</p>
@@ -205,7 +214,10 @@
                         </div>
                         <div class="columns mb-0">
                             <div class="column">
-                                <p><i class="fas fa-award has-text-warning"></i>　講座視聴本数</p>
+                                <p>
+                                    <span class="icon"><i class="fas fa-award has-text-warning"></i></span>
+                                    <span>講座視聴本数</span>
+                                </p>
                             </div>
                             <div class="column has-text-right">
                                 <p>5 / 20本</p>
@@ -213,7 +225,10 @@
                         </div>
                         <div class="columns mb-0">
                             <div class="column">
-                                <p><i class="fas fa-trophy has-text-warning"></i>　テスト完了数</p>
+                                <p>
+                                    <span class="icon"><i class="fas fa-trophy has-text-warning"></i></span>
+                                    <span>テスト完了数</span>
+                                </p>
                             </div>
                             <div class="column has-text-right">
                                 <p>5 / 20本</p>

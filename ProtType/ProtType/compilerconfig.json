@@ -14,5 +14,9 @@
   {
     "inputFile": "scss/common.scss",
     "outputFile": "css/common.css"
+  },
+  {
+    "inputFile": "scss/courseinfolist.scss",
+    "outputFile": "css/courseinfolist.css"
   }
 ]

@@ -1,4 +1,10 @@
-﻿.tab-container {
+﻿@import 'https://fonts.googleapis.com/css?family=Cinzel';
+.section__title {
+  text-align: center;
+  font-family: "Cinzel", serif;
+}
+
+.tab-container {
   padding: 20px;
   line-height: 2;
   height: 300px;
@@ -16,7 +22,6 @@
 
 .favorite-button {
   background-color: transparent;
-  border: none;
   cursor: pointer;
   position: relative;
   display: inline-flex;
@@ -30,6 +35,7 @@
 }
 .favorite-button .icon {
   margin-right: 4px;
+  padding-left: 12px;
 }
 .favorite-button .favorite-text {
   opacity: 0;
@@ -46,5 +52,33 @@
   transition: opacity 0.2s ease;
 }
 .favorite-button:hover .favorite-text {
+  opacity: 1;
+}
+
+.messageicon-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.messageicon-button .icon {
+  margin: 0.5rem 0.5rem 0 1rem;
+}
+.messageicon-button .messageicon-text {
+  opacity: 0;
+  position: absolute;
+  bottom: 100%;
+  right: 50%;
+  transform: translateX(50%);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+.messageicon-button:hover .messageicon-text {
   opacity: 1;
 }

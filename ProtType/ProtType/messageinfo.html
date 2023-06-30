@@ -10,8 +10,10 @@
     <link rel="icon" href="images/favicon.ico">
     <!-- reset css -->
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+    <!-- common css -->
+    <link rel="stylesheet" href="css/common.css" />
     <!-- css -->
-    <link rel="stylesheet" href="css/messageinfo.css" />
+    <link rel="stylesheet" href="css/messagelist.css" />
     <!-- js -->
     <script src="js/main.js" defer></script>
 
@@ -68,7 +70,7 @@
         </nav>
     </header>
     <!-- header.end -->
-    <section class="section">
+    <section class="section pb-0 pl-0">
         <!-- パンくずリスト -->
         <nav class="breadcrumb is-size-7" aria-label="breadcrumbs">
             <ul>
@@ -99,130 +101,183 @@
             </ul>
         </nav>
         <!-- パンくずリスト.end -->
-        <!-- incoming-mail -->
-        <div class="container">
-            <div class="icoming-mail box">
-                <div class="field has-horizontal">
-                    <div class="is-4"><span class="tag is-success is-nomal">受信トレイ</span></div>
-
-                    <div><p class="is-size-5 has-text-weight-semibold">プロトタイプを作成中のお知らせ</p></div>
+        <div class="columns" id="mail-app">
+            <!-- sidebar -->
+            <aside class="column is-2 aside hero is-fullheight">
+                <button class="button is-fullwidth is-primary mt-3 ml-1">
+                    <span class="icon pr-2"><i class="fas fa-pen"></i></span><span class="name">新規作成</span>
+                </button>
+                <div>
+                    <div class="has-text-centered">
+                    </div>
+                    <div class="main">
+                        <a href="messagelist.html" class="item active"><span class="icon"><i class="fa fa-inbox"></i></span><span class="name">受信</span></a>
+                        <a href="messagesend.html" class="item"><span class="icon"><i class="fas fa-paper-plane"></i></span><span class="name">送信</span></a>
+                        <a href="#" class="item"><span class="icon"><i class="fas fa-file"></i></span><span class="name">下書き</span></a>
+                        <a href="#" class="item"><span class="icon"><i class="fa fa-star"></i></span><span class="name">星付き</span></a>
+                        <a href="#" class="item"><span class="icon"><i class="fas fa-trash-alt"></i></span><span class="name">ゴミ箱</span></a>
+                    </div>
                 </div>
-            </div>
-            <!-- dropdown -->
-            <div class="dropdown is-hoverable is-right is-pulled-right">
-                <div class="dropdown-trigger">
-                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu5">
-                        <span>To 自分</span>
-                        <span class="icon is-small">
-                            <i class="fas fa-angle-down" aria-hidden="true"></i>
-                        </span>
-                    </button>
-                </div>
-                <div class="dropdown-menu" id="dropdown-menu5" role="menu">
-                    <div class="dropdown-content">
-                        <div class="dropdown-item">
-                            <p><strong>From:</strong> Entrance tutor_1@excample.com</p><br />
-                            <p><strong>To:</strong> user_1@example.com</p><br />
-                            <p><strong>日付:</strong> 2023年6月16日12:00</p>
+            </aside>
+            <!-- sidebar.end -->
+            <!-- main -->
+            <div class="column">
+                <!-- incoming-mail -->
+                <header class="header mb-2">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="messagelist.html" class="has-text-dark"><span class="icon"><i class="fas fa-chevron-left"></i></span></a>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <!-- dropdown.end -->
-            <!-- mail-text -->
-            <div class="icoming-mail">
-                <div class="field has-horizontal">
-                    <p>User_1さん</p><br />
-                    <p>
-                        こんにちは。このたびはEntranceに登録していただき誠にありがとうございます。<br />
-                        本メールでは登録されて間もない方向けに、学習に便利なトピックスをご紹介いたします。
-                    </p><br />
-                    <p> □ プログラミング学習について悩みや不安がある</p>
-                    <p class="has-text-primary">→ スタッフからのアドバイスを参考にしてみよう</p><br />
-                    <p> □ プログラミングを取得するコツを知りたい！</p>
-                    <p class="has-text-primary">→ プログラミング学習ガイドを見てみよう</p><br />
-                    <p> □ Entranceではどんなことが学べるの？</p>
-                    <p class="has-text-primary">→ レッスン一覧を確認してみよう</p><br />
-                    <p> □ 学習をスムーズに進めたい！</p>
-                    <p class="has-text-primary">→ レッスンと同じエディタ（コードを打ち込むツール）を用意してみよう</p><br />
-                    <p class="has-text-weight-semibold">最新情報はこちらから</p><br />
-                    <p>...</p><br />
-                    <p>User_1さんのプログラミング学習が少しでも充実したものになるようお手伝いできれば幸いです。</p><br />
-                    <p>今後ともEntranceをよろしくお願いいたします。</p><br />
-                </div>
-            </div>
-            <!-- mail-text.end -->
-        </div><br />
-        <!-- incoming-mail.end -->
-        <!-- response-message -->
-        <div class="container">
-            <div class="response-message box has-background-light">
-                <p class="title is-size-5 has-text-success">返信フォーム</p>
-                <div class="field is-horizontal">
-                    <div class="field-label is-normal">
-                        <label class="label">From</label>
-                    </div>
-                    <div class="field-body">
-                        <div class="field">
-                            <p class="control is-expanded has-icons-left">
-                                <input class="input is-static" type="email" value="me@example.com" readonly>
-                                <span class="icon is-small is-left has-text-black">
-                                    <i class="fas fa-envelope"></i>
-                                </span>
-                            </p>
-                            <p class="control is-expanded has-icons-left">
-                                <input class="input" type="text" placeholder="Name">
-                                <span class="icon is-small is-left">
-                                    <i class="fas fa-user"></i>
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="field is-horizontal">
-                    <div class="field-label is-normal">
-                        <label class="label">Re:</label>
-                    </div>
-                    <div class="field-body">
-                        <div class="field">
-                            <div class="control has-text-weight-semibold">
-                                <input class="input" type="text" placeholder="Text input">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="field is-horizontal">
-                    <div class="field-label is-normal">
-                        <label class="label">Message</label>
-                    </div>
-                    <div class="field-body">
-                        <div class="field">
-                            <div class="control">
-                                <textarea class="textarea" placeholder="Explain how we can help you"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="field is-horizontal">
-                    <div class="field-label">
-                        <!-- Left empty for spacing -->
-                    </div>
-                    <div class="field-body">
-                        <div class="field">
-                            <div class="control">
-                                <button class="button is-primary">
-                                    返信
+                        <div class="media-content">
+                            <div class="content">
+                                <button class="favorite-button">
+                                    <span class="icon">
+                                        <i class="far fa-star is-small has-text-grey"></i>
+                                    </span>
+                                </button>
+                                <button class="trash-button">
+                                    <span class="icon">
+                                        <i class="far fa-trash-alt has-text-grey"></i>
+                                    </span>
                                 </button>
                             </div>
                         </div>
+                        <div class="media-right">
+                            <p class="is-size-7">
+                                1/3
+                                <a href="messageinfo.html" class="has-text-dark"><span class="icon"><i class="fas fa-chevron-left"></i></span></a>
+                                <a href="messageinfo.html" class="has-text-dark"><span class="icon"><i class="fas fa-chevron-right"></i></span></a>
+                            </p>
+                        </div>
+                    </div>
+                </header>
+                <div class="container">
+                    <div class="icoming-mail box">
+                        <div class="field has-horizontal">
+                            <div class="media">
+                                <div class="media-left">
+                                    <span class="tag is-success is-nomal">受信トレイ</span>
+                                </div>
+                                <div class="media-content">
+                                    <div class="content">
+                                        <p class="is-size-5 has-text-weight-semibold">プロトタイプを作成中のお知らせ</p>
+                                    </div>
+                                </div>
+                                <div class="media-right">
+                                    <!-- dropdown -->
+                                    <div class="dropdown is-hoverable is-right is-pulled-right">
+                                        <div class="dropdown-trigger">
+                                            <button aria-haspopup="true" aria-controls="dropdown-menu5">
+                                                <span>To 自分</span>
+                                                <span class="icon is-small">
+                                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="dropdown-menu" id="dropdown-menu5" role="menu">
+                                            <div class="dropdown-content">
+                                                <div class="dropdown-item">
+                                                    <p><strong>From:</strong> Entrance tutor_1@excample.com</p><br />
+                                                    <p><strong>To:</strong> User_1 user_1@example.com</p><br />
+                                                    <p><strong>日付:</strong> 6月29日 12:00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- dropdown.end -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- mail-text -->
+                    <div class="section">
+                        <div class="field has-horizontal">
+                            <p>User_1さん</p><br />
+                            <p>
+                                こんにちは。このたびはEntranceに登録していただき誠にありがとうございます。<br />
+                                本メールでは登録されて間もない方向けに、学習に便利なトピックスをご紹介いたします。
+                            </p><br />
+                            <p> □ プログラミング学習について悩みや不安がある</p>
+                            <p class="has-text-primary">→ スタッフからのアドバイスを参考にしてみよう</p><br />
+                            <p> □ プログラミングを取得するコツを知りたい！</p>
+                            <p class="has-text-primary">→ プログラミング学習ガイドを見てみよう</p><br />
+                            <p> □ Entranceではどんなことが学べるの？</p>
+                            <p class="has-text-primary">→ レッスン一覧を確認してみよう</p><br />
+                            <p> □ 学習をスムーズに進めたい！</p>
+                            <p class="has-text-primary">→ レッスンと同じエディタ（コードを打ち込むツール）を用意してみよう</p><br />
+                            <p class="has-text-weight-semibold">最新情報はこちらから</p><br />
+                            <p>...</p><br />
+                            <p>User_1さんのプログラミング学習が少しでも充実したものになるようお手伝いできれば幸いです。</p><br />
+                            <p>今後ともEntranceをよろしくお願いいたします。</p><br />
+                        </div>
+                    </div>
+                    <!-- mail-text.end -->
+                </div>
+                <!-- response-message -->
+                <div class="container">
+                    <div class="response-message box has-background-light">
+                        <p class="title is-size-5 has-text-success">返信フォーム</p>
+                        <div class="field is-horizontal">
+                            <div class="field-label is-normal">
+                                <label class="label">From</label>
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <p class="control is-expanded has-icons-left">
+                                        <input class="input is-static" type="email" value="me@example.com" readonly>
+                                        <span class="icon is-small is-left has-text-black">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field is-horizontal">
+                            <div class="field-label is-normal">
+                                <label class="label">件名</label>
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control has-text-weight-semibold">
+                                        <input class="input" type="text" placeholder="Text input">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field is-horizontal">
+                            <div class="field-label is-normal">
+                                <label class="label">本文</label>
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <textarea class="textarea" placeholder="textarea"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field is-horizontal">
+                            <div class="field-label">
+                                <!-- Left empty for spacing -->
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <button class="button is-primary">
+                                            返信
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!-- response-message.end -->
             </div>
         </div>
-        <!-- response-message.end -->
+        <!-- main.end -->
     </section>
 </body>
 </html>
