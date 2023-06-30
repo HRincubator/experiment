@@ -28,8 +28,8 @@
     }
 }
 .service__section {
-    width: 70%;
-    margin: 0 auto 0 auto;
+    max-width: 70vw;
+    margin: 0 auto 10vw auto;
 }
 .fv__hero {
     background-image: url("../images/fv-main.png");
