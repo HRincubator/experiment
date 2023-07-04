@@ -24,9 +24,28 @@
         max-width: 130px;
     }
 }
+// Colors
+$bg-color: #ffffff;
+$dot-color: hsl(256,33,10);
+
+// Dimensions
+$dot-size: 1px;
+$dot-space: 22px;
 .service__section {
-    max-width: 70vw;
-    margin: 0 auto 10vw auto;
+    margin: 0;
+    background: linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center, linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center, $dot-color;
+    background-size: $dot-space $dot-space;
+
+    .service_content {
+        max-width: 70vw;
+        margin: 0 auto;
+    }
+
+    .card_text {
+        p {
+            font-size: 17px;
+        }
+    }
 }
 .fv__hero {
     background-image: url("../images/fv-main.png");

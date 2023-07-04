@@ -23,8 +23,16 @@
 }
 
 .service__section {
+  margin: 0;
+  background: linear-gradient(90deg, #ffffff 21px, transparent 1%) center, linear-gradient(#ffffff 21px, transparent 1%) center, hsl(256deg, 33%, 10%);
+  background-size: 22px 22px;
+}
+.service__section .service_content {
   max-width: 70vw;
-  margin: 0 auto 10vw auto;
+  margin: 0 auto;
+}
+.service__section .card_text p {
+  font-size: 17px;
 }
 
 .fv__hero {
