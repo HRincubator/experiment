@@ -1,5 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
-@import "variables";
+﻿@import "variables";
 /* common css */
 * {
     font-family: $text-font;
@@ -8,6 +7,7 @@
 .section {
     &__title {
         text-align: center;
+        font-weight: bold;
     }
 }
 

@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\admin"
+    "\\admin",
+    "\\scss"
   ],
+  "SelectedNode": "\\compilerconfig.json",
   "PreviewInSolutionExplorer": false
 }

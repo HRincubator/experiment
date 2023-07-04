@@ -18,6 +18,13 @@
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
+.about__section {
+  margin: 0;
+  background: rgba(204, 255, 204, 0.1);
+}
+.about__section .about_content {
+  margin: 0 auto;
+}
 .about__section img {
   max-width: 130px;
 }

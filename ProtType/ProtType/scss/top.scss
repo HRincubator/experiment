@@ -1,4 +1,6 @@
-﻿.hero-content {
+﻿@import "variables";
+
+.hero-content {
     p {
         padding-bottom: 0.75rem;
         text-shadow: 0 0 10px rgba(0,0,0,.4);
@@ -20,17 +22,17 @@
     }
 }
 .about__section {
+    margin: 0;
+    background: $base-color;
+
+    .about_content {
+        margin: 0 auto;
+    }
+
     img {
         max-width: 130px;
     }
 }
-// Colors
-$bg-color: #ffffff;
-$dot-color: hsl(256,33,10);
-
-// Dimensions
-$dot-size: 1px;
-$dot-space: 22px;
 .service__section {
     margin: 0;
     background: linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center, linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center, $dot-color;

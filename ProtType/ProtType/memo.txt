@@ -67,7 +67,7 @@ FontAwesome - ŒŸõƒ[ƒh
 ‚â‚é‚±‚Æ
 -----------------------------------------------------
 
-EƒfƒUƒCƒ“i‘}“ü‰æ‘œ‚Ì’ŠojAƒJƒ‰[Œˆ‚ßAƒLƒƒƒbƒ`ƒtƒŒ[ƒY“™‚ÌƒeƒLƒXƒg
+EƒfƒUƒCƒ“i‘}“ü‰æ‘œ‚Ì’ŠojAƒJƒ‰[Œˆ‚ßAƒLƒƒƒbƒ`ƒtƒŒ[ƒY“™‚ÌƒeƒLƒXƒgAƒtƒHƒ“ƒg
 
 ƒfƒUƒCƒi[‚ÍHP‚ð‚Ç‚¤‚â‚Á‚Äì¬‚µ‚Ä‚¢‚é‚Ì‚©AFigma,Illustrator‚ÌŽg‚¢•û‚ðŠw‚Ô
 Figma‚Åƒvƒƒgƒ^ƒCƒv‚Ìì¬‚ª‚Å‚«‚éBIllustrator‚ðŽg—p‚µ‚ÄƒƒS‚Ìì¬‚ª‚Å‚«‚é
@@ -99,6 +99,10 @@ About•”•ª‚ÍŒã‚ë‚Ì‚Ù‚¤‚ª—Ç‚¢‚Ì‚Å‚Í‚È‚¢‚©BÅ‰‚É—ˆ‚é‚ÆÚ‚µ‚¢à–¾‚ª‚ ‚é•ªA•¶Žš”‚
 ‹»–¡‚ðŽ¦‚µ‚½l‚Í‰º‚ÉƒXƒNƒ[ƒ‹‚·‚é‚ÆŽv‚¤‚Ì‚ÅAAboutƒZƒNƒVƒ‡ƒ“‚ÅÚ‚µ‚¢ƒT[ƒrƒXî•ñ‚ð’m‚ê‚éB
 FAQ ‚æ‚­‚ ‚éŽ¿–â‚ð’Ç‰Á‚·‚é‚Ì‚©
 
+Ú×‰æ–Ê‚Í“¯‚¶‚É‚·‚é‚©•ª‚¯‚é‚©
+Æ‰ïƒ{ƒ^ƒ“‚©‚ç‘JˆÚ‚µAÆ‰ï‚Í¬Ñ‚Ìî•ñ‚àŠÜ‚ß‚é
+hiddenƒXƒe[ƒ^ƒX‚Å“o˜^“ú
+
 ------------------------------------------------------------
 Scss
 ------------------------------------------------------------
@@ -106,3 +110,10 @@ Scss
 		Žg—p‚µ‚½‚¢ƒNƒ‰ƒX‚Ì’†‚Åu@include ƒNƒ‰ƒX–¼v‚ÅŽg‚¢‰ñ‚¹‚é‚æ‚¤‚É‚È‚é
 
 _variables.scss...•Ï”‚ð‚Ü‚Æ‚ß‚½ƒtƒ@ƒCƒ‹B•Ï”‚ðŽg—p‚·‚é‚É‚ÍAŽg—p‚µ‚½‚¢ƒtƒ@ƒCƒ‹‚Ìæ“ª‚Åu@import "variables";v‚ÅƒCƒ“ƒ|[ƒg‚µ‚ÄŽg—p‚·‚éB¦ƒCƒ“ƒ|[ƒg‚·‚éÛAu_v‚Í•K—v‚È‚¢
+
+
+==================================================================
+ƒAƒjƒ[ƒVƒ‡ƒ“
+==================================================================
+
+animate__fadeInDown

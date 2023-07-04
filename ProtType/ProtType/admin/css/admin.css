@@ -119,3 +119,14 @@ nav.navbar {
     max-height: 250px;
     overflow-y: scroll;
 }
+
+.admin_icon {
+    position: relative;
+}
+.icon_info {
+    position: absolute;
+    font-size: 12px;
+    padding-left: .3em;
+    font-weight: bold;
+    color: orangered;
+}
