@@ -9,3 +9,7 @@
 .tab-container .tab-content.active {
   display: block;
 }
+
+.profile__section {
+  background: rgba(204, 255, 204, 0.1);
+}
