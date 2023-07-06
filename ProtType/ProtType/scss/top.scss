@@ -83,3 +83,31 @@
         z-index: -1;
     }
 }
+
+.about-content-block {
+    position: relative;
+
+    &::after {
+        content: "01";
+        font-family: 'Helvetica';
+        font-weight: 700;
+        font-size: 200px;
+        position: absolute;
+        bottom: -100px;
+        right: -20px;
+        z-index: -1;
+        color: #E0E3E8;
+    }
+
+    &_two::after {
+        content: "02";
+    }
+
+    &_three::after {
+        content: "03";
+    }
+
+    &_four::after {
+        content: "04";
+    }
+}

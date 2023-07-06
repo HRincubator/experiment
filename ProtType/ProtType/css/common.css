@@ -1,4 +1,5 @@
-﻿/* common css */
+﻿@charset "UTF-8";
+/* common css */
 * {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
@@ -128,4 +129,61 @@
   top: 50%;
   right: 0.8em;
   transform: translateY(-50%);
+}
+
+.relative {
+  position: relative;
+}
+
+.lock_content {
+  position: relative;
+  z-index: 0;
+}
+.lock_content:before {
+  content: "会員限定コンテンツ";
+  text-align: center;
+  font-weight: bold;
+  top: 65%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  color: #00abff;
+  position: absolute;
+  z-index: 2;
+}
+.lock_content::after {
+  content: "\f023";
+  font-family: "Font Awesome 5 Free";
+  padding-top: 3vh;
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
+  font-size: 35px;
+  border-radius: 20px;
+  color: #ffdf2e;
+  background: #000;
+  opacity: 0.7;
+  top: -1vh;
+  bottom: -3vh;
+  right: -3vh;
+  left: -3vh;
+}
+
+.list-inner li {
+  counter-increment: num 1;
+  list-style: none;
+}
+.list-inner li:before {
+  /*--content  counter(num)に指定--*/
+  content: "第" counter(num) "部";
+  color: #000;
+  margin: 0 20px 0 0;
+}
+
+.side-menu-text {
+  font-weight: bold;
+}
+.side-menu-text a {
+  color: #9c9c9c !important;
 }

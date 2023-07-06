@@ -116,3 +116,6 @@ html, body {
     font-weight: bold;
     color: orangered;
 }
+.border_right {
+    border-right: 1px solid #dedede;
+}
