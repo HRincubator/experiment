@@ -124,8 +124,10 @@
                 </ul>
             </div>
             <!-- tabbar.end -->
-            <!-- tabcontent -->
-            <div class="tab-container">
+
+            <!-- window__tabcontent -->
+            <!-- スマホでは非表示。windows、タブレットのみの表示コンテンツ -->
+            <div class="tab-container is-hidden-mobile">
                 <!-- tab1 -->
                 <div class="tab-content active">
                     <!-- tile-wrapper -->
@@ -144,36 +146,63 @@
                                             </div>
                                             <div class="media-content">
                                                 <div class="content">
-                                                    <div class="columns">
-                                                        <div class="column">
-                                                            <div class="courseinfo-title">
-                                                                <p class="has-text-grey">
-                                                                    <span class="is-size-7">第1部</span>
-                                                                    <span class="has-text-weight-semibold">様々な基本機能</span>
-                                                                </p>
-                                                            </div>
-                                                            <div class="course__progress mt-2 pl-2">
-                                                                <p class="is-size-7 mb-1">講座進捗率：<span>60%</span></p>
-                                                                <progress class="is-primary progress mb-2" style="height: 7px;" value="60" max="100">60%</progress>
-                                                            </div>
-                                                        </div>
-                                                        <div class="column is-2">
-                                                            <p class="is-size-7 mb-1">
-                                                                最終視聴日：6月29日<br />
-                                                                合計視聴時間：3h
-                                                            </p>
-                                                            <div class="has-text-right">
-                                                                <button class="button is-small is-primary" onclick="location.href='course101.html'">
-                                                                    <span class="icon"><i class="fas fa-video"></i></span>
-                                                                    <span class="name">詳細</span>
-                                                                </button>
-                                                            </div>
-                                                        </div>
+                                                    <div class="courseinfo-title">
+                                                        <p class="has-text-grey">
+                                                            <span class="is-size-7">第1部</span>
+                                                            <span class="has-text-weight-semibold">様々な基本機能</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="course__progress mt-2 pl-2">
+                                                        <p class="is-size-7 mb-1">講座進捗率：<span>60%</span></p>
+                                                        <progress class="is-primary progress mb-2" style="height: 7px;" value="60" max="100">60%</progress>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="media-right">
-
+                                                <p class="is-size-7 mb-1">
+                                                    最終視聴日：6月29日<br />
+                                                    合計視聴時間：10h
+                                                </p>
+                                                <div class="has-text-right">
+                                                    <button class="button is-small is-primary" onclick="location.href='course101.html'">
+                                                        <span class="icon"><i class="fas fa-video"></i></span>
+                                                        <span class="name">詳細</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <div class="tag">
+                                                    <span class="icon"><i class="fas fa-box-open" aria-hidden="true"></i></span>
+                                                    <span class="name">実施中</span>
+                                                </div>
+                                            </div>
+                                            <div class="media-content">
+                                                <div class="content">
+                                                    <div class="courseinfo-title">
+                                                        <p class="has-text-grey">
+                                                            <span class="is-size-7">第2部</span>
+                                                            <span class="has-text-weight-semibold">コレクション</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="course__progress mt-2 pl-2">
+                                                        <p class="is-size-7 mb-1">講座進捗率：<span>20%</span></p>
+                                                        <progress class="is-primary progress mb-2" style="height: 7px;" value="20" max="100">20%</progress>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="media-right">
+                                                <p class="is-size-7 mb-1">
+                                                    最終視聴日：7月7日<br />
+                                                    合計視聴時間：3h
+                                                </p>
+                                                <div class="has-text-right">
+                                                    <button class="button is-small is-primary" onclick="location.href='course101.html'">
+                                                        <span class="icon"><i class="fas fa-video"></i></span>
+                                                        <span class="name">詳細</span>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -246,36 +275,29 @@
                                             </div>
                                             <div class="media-content">
                                                 <div class="content">
-                                                    <div class="columns">
-                                                        <div class="column">
-                                                            <div class="courseinfo-title">
-                                                                <p class="has-text-grey">
-                                                                    <span class="is-size-7">第1部</span>
-                                                                    <span class="has-text-weight-semibold">様々な基本機能</span>
-                                                                </p>
-                                                            </div>
-                                                            <div class="course__progress mt-2 pl-2">
-                                                                <p class="is-size-7 mb-1">講座進捗率：<span>60%</span></p>
-                                                                <progress class="is-primary progress mb-2" style="height: 7px;" value="60" max="100">60%</progress>
-                                                            </div>
-                                                        </div>
-                                                        <div class="column is-2">
-                                                            <p class="is-size-7 mb-1">
-                                                                最終視聴日：6月29日<br />
-                                                                合計視聴時間：3h
-                                                            </p>
-                                                            <div class="has-text-right">
-                                                                <button class="button is-small is-primary" onclick="location.href='course101.html'">
-                                                                    <span class="icon"><i class="fas fa-video"></i></span>
-                                                                    <span class="name">詳細</span>
-                                                                </button>
-                                                            </div>
-                                                        </div>
+                                                    <div class="courseinfo-title">
+                                                        <p class="has-text-grey">
+                                                            <span class="is-size-7">第1部</span>
+                                                            <span class="has-text-weight-semibold">様々な基本機能</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="course__progress mt-2 pl-2">
+                                                        <p class="is-size-7 mb-1">講座進捗率：<span>60%</span></p>
+                                                        <progress class="is-primary progress mb-2" style="height: 7px;" value="60" max="100">60%</progress>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="media-right">
-
+                                                <p class="is-size-7 mb-1">
+                                                    最終視聴日：6月29日<br />
+                                                    合計視聴時間：3h
+                                                </p>
+                                                <div class="has-text-right">
+                                                    <button class="button is-small is-primary" onclick="location.href='course101.html'">
+                                                        <span class="icon"><i class="fas fa-video"></i></span>
+                                                        <span class="name">詳細</span>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -297,7 +319,13 @@
                     <!-- tile-wrapper.end -->
                 </div>
             </div>
-            <!-- tabcontent.end -->
+            <!-- window__tabcontent.end -->
+            <!-- *************************************************************************************************************** -->
+
+            <!-- mobile__tabcontent -->
+            <!-- windows、タブレットでは非表示。スマホのみの表示コンテンツ -->
+
+            <!-- mobile__tabcontent.end -->
         </div>
         <!-- main-container.end -->
     </section>

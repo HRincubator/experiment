@@ -1,4 +1,5 @@
 ﻿@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;600&display=swap");
 .hero-content p {
   padding-bottom: 0.75rem;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -35,7 +36,7 @@
   background-size: 22px 22px;
 }
 .service__section .service_content {
-  max-width: 70vw;
+  max-width: 70vmax;
   margin: 0 auto;
 }
 .service__section .card_text p {

@@ -1,11 +1,14 @@
-﻿// 変数設定
+﻿@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;600&display=swap');
+
+// 変数設定
 $theme-color: #57bc90;
 $primary-color: #77c9d4;
 $accent-color: #015249;
 $base-color: rgba(204,255,204,0.1);
-$text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$text-font: 'Noto Sans JP', sans-serif;
 $subtext-color: #808080;
 $yellow_color: #ffdf2e;
+$calendar-color: hsl(141, 71%, 70%);
 
 // Colors
 $bg-color: #ffffff;
