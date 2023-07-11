@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="css/common.css" />
     <!-- css -->
     <link rel="stylesheet" href="css/top.css" />
+
+    <link rel="stylesheet" href="css/btn.css" />
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +34,7 @@
 </head>
 <body>
     <!-- header -->
-    <header class="header">
+    <header class="header custom__header">
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="top.html">
@@ -104,13 +106,16 @@
                         完全未経験からIT業界へ挑戦するエントランス。
                     </span>
                 </p>
+                <button class="custom_button arrow" onclick="location.href='signup.html'">新規登録はこちら</button>
             </div>
         </div>
     </section>
     <!-- hero.end -->
     <!-- about__section -->
     <section class="section about__section">
-        <p class="title section__title mb-3 pt-6">Entranceの特徴</p>
+        <div class="section__title">
+            <p class="title mb-3 pt-6 title_01">Entranceの特徴</p>
+        </div>
         <div class="container about_content py-6 mt-6">
             <div class="columns">
                 <div class="column about-content-block">
@@ -184,7 +189,7 @@
                     <div class="card-content">
                         <div class="media">
                             <div class="media-content">
-                                <p class="title">動画教材</p>
+                                <p class="title service_no" data-number="01">動画教材</p>
                                 <p class="subtitle">40以上の講義動画で「Java」を学習できます。</p>
                             </div>
                         </div>
@@ -207,7 +212,7 @@
                     <div class="card-content">
                         <div class="media">
                             <div class="media-content">
-                                <p class="title">テスト</p>
+                                <p class="title service_no" data-number="02">テスト</p>
                                 <p class="subtitle">テストに挑戦して、今の理解度を確認してみよう。</p>
                             </div>
                         </div>
@@ -230,7 +235,7 @@
                     <div class="card-content">
                         <div class="media">
                             <div class="media-content">
-                                <p class="title">成績</p>
+                                <p class="title service_no" data-number="03">成績</p>
                                 <p class="subtitle">動画教材進捗率とテスト成績結果を確認することができます。</p>
                             </div>
                         </div>

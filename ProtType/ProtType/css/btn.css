@@ -1,0 +1,86 @@
+﻿@charset "UTF-8";
+.custom_button {
+  display: inline-block;
+  position: relative;
+  padding: 15px 5.7em 15px 40px;
+  background: #009ED8;
+  border: none;
+  color: white;
+  transition: 0.2s;
+  margin: 5vw auto;
+}
+.custom_button:before, .custom_button:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding-top: inherit;
+  padding-bottom: inherit;
+  width: 2.8em;
+  content: " ";
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.2em;
+  text-align: center;
+  transition: 0.2s;
+  transform-origin: 50% 60%;
+}
+.custom_button:active, .custom_button:focus {
+  background: #002e3f;
+  outline: none;
+}
+.custom_button:before {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.arrow {
+  background: #FE5F55;
+}
+.arrow:hover {
+  background: #fe2f22;
+  color: #fff;
+}
+.arrow:active, .arrow:focus {
+  background: #b90c01;
+}
+.arrow:after {
+  content: "\f054";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.arrow:hover:after {
+  -webkit-animation: bounceright 0.3s alternate ease infinite;
+  animation: bounceright 0.3s alternate ease infinite;
+}
+
+@-webkit-keyframes bounceright {
+  from {
+    -webkit-transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(3px);
+  }
+}
+@-webkit-keyframes wiggle {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(30deg);
+  }
+}
+@keyframes bounceright {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(3px);
+  }
+}
+@keyframes wiggle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(30deg);
+  }
+}

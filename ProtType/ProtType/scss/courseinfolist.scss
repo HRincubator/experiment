@@ -1,4 +1,6 @@
-﻿.fv__hero {
+﻿@import "variables";
+
+.fv__hero {
     background-image: url("../images/test.png");
     background-size: cover;
     position: relative;
@@ -30,7 +32,78 @@
         padding-bottom: 3%;
     }
 }
-.courseabout-info__content {
-    max-width: 60vw;
+
+/* ------------------------- Course101 CSS ------------------------- */
+.readmore {
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px;
     margin: auto;
+
+    &-content {
+        position: relative;
+        overflow: hidden;
+        /*以下お好み*/
+        /*高さの初期値*/
+        height: 200px;
+
+        &::before {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            content: "";
+            /*以下お好み グラデーションの色と高さ 高さはreadmoreのheight以下にすること*/
+            height: 50px;
+            background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.8) 50%, #fff 100%);
+            background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.8) 50%, #fff 100%);
+        }
+    }
+}
+
+/* 続きを読むボタン */
+.readmore-label {
+    display: table;
+    bottom: 5px;
+    position: absolute;
+    font-weight: bold;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    margin: 0 auto;
+    z-index: 2;
+    padding: 0 10px;
+    color: $primary-color;
+
+    &::before {
+        font-family: 'Font Awesome 5 Free';
+        content: '\f078  続きを読む';
+    }
+}
+
+.readmore-check {
+    display: none;
+    /*チェック時にボタンを非表示*/
+    &:checked ~ .readmore-label {
+        position: static;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        /* 「続きを読む」を押した後、元に戻す必要がない場合は、上のオプションを消してこの1行だけにする */
+        /* display: none; */
+    }
+
+    &:checked ~ .readmore-label::before {
+        font-family: 'Font Awesome 5 Free';
+        content: '\f077  閉じる';
+    }
+    /*チェック時に高さを自動に戻す*/
+    &:checked ~ .readmore-content {
+        height: auto;
+    }
+    /*チェック時グラデーション等を削除*/
+    &:checked ~ .readmore-content::before {
+        display: none;
+    }
 }

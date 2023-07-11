@@ -1,0 +1,107 @@
+﻿$button-color: #009ED8;
+$button-text: #ffffff;
+$background: #303036;
+
+.custom_button {
+    display: inline-block;
+    position: relative;
+    padding: 15px 5.7em 15px 40px;
+    background: $button-color;
+    border: none;
+    color: white;
+    transition: .2s;
+    margin: 5vw auto;
+
+    &:before,
+    &:after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        width: 2.8em;
+        content: "\00a0";
+        font-family: 'Font Awesome 5 Free';
+        font-size: 1.2em;
+        text-align: center;
+        transition: .2s;
+        transform-origin: 50% 60%;
+    }
+
+    &:active,
+    &:focus {
+        background: darken($button-color, 30%);
+        outline: none;
+    }
+
+    &:before {
+        background: rgba(0, 0, 0, 0.1);
+    }
+}
+
+.arrow {
+    background: #FE5F55;
+
+    &:hover {
+        background: darken(#FE5F55, 10%);
+        color: #fff;
+    }
+
+    &:active,
+    &:focus {
+        background: darken(#FE5F55, 30%);
+    }
+
+    &:after {
+        content: '\f054';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+    }
+
+    &:hover:after {
+        -webkit-animation: bounceright .3s alternate ease infinite;
+        animation: bounceright .3s alternate ease infinite;
+    }
+}
+
+
+@-webkit-keyframes bounceright {
+    from {
+        -webkit-transform: translateX(0);
+    }
+
+    to {
+        -webkit-transform: translateX(3px);
+    }
+}
+
+@-webkit-keyframes wiggle {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(30deg);
+    }
+}
+
+@keyframes bounceright {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(3px);
+    }
+}
+
+@keyframes wiggle {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(30deg);
+    }
+}

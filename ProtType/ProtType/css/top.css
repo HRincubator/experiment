@@ -99,3 +99,21 @@
 .about-content-block_four::after {
   content: "04";
 }
+
+.service_no {
+  position: relative;
+  padding-top: 1.5em;
+  color: #333333;
+  z-index: 0;
+}
+.service_no::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  color: #dbffe4;
+  font-size: 3em;
+  line-height: 1;
+  content: attr(data-number);
+  pointer-events: none;
+}

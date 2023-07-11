@@ -47,7 +47,7 @@
                 <div class="navbar-end">
                     <!-- ユーザーアイコンnavbar -->
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">
+                        <a class="navbar-link is-hidden-mobile">
                             <img src="images/index/user-icon.png" />User_1
                         </a>
 
@@ -106,37 +106,43 @@
                     <li class="tab-item is-active">
                         <a>
                             <span class="icon is-small"><i class="fas fa-map" aria-hidden="true"></i></span>
-                            <span>学習中講座</span>
+                            <span class="is-hidden-mobile">学習中講座</span>
                         </a>
                     </li>
                     <li class="tab-item">
                         <a>
                             <span class="icon is-small"><i class="fas fa-graduation-cap" aria-hidden="true"></i></span>
-                            <span>修了講座</span>
+                            <span class="is-hidden-mobile">修了講座</span>
                         </a>
                     </li>
                     <li class="tab-item">
                         <a>
                             <span class="icon is-small"><i class="fas fa-star" aria-hidden="true"></i></span>
-                            <span>お気に入り登録</span>
+                            <span class="is-hidden-mobile">お気に入り</span>
+                        </a>
+                    </li>
+                    <li class="tab-item">
+                        <a>
+                            <span class="icon is-small"><i class="fas fa-spell-check" aria-hidden="true"></i></span>
+                            <span class="is-hidden-mobile">テスト成績</span>
                         </a>
                     </li>
                 </ul>
             </div>
             <!-- tabbar.end -->
-
             <!-- window__tabcontent -->
             <!-- スマホでは非表示。windows、タブレットのみの表示コンテンツ -->
-            <div class="tab-container is-hidden-mobile">
+            <div class="tab-container">
                 <!-- tab1 -->
                 <div class="tab-content active">
                     <!-- tile-wrapper -->
                     <div class="tile is-ancestor">
                         <div class="tile is-parent is-justify-content-center">
                             <div class="tile is-child is-9">
-                                <!-- Content... -->
-                                <div class="recordlist__section">
+                                <!-- Window-Content... -->
+                                <div class="recordlist__section is-hidden-mobile">
                                     <div class="tile is-child box">
+                                        <!-- content1 -->
                                         <div class="media">
                                             <div class="media-left">
                                                 <div class="tag">
@@ -171,6 +177,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- content2 -->
                                         <div class="media">
                                             <div class="media-left">
                                                 <div class="tag">
@@ -207,7 +214,56 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Content.end -->
+                                <!-- Window-Content.end -->
+                                <!-- mobile-Content -->
+                                <div class="recordlist__section is-hidden-tablet">
+                                    <!-- content1 -->
+                                    <div class="card accordion">
+                                        <header class="card-header menu js-menu">
+                                            <div class="media py-3">
+                                                <div class="media-left ml-1">
+                                                    <div class="tag">
+                                                        <span class="icon"><i class="fas fa-box-open" aria-hidden="true"></i></span>
+                                                        <span class="name">実施中</span>
+                                                    </div>
+                                                </div>
+                                                <div class="media-content">
+                                                    <div class="content">
+                                                        <div class="courseinfo-title">
+                                                            <p class="has-text-grey">
+                                                                <span class="is-size-7">第1部</span>
+                                                                <span class="has-text-weight-semibold">様々な基本機能</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="media-right">
+                                                    <button class="card-header-icon" aria-label="more options">
+                                                        <span class="icon">
+                                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </header>
+                                        <div class="contents">
+                                            <div class="card-content">
+                                                <div class="content">
+                                                    <p class="is-size-7">
+                                                        <span>最終視聴日：6月29日</span><br />
+                                                        <span>合計視聴時間：10h</span>
+                                                    </p>
+                                                    <div class="circle-bar">60%</div>
+                                                </div>
+                                            </div>
+                                            <footer class="card-footer">
+                                                <a href="course101.html" class="card-footer-item"><span class="icon"><i class="fas fa-video"></i></span>詳細</a>
+                                            </footer>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- mobile-Content.end -->
+
                                 <!-- Buttons -->
                                 <div class="section">
                                     <div class="buttons">
@@ -246,7 +302,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="column is-4">
+                                    <div class="column is-4 is-hidden-mobile">
                                         <figure class="image is-128x128">
                                             <img src="images/goal.png" />
                                         </figure>
@@ -264,7 +320,7 @@
                         <div class="tile is-parent is-justify-content-center">
                             <div class="tile is-child is-9">
                                 <!-- Content... -->
-                                <div class="recordlist__section">
+                                <div class="recordlist__section is-hidden-mobile">
                                     <div class="tile is-child box">
                                         <div class="media">
                                             <div class="media-left">
@@ -318,13 +374,86 @@
                     </div>
                     <!-- tile-wrapper.end -->
                 </div>
+                <!-- tab4 -->
+                <div class="tab-content">
+                    <!-- tile-wrapper -->
+                    <div class="tile is-ancestor">
+                        <div class="tile is-parent is-justify-content-center">
+                            <div class="tile is-child is-9">
+                                <!-- Content... -->
+                                <div class="recordlist__section is-hidden-mobile">
+                                    <div class="tile is-child box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <div class="tag">
+                                                    <span class="icon"><i class="fas fa-robot" aria-hidden="true"></i></span>
+                                                    <span class="name">自動採点</span>
+                                                </div>
+                                            </div>
+                                            <div class="media-content">
+                                                <div class="content">
+                                                    <div class="courseinfo-title">
+                                                        <p class="has-text-grey">
+                                                            <span class="is-size-7">第1章</span>
+                                                            <span class="has-text-weight-semibold">文字列の操作 テスト2</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="media-right">
+                                                <p class="is-size-7 mb-1">
+                                                    実施日：7月11日<br />
+                                                    得点：90/100
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <div class="tag">
+                                                    <span class="icon"><i class="fas fa-user-circle"></i></span>
+                                                    <span class="name">手動採点</span>
+                                                </div>
+                                            </div>
+                                            <div class="media-content">
+                                                <div class="content">
+                                                    <div class="courseinfo-title">
+                                                        <p class="has-text-grey">
+                                                            <span class="is-size-7">第1章</span>
+                                                            <span class="has-text-weight-semibold">文字列の操作 テスト1</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="media-right">
+                                                <p class="is-size-7 mb-1">
+                                                    実施日：7月11日<br />
+                                                    得点：採点待ち
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Buttons -->
+                                <div class="section">
+                                    <div class="buttons">
+                                        <a class="button is-primary" href="coursetop.html">
+                                            <strong>動画教材</strong>
+                                        </a>
+                                        <a class="button is-light" href="testtop.html">
+                                            <strong>テスト</strong>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tile-wrapper.end -->
+                </div>
             </div>
             <!-- window__tabcontent.end -->
             <!-- *************************************************************************************************************** -->
-
             <!-- mobile__tabcontent -->
             <!-- windows、タブレットでは非表示。スマホのみの表示コンテンツ -->
-
             <!-- mobile__tabcontent.end -->
         </div>
         <!-- main-container.end -->
@@ -374,5 +503,6 @@
         <!-- content.end -->
     </footer>
     <!-- footer.end -->
+    <script src="js/main.js" defer></script>
 </body>
 </html>

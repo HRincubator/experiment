@@ -18,5 +18,9 @@
   {
     "inputFile": "scss/courseinfolist.scss",
     "outputFile": "css/courseinfolist.css"
+  },
+  {
+    "inputFile": "scss/btn.scss",
+    "outputFile": "css/btn.css"
   }
 ]

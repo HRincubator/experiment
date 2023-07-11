@@ -4,11 +4,38 @@
 body {
     font-family: $text-font;
 }
+.custom__header {
+    display: block;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
 
 .section {
     &__title {
         text-align: center;
         font-weight: bold;
+    }
+}
+
+.title_01 {
+    display: inline-block;
+    position: relative;
+    margin: calc(3.5em / 2) 0 calc(3.5em / 4) calc(3.5em / 2);
+    color: #333333;
+    line-height: 1;
+
+    &::before {
+        position: absolute;
+        bottom: calc(-3.5em / 4);
+        left: calc(-3.5em / 2);
+        z-index: -1;
+        width: 3.5em;
+        height: 3.5em;
+        border-radius: 50%;
+        background: #b8ffcd;
+        content: '';
     }
 }
 
@@ -100,30 +127,34 @@ body {
 }
 
 .arrow_button1 {
-    font-size: 25px;
-    display: inline-block;
-    max-width: 180px;
-    border-radius: 3px;
-    padding: 1em 2em 1em 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    margin: 0 auto;
+    padding: .9em 2em;
+    border: none;
+    border-bottom: solid 5px #cf0303;
+    border-radius: 5px;
+    background-color: #ff3333;
     color: #fff;
-    background: orangered;
-    text-decoration: none;
-    position: relative;
-    border: 1px solid orangered;
+    font-weight: 600;
+    font-size: 1em;
+    transition: .5s ease;
 
     &::after {
-        content: '\f054';
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
-        position: absolute;
-        top: 50%;
-        right: .5em;
-        transform: translateY(-50%);
+        transform: rotate(45deg);
+        width: 5px;
+        height: 5px;
+        margin-left: 10px;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        content: '';
     }
 
     &:hover {
-        background: #fff;
-        color: orangered;
+        transform: translateY(3px);
+        border-bottom-width: 2px;
     }
 }
 
@@ -245,4 +276,26 @@ body {
     background: $calendar-color;
     color: $calendar-color;
     
+}
+
+.point-text {
+    position: relative;
+    padding: 1rem 2rem;
+    color: $accent-color;
+    border-radius: 0 10px 10px 10px;
+    background: $point-text-color;
+    max-width: 980px;
+
+    &:before {
+        font-family: 'Font Awesome 5 Free';
+        position: absolute;
+        top: -24px;
+        left: 0;
+        height: 24px;
+        padding: 0 1em;
+        content: '\f0a4  POINT';
+        color: #fff;
+        border-radius: 10px 10px 0 0;
+        background: $accent-color;
+    }
 }
