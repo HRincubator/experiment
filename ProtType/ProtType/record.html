@@ -25,7 +25,7 @@
 </head>
 <body>
     <!-- header -->
-    <header class="header">
+    <header class="header custom__header">
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="top.html">
@@ -133,7 +133,7 @@
             <!-- window__tabcontent -->
             <!-- スマホでは非表示。windows、タブレットのみの表示コンテンツ -->
             <div class="tab-container">
-                <!-- tab1 -->
+                <!-- 学習中講座 -->
                 <div class="tab-content active">
                     <!-- tile-wrapper -->
                     <div class="tile is-ancestor">
@@ -217,10 +217,54 @@
                                 <!-- Window-Content.end -->
                                 <!-- mobile-Content -->
                                 <div class="recordlist__section is-hidden-tablet">
-                                    <!-- content1 -->
+                                    <!-- mobile-content1 -->
                                     <div class="card accordion">
                                         <header class="card-header menu js-menu">
-                                            <div class="media py-3">
+                                            <div class="media pt-3">
+                                                <div class="media-left ml-1">
+                                                    <div class="tag">
+                                                        <span class="icon"><i class="fas fa-box-open" aria-hidden="true"></i></span>
+                                                        <span class="name">実施中</span>
+                                                    </div>
+                                                </div>
+                                                <div class="media-content">
+                                                    <div class="content">
+                                                        <div class="courseinfo-title">
+                                                            <p class="has-text-grey">
+                                                                <span class="is-size-7">第1部</span>
+                                                                <span class="has-text-weight-semibold">様々な基本機能</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="media-right">
+                                                    <button class="card-header-icon" aria-label="more options">
+                                                        <span class="icon">
+                                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </header>
+                                        <div class="contents">
+                                            <div class="card-content">
+                                                <div class="content">
+                                                    <p class="is-size-7">
+                                                        <span>最終視聴日：6月29日</span><br />
+                                                        <span>合計視聴時間：10h</span>
+                                                    </p>
+                                                    <div class="circle-bar">60%</div>
+                                                </div>
+                                            </div>
+                                            <footer class="card-footer">
+                                                <a href="course101.html" class="card-footer-item"><span class="icon"><i class="fas fa-video"></i></span>詳細</a>
+                                            </footer>
+                                        </div>
+                                    </div>
+                                    <!-- mobile-content2 -->
+                                    <div class="card accordion">
+                                        <header class="card-header menu js-menu">
+                                            <div class="media pt-3">
                                                 <div class="media-left ml-1">
                                                     <div class="tag">
                                                         <span class="icon"><i class="fas fa-box-open" aria-hidden="true"></i></span>
@@ -263,9 +307,8 @@
                                     </div>
                                 </div>
                                 <!-- mobile-Content.end -->
-
                                 <!-- Buttons -->
-                                <div class="section">
+                                <div class="buttons_area">
                                     <div class="buttons">
                                         <a class="button is-primary" href="coursetop.html">
                                             <strong>動画教材</strong>
@@ -280,7 +323,7 @@
                     </div>
                     <!-- tile-wrapper.end -->
                 </div>
-                <!-- tab2 -->
+                <!-- 修了講座 -->
                 <div class="tab-content">
                     <!-- tile-wrapper -->
                     <div class="tile is-ancestor">
@@ -290,8 +333,9 @@
                                 <div class="columns has-text-centered mt-3">
                                     <div class="column">
                                         <p class="title mt-6 has-text-grey is-size-5">修了講座はありません。</p>
+
                                         <!-- Buttons -->
-                                        <div class="section">
+                                        <div class="buttons_area">
                                             <div class="buttons">
                                                 <a class="button is-primary" href="coursetop.html">
                                                     <strong>動画教材</strong>
@@ -313,7 +357,7 @@
                     </div>
                     <!-- tile-wrapper.end -->
                 </div>
-                <!-- tab3 -->
+                <!-- お気に入り登録講座 -->
                 <div class="tab-content">
                     <!-- tile-wrapper -->
                     <div class="tile is-ancestor">
@@ -358,8 +402,100 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- mobile-Content -->
+                                <div class="recordlist__section is-hidden-tablet">
+                                    <!-- mobile-content1 -->
+                                    <div class="card accordion">
+                                        <header class="card-header menu js-menu">
+                                            <div class="media pt-3">
+                                                <div class="media-left ml-1">
+                                                    <div class="tag">
+                                                        <span class="icon"><i class="fas fa-box-open" aria-hidden="true"></i></span>
+                                                        <span class="name">実施中</span>
+                                                    </div>
+                                                </div>
+                                                <div class="media-content">
+                                                    <div class="content">
+                                                        <div class="courseinfo-title">
+                                                            <p class="has-text-grey">
+                                                                <span class="is-size-7">第1部</span>
+                                                                <span class="has-text-weight-semibold">様々な基本機能</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="media-right">
+                                                    <button class="card-header-icon" aria-label="more options">
+                                                        <span class="icon">
+                                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </header>
+                                        <div class="contents">
+                                            <div class="card-content">
+                                                <div class="content">
+                                                    <p class="is-size-7">
+                                                        <span>最終視聴日：6月29日</span><br />
+                                                        <span>合計視聴時間：10h</span>
+                                                    </p>
+                                                    <div class="circle-bar">60%</div>
+                                                </div>
+                                            </div>
+                                            <footer class="card-footer">
+                                                <a href="course101.html" class="card-footer-item"><span class="icon"><i class="fas fa-video"></i></span>詳細</a>
+                                            </footer>
+                                        </div>
+                                    </div>
+                                    <!-- mobile-content2 -->
+                                    <div class="card accordion">
+                                        <header class="card-header menu js-menu">
+                                            <div class="media pt-3">
+                                                <div class="media-left ml-1">
+                                                    <div class="tag">
+                                                        <span class="icon"><i class="fas fa-box-open" aria-hidden="true"></i></span>
+                                                        <span class="name">実施中</span>
+                                                    </div>
+                                                </div>
+                                                <div class="media-content">
+                                                    <div class="content">
+                                                        <div class="courseinfo-title">
+                                                            <p class="has-text-grey">
+                                                                <span class="is-size-7">第1部</span>
+                                                                <span class="has-text-weight-semibold">様々な基本機能</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="media-right">
+                                                    <button class="card-header-icon" aria-label="more options">
+                                                        <span class="icon">
+                                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </header>
+                                        <div class="contents">
+                                            <div class="card-content">
+                                                <div class="content">
+                                                    <p class="is-size-7">
+                                                        <span>最終視聴日：6月29日</span><br />
+                                                        <span>合計視聴時間：10h</span>
+                                                    </p>
+                                                    <div class="circle-bar">60%</div>
+                                                </div>
+                                            </div>
+                                            <footer class="card-footer">
+                                                <a href="course101.html" class="card-footer-item"><span class="icon"><i class="fas fa-video"></i></span>詳細</a>
+                                            </footer>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- mobile-Content.end -->
                                 <!-- Buttons -->
-                                <div class="section">
+                                <div class="buttons_area">
                                     <div class="buttons">
                                         <a class="button is-primary" href="coursetop.html">
                                             <strong>動画教材</strong>
@@ -374,13 +510,13 @@
                     </div>
                     <!-- tile-wrapper.end -->
                 </div>
-                <!-- tab4 -->
+                <!-- テスト成績 -->
                 <div class="tab-content">
                     <!-- tile-wrapper -->
                     <div class="tile is-ancestor">
                         <div class="tile is-parent is-justify-content-center">
                             <div class="tile is-child is-9">
-                                <!-- Content... -->
+                                <!-- Window-Content... -->
                                 <div class="recordlist__section is-hidden-mobile">
                                     <div class="tile is-child box">
                                         <div class="media">
@@ -433,8 +569,50 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Window-Content.end -->
+
+                                <!-- mobile-Content -->
+                                <div class="recordlist__section is-hidden-tablet">
+                                    <!-- mobile-content1 -->
+                                    <div class="card">
+                                        <div class="card-content p-2">
+                                            <!-- Content1 -->
+                                            <div class="mobile-content_test">
+                                                <div class="tag">
+                                                    <span class="icon"><i class="fas fa-user-circle"></i></span>
+                                                    <span class="name">手動採点</span>
+                                                </div>
+                                                <p class="has-text-grey mb-0">
+                                                    <span class="is-size-7">第1章</span>
+                                                    <span class="has-text-weight-semibold">文字列の操作 テスト1</span>
+                                                </p>
+                                                <p class="is-size-7">
+                                                    テスト実施日：6月29日<br />
+                                                    得点：採点待ち
+                                                </p>
+                                            </div>
+                                            <!-- Content2 -->
+                                            <div class="mobile-content_test">
+                                                <div class="tag">
+                                                    <span class="icon"><i class="fas fa-robot" aria-hidden="true"></i></span>
+                                                    <span class="name">自動採点</span>
+                                                </div>
+                                                <p class="has-text-grey mb-0">
+                                                    <span class="is-size-7">第1章</span>
+                                                    <span class="has-text-weight-semibold">文字列の操作 テスト1</span>
+                                                </p>
+                                                <p class="is-size-7">
+                                                    テスト実施日：6月29日<br />
+                                                    得点：90/100
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- mobile-Content.end -->
+
                                 <!-- Buttons -->
-                                <div class="section">
+                                <div class="buttons_area">
                                     <div class="buttons">
                                         <a class="button is-primary" href="coursetop.html">
                                             <strong>動画教材</strong>
@@ -461,46 +639,44 @@
     <!-- section.end -->
     <!-- footer -->
     <footer class="footer has-background-white-ter pb-3">
-        <!-- content -->
-        <div class="content has-text-derk">
-            <!-- columns -->
-            <div class="columns">
-                <!-- left-content -->
-                <div class="column is-two-fifths">
-                    <a class="tile box is-5 p-2 ml-6" href="top.html">
-                        <img src="images/logo.png">
-                    </a>
-                </div>
-                <!-- left-content.end -->
-                <!-- right-content -->
-                <div class="column">
-                    <p class="title is-6">サービス</p>
-                    <div class="is-size-7 ml-3">
-                        <p>動画教材一覧</p>
-                        <p>テスト一覧</p>
-                        <p>ヘルプ</p>
-                    </div>
-                </div>
-                <div class="column">
-                    <p class="title is-6">サポート</p>
-                    <div class="is-size-7 ml-3">
-                        <p>運営会社</p>
-                        <p>採用情報</p>
-                        <p>利用規約</p>
-                        <p>特定商取引法に基づく表示</p>
-                        <p>プライバシーポリシー</p>
-                    </div>
-                </div>
-                <!-- right-content.end -->
-            </div>
-            <!-- columns.end -->
-            <!-- copylight -->
-            <p class="has-text-centered mt-6">
-                <small>© Entrance Co. Ltd. 2023</small>
-            </p>
-            <!-- copylight.end -->
+    <div class="content has-text-derk">
+    <div class="columns">
+     <!-- left-content -->
+    <div class="column is-two-fifths">
+        <a class="tile box is-5 p-2 ml-6" href="top.html">
+            <img src="images/logo.png">
+        </a>
+    </div>
+    <!-- left-content.end -->
+    <!-- right-content -->
+    <div class="column">
+        <p class="title is-6">サービス</p>
+        <div class="is-size-7 ml-3">
+            <p>動画教材一覧</p>
+            <p>テスト一覧</p>
+            <p>ヘルプ</p>
         </div>
-        <!-- content.end -->
+    </div>
+    <div class="column">
+        <p class="title is-6">サポート</p>
+        <div class="is-size-7 ml-3">
+            <p>運営会社</p>
+            <p>採用情報</p>
+            <p>利用規約</p>
+            <p>特定商取引法に基づく表示</p>
+            <p>プライバシーポリシー</p>
+        </div>
+    </div>
+    <!-- right-content.end -->
+    </div>
+    <!-- columns.end -->
+    <!-- copylight -->
+    <p class="has-text-centered mt-6">
+        <small>© Entrance Co. Ltd. 2023</small>
+    </p>
+    <!-- copylight.end -->
+    </div>
+    <!-- content.end -->
     </footer>
     <!-- footer.end -->
     <script src="js/main.js" defer></script>

@@ -337,7 +337,7 @@
                         <ul class="menu-list">
                             <li><a>ヘルプ</a></li>
                             <li><a>利用規約</a></li>
-                            <li><a class="has-text-danger js-modal-trigger" data-target="quit-modal">退会</a></li>
+                            <li><a href="quit.html" class="has-text-danger js-modal-trigger">退会</a></li>
                         </ul>
                     </aside>
                 </div>
@@ -397,42 +397,7 @@
             </footer>
         </div>
     </div>
-    <!-- quit-modal -->
-    <div id="quit-modal" class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title">退会の前にご確認ください。</p>
-                <button class="delete" aria-label="close"></button>
-            </header>
-            <section class="modal-card-body">
-                <!-- Content ... -->
-                <div class="content">
-                    <p>退会するには、下記の <strong>[退会の確定]</strong> をクリックしてください。</p>
-                    <ul>
-                        <li>退会後、本サービスを一部使用することができなくなります。</li>
-                        <li>間違って退会した場合でも、30日以内であればアカウントを復活させることができます。</li>
-                        <li>退会しなくてもユーザー名やメールアドレスは変更できます。ユーザー名の変更はマイページから編集して行ってください。</li>
-                    </ul>
-                </div>
-                <a href="quit.html" class="has-text-primary">よろしければ退会理由アンケートにご協力ください</a>
-            </section>
-            <footer class="modal-card-foot">
-                <button class="button is-danger js-modal-trigger" data-target="quit-decision-modal">退会の確定</button>
-                <button class="button">キャンセル</button>
-            </footer>
-        </div>
-    </div>
-    <div id="quit-decision-modal" class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <section class="modal-card-body">
-                <!-- Content ... -->
-                <p>退会が完了しました。</p>
-            </section>
-        </div>
-    </div>
-    <!-- quit-modal.end -->
+    
     <!-- mail-setting-modal -->
     <div id="mail-setting-modal" class="modal">
         <div class="modal-background"></div>

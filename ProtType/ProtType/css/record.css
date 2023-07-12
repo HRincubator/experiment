@@ -1,8 +1,4 @@
-﻿.record__section {
-  min-height: 120vh;
-}
-
-.custom-container {
+﻿.custom-container {
   max-width: 800px;
 }
 
@@ -14,7 +10,7 @@
 .tab-container {
   padding: 20px;
   line-height: 2;
-  height: 300px;
+  height: auto;
 }
 .tab-container .tab-content {
   display: none;
@@ -27,12 +23,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   margin: 0 auto;
   border-radius: 50%;
   background-image: radial-gradient(#fff 55%, transparent 55%), conic-gradient(#55ec73 60%, #e2e2e2 60% 100%);
   font-weight: 600;
+}
+
+.buttons_area {
+  padding: 3rem 1.5rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -64,5 +64,12 @@
     line-height: normal;
     height: auto;
     opacity: 1;
+  }
+  .buttons_area {
+    padding: 3rem 1.5rem;
+    display: inline;
+  }
+  .mobile-content_test:not(:last-child) {
+    border-bottom: 1px #e3e3e3 solid;
   }
 }
