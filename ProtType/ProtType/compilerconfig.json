@@ -22,5 +22,13 @@
   {
     "inputFile": "scss/btn.scss",
     "outputFile": "css/btn.css"
+  },
+  {
+    "inputFile": "scss/coursetop.scss",
+    "outputFile": "css/coursetop.css"
+  },
+  {
+    "inputFile": "scss/1.scss",
+    "outputFile": "css/1.css"
   }
 ]

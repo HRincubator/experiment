@@ -3,7 +3,6 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- icon -->
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
@@ -14,17 +13,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;600&display=swap" rel="stylesheet">
     <!-- reset css -->
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
-    <!-- common css -->
-    <link rel="stylesheet" href="css/common.css" />
     <!-- css -->
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/1.css" />
     <link rel="stylesheet" href="css/coursetop.css" />
+    <title></title>
     <!-- js -->
     <script src="js/main.js" defer></script>
-
-    <title>Entrance | 動画教材トップ</title>
 </head>
 <body>
-    <!-- header -->
     <header class="header custom__header">
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
@@ -73,140 +70,111 @@
             </div>
         </nav>
     </header>
-    <!-- header.end -->
-
-    <section class="section">
-        <!-- パンくずリスト -->
-        <nav class="breadcrumb is-size-7" aria-label="breadcrumbs">
-            <ul>
-                <li>
-                    <a href="top.html">
-                        <span class="icon is-small">
-                            <i class="fas fa-home" aria-hidden="true"></i>
-                        </span>
-                        <span>トップ</span>
+    <div data-component="sidebar">
+        <div class="sidebar">
+            <ul class="list-group flex-column d-inline-block first-menu">
+                <!-- 学習の進め方 -->
+                <li class="list-group-item pl-3 py-2">
+                    <a href="coursetop.html" style="display: flex;">
+                        <i class="fab fa-java" aria-hidden="true"></i>
+                        <span class="ml-2 align-middle">学習の進め方</span>
                     </a>
-                </li>
-                <li class="is-active">
-                    <a href="#">
-                        <span class="icon is-small">
-                            <i class="fas fa-book" aria-hidden="true"></i>
-                        </span>
-                        <span>動画教材トップ</span>
+                </li> <!-- /.list-group-item -->
+                <!-- 単元一覧 -->
+                <li class="list-group-item pl-3 py-2">
+                    <a href="courselist.html" style="display: flex;">
+                        <i class="fab fa-java" aria-hidden="true"></i>
+                        <span class="ml-2 align-middle">単元一覧</span>
                     </a>
-                </li>
-            </ul>
-        </nav>
-        <!-- パンくずリスト.end -->
-        <!-- tile -->
-        <div class="tile is-ancestor">
-            <!-- side__tile -->
-            <div class="tile is-3 is-vertical is-parent side__tile is-hidden-mobile">
-                <!-- リンク -->
-                <div class="mt-6 pb-3">
-                    <p class="title is-size-5">
-                        <a href="coursetop.html" class="has-text-grey">学習の進め方</a>
-                    </p>
-                    <p class="title is-size-5">
-                        <a href="courselist.html" class="has-text-grey">単元一覧</a>
-                    </p>
-                </div>
-                <!-- tabs -->
-                <div class="tabs is-boxed ml-5">
-                    <ul class="tab-list is-size-7">
-                        <li class="tab-item is-active">
-                            <a>
-                                <span class="icon is-small"><i class="fas fa-book"></i></span>
-                                <span>教材一覧</span>
-                            </a>
-                        </li>
-                        <li class="tab-item">
-                            <a>
-                                <span class="icon is-small"><i class="fas fa-graduation-cap"></i></span>
-                                <span>テスト一覧</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- tabs.end -->
-                <!-- tabcontainer -->
-                <div class="tab-container ml-5 pt-0">
-                    <!-- tab1 -->
-                    <div class="tab-content active">
-                        <div class="tile side-menu-text is-child">
-                            <ul class="menu-list mb-3">
-                                <li><a href="course101.html">第1部 プログラムの書き方</a></li>
-                                <li><a>第2部 式と演算子</a></li>
-                                <li><a>第3部 条件分岐と繰り返し</a></li>
-                            </ul>
-                            <ul class="menu-list lock_content">
-                                <li><a>第4部 配列</a></li>
-                                <li><a>非公開2</a></li>
-                                <li><a>非公開3</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- tab2 -->
-                    <div class="tab-content">
-                        <div class="tile is-child">
-                            <aside class="menu">
-                                <p class="menu-label mb-0">第1部</p>
-                                <ul class="menu-list mb-3">
-                                    <li><a href="course101.html">第1章 テスト1</a></li>
-                                    <li><a>第2章 テスト2</a></li>
-                                    <li><a>第3章 テスト3</a></li>
-                                </ul>
-                                <p class="menu-label">第2部</p>
-                                <ul class="menu-list lock_content">
-                                    <li><a>第1章 テスト4</a></li>
-                                    <li><a>第2章 テスト5</a></li>
-                                    <li><a>第3章 テスト6</a></li>
-                                </ul>
-                            </aside>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- side-tile.end -->
 
+                    <!-- サブメニュー -->
+                    <ul class="list-group flex-column d-inline-block submenu">
+                        <!-- 教材一覧 -->
+                        <li class="list-group-item px-3">
+                            <div class="accordion side-menu-text">
+                                <!-- accodion menu -->
+                                <button class="menu js-menu has-text-white">
+                                    <div class="media sidemenu-title">
+                                        <div class="media-left">
+                                            <span class="icon"><i class="fab fa-youtube" aria-hidden="true"></i></span>
+                                        </div>
+                                        <div class="media-content">
+                                            <div class="content">
+                                                <span>教材一覧</span>
+                                            </div>
+                                        </div>
+                                        <div class="media-right">
+                                            <div class="content" style="padding-left: 12px;">
+                                                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
 
-            <!-- Mobile Side Menu -->
+                                <div class="contents">
+                                    <div class="side-menu-text">
+                                        <ul class="menu-list mb-3">
+                                            <li><a href="course101.html" class="is-size-7">第1部 プログラムの書き方</a></li>
+                                            <li><a class="is-size-7">第2部 式と演算子</a></li>
+                                            <li><a class="is-size-7">第3部 条件分岐と繰り返し</a></li>
+                                        </ul>
+                                        <ul class="menu-list lock_content">
+                                            <li><a class="is-size-7">第4部 配列</a></li>
+                                            <li><a class="is-size-7">非公開2</a></li>
+                                            <li><a class="is-size-7">非公開3</a></li>
+                                        </ul>
+                                    </div>
 
-            <!-- Mobile Side Menu END -->
+                                </div>
+                            </div>
+                        </li> <!-- end 教材一覧 -->
+                        <!-- テスト一覧 -->
+                        <li class="list-group-item px-3">
+                            <div class="accordion side-menu-text">
+                                <!-- accodion menu -->
+                                <button class="menu js-menu has-text-white">
+                                    <div class="media sidemenu-title">
+                                        <div class="media-left">
+                                            <span class="icon is-small"><i class="fas fa-edit custom_icon"></i></span>
+                                        </div>
+                                        <div class="media-content">
+                                            <div class="content pl-1">
+                                                <span>テスト一覧</span>
+                                            </div>
+                                        </div>
+                                        <div class="media-right">
+                                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <div class="contents">
+                                    <div class="side-menu-text">
+                                        <ul class="menu-list mb-3">
+                                            <li><a class="is-size-7" href="course101.html">第1部 プログラムの書き方</a></li>
+                                            <li><a class="is-size-7">第2部 式と演算子</a></li>
+                                            <li><a class="is-size-7">第3部 条件分岐と繰り返し</a></li>
+                                        </ul>
+                                        <ul class="menu-list lock_content">
+                                            <li><a class="is-size-7">第4部 配列</a></li>
+                                            <li><a class="is-size-7">非公開2</a></li>
+                                            <li><a class="is-size-7">非公開3</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
 
+                        </li> <!-- end テスト一覧 -->
 
-            <!-- main-tile -->
+                    </ul> <!-- /.submenu -->
+                </li> <!-- /.list-group-item -->
+
+            </ul> <!-- /.first-menu -->
+        </div> <!-- /.sidebar -->
+    </div>
+    <div class="wp-content section">
+        <div class="container-fluid">
             <div class="tile is-parent">
                 <div class="tile is-child pl-4">
-                    <p class="title">動画教材トップページ</p><br />
-                    <p class="title has-text-weight-normal is-4 mb-3">学習の進め方</p>
-                    <hr class="dropdown-divider">
-                    <p class="subtitle is-5">本気でエンジニアを目指すあなたへ</p>
-                    <p class="mb-6">Entranceは、「完全未経験者からIT業界へ挑戦する方の窓口」になることをコンセプトにサービスを開始しました。</p>
-
-                    <p class="title is-5 mb-3">1.Entranceで基礎を体系的に学ぶ</p>
-                    <hr class="dropdown-divider">
-                    <p class="mb-5">
-                        Entranceはプログラミング未経験者でも楽しく学べる学習サービスです。<br />
-                        Entranceのサービスに登録していただくことで動画教材でJavaの学習をすることができます。
-                    </p>
-                    <p class="title is-6 mb-4">1-1.様々な基本機能を理解しよう</p>
-                    <p class="mb-5">
-                        まずは、第1部の様々な基本機能でJavaの基本知識を一通り身につけましょう。以下の学習項目が含まれています。
-                    </p>
-                    <div class="card mb-5 mr-6">
-                        <div class="card-content has-background-white-ter">
-                            <div class="content">
-                                <ul>
-                                    <li>第1章 文字列の操作</li>
-                                    <li>第2章 日付と時間の取扱</li>
-                                    <li>第3章 コレクション</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="point-text my-6">全てを完璧に覚えるまで頑張るよりも一周したら先へ進み、行き詰まったら復習するやり方をお勧めします。</p>
-
                     <!--********** MAIN-CONTENT__TILE NEW **********-->
                     <div class="step-wrap">
                         <!-- Step 1 -->
@@ -268,13 +236,11 @@
                         </div>
                     </div>
                     <!--********** MAIN-CONTENT__TILE END **********-->
+
                 </div>
             </div>
-            <!-- main-title.end -->
- 
         </div>
-        <!-- tile.end -->
-    </section>
+    </div>
     <!-- footer -->
     <footer class="footer has-background-white-ter pb-3">
         <!-- content -->
@@ -319,5 +285,6 @@
         <!-- content.end -->
     </footer>
     <!-- footer.end -->
+    <script src="js/main.js" defer></script>
 </body>
 </html>
