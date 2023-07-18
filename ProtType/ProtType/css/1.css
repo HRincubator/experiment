@@ -1,5 +1,4 @@
 ﻿@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;600&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
 .p-1 {
   padding: 5px !important;
 }
@@ -271,7 +270,6 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
   min-height: 100vh;
 }
 
@@ -315,7 +313,6 @@ button:focus, a:focus {
 [data-component=sidebar] .first-menu span {
   font-size: 14px;
   white-space: nowrap;
-  font-family: "Open Sans", sans-serif;
   opacity: 0;
   visibility: hidden;
 }
@@ -344,12 +341,11 @@ button:focus, a:focus {
   height: 100vw;
   opacity: 0;
   visibility: hidden;
-  transition: 500ms opacity 500ms, 0ms visibility 0ms;
+  transition: 500ms opacity 500ms, 500ms visibility 500ms;
 }
 [data-component=sidebar] .submenu span {
   font-size: 14px;
   white-space: nowrap;
-  font-family: "Open Sans", sans-serif;
   opacity: 0;
   visibility: hidden;
 }
@@ -366,10 +362,6 @@ button:focus, a:focus {
   color: #015249;
 }
 [data-component=sidebar] .first-menu li:hover .submenu {
-  visibility: visible;
-  opacity: 1;
-}
-[data-component=sidebar] .submenu li:hover .sub-submenu {
   visibility: visible;
   opacity: 1;
 }
@@ -403,4 +395,43 @@ button:focus, a:focus {
   line-height: normal;
   height: auto;
   opacity: 1;
+}
+
+.courselist_time {
+  padding: 0.5em 0.7em;
+  border-left: 2px solid #dedede;
+  color: #333333;
+}
+
+.container-fluid {
+  max-width: 907px;
+}
+
+.custom_content-info {
+  position: relative;
+  z-index: 0;
+}
+.custom_content-info::before {
+  content: "";
+  position: absolute;
+  background: #57bc90;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.fa-customx {
+  font-size: 4rem;
+}
+
+.is-custom {
+  height: 100%;
+  width: 100%;
+  min-height: 110.5px;
+}
+
+.course-top__section {
+  display: flex;
+  justify-content: center;
 }

@@ -299,9 +299,6 @@ $spacer-5: $spacer * 7;
     margin-bottom: $spacer-5 !important;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
-
-$font-stack: 'Open Sans', sans-serif;
 $secondary-color: #81ff74;
 $background: #eee;
 
@@ -314,10 +311,9 @@ $browser-context: 16;
 $transition-duration: 500ms;
 $transition-delay: $transition-duration;
 
-$sidebar-transition: $transition-duration opacity $transition-delay, 0ms visibility 0ms;
+$sidebar-transition: $transition-duration opacity $transition-delay, $transition-duration visibility $transition-delay;
 
 body {
-    font-family: $font-stack;
     min-height: 100vh;
 }
 
@@ -373,7 +369,6 @@ button, a {
         span {
             font-size: 14px;
             white-space: nowrap;
-            font-family: 'Open Sans', sans-serif;
             opacity: 0;
             visibility: hidden;
         }
@@ -414,7 +409,6 @@ button, a {
         span {
             font-size: 14px;
             white-space: nowrap;
-            font-family: 'Open Sans', sans-serif;
             opacity: 0;
             visibility: hidden;
 
@@ -437,11 +431,6 @@ button, a {
     }
 
     .first-menu li:hover .submenu {
-        visibility: visible;
-        opacity: 1;
-    }
-
-    .submenu li:hover .sub-submenu {
         visibility: visible;
         opacity: 1;
     }
@@ -476,4 +465,42 @@ button, a {
     line-height: normal;
     height: auto;
     opacity: 1;
+}
+
+.courselist_time {
+    padding: .5em .7em;
+    border-left: 2px solid #dedede;
+    color: #333333;
+}
+
+.container-fluid {
+    max-width: 907px;
+}
+
+.custom_content-info {
+    position: relative;
+    z-index: 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: $theme-color;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+}
+.fa-customx {
+    font-size: 4rem;
+}
+
+.is-custom {
+    height: 100%;
+    width: 100%;
+    min-height: 110.5px;
+}
+.course-top__section {
+    display: flex;
+    justify-content: center;
 }
