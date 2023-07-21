@@ -282,3 +282,7 @@ body {
   border-radius: 10px 10px 0 0;
   background: #015249;
 }
+
+.section__title {
+  color: #57bc90;
+}

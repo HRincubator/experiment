@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\01",
+    "\\01\\lesson",
+    "\\scss"
   ],
+  "SelectedNode": "\\scss\\lesson.scss",
   "PreviewInSolutionExplorer": false
 }

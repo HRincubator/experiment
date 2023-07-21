@@ -14,19 +14,60 @@
     <!-- reset css -->
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
     <!-- css -->
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/1.css" />
-    <link rel="stylesheet" href="css/coursetop.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/lesson.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/coursetop.css" />
     <title></title>
     <!-- js -->
-    <script src="js/main.js" defer></script>
+    <script src="../../js/main.js" defer></script>
+    <!-- Monaco Editor -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.27.0/min/vs/loader.js"></script>
+    <script>
+        // Monaco Editorの読み込みが完了した後にエディタを作成
+        require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.27.0/min/vs' } });
+        require(['vs/editor/editor.main'], function () {
+            monaco.editor.defineTheme('dark', {
+                base: 'vs-dark',
+                inherit: true,
+                rules: [{ token: '', background: '1e1e1e' }],
+                colors: {
+                    'editor.foreground': '#F8F8F8',
+                    'editor.background': '#1e1e1e',
+                    'editorCursor.foreground': '#A7A7A7',
+                    'editor.lineHighlightBackground': '#222',
+                    'editorLineNumber.foreground': '#ccc',
+                    'editor.selectionBackground': '#D4D4D4',
+                    'editor.inactiveSelectionBackground': '#7A7A7A',
+                    'editor.selectionHighlightBackground': '#ADD6FF26'
+                }
+            });
+
+            monaco.editor.create(document.getElementById('editor'), {
+                value: [
+                    'public class Main {',
+                    '    public static void main(String[] args) {',
+                    '        System.out.println("Hello World");',
+                    '    }',
+                    '}'
+                ].join('\n'),
+                language: 'java',
+                theme: 'dark',
+                automaticLayout: true,
+                wordBasedSuggestions: true,
+                quickSuggestions: true,
+                quickSuggestionsDelay: 50,
+                snippetSuggestions: 'inline',
+                contextmenu: false
+            });
+        });
+    </script>
 </head>
 <body>
     <header class="header custom__header">
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="top.html">
-                    <img src="images/logo.png">
+                    <img src="../../images/logo.png">
                 </a>
 
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -45,17 +86,17 @@
                     <!-- ユーザーアイコンnavbar -->
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link is-hidden-mobile">
-                            <img src="images/index/user-icon.png" />User_1
+                            <img src="../../images/index/user-icon.png" />User_1
                         </a>
 
                         <div class="navbar-dropdown  is-right">
-                            <a class="navbar-item" href="mypage.html">
+                            <a class="navbar-item" href="../../mypage.html">
                                 マイページ
                             </a>
-                            <a class="navbar-item" href="messagelist.html">
+                            <a class="navbar-item" href="../../messagelist.html">
                                 メッセージ
                             </a>
-                            <a class="navbar-item" href="login.html">
+                            <a class="navbar-item" href="../../login.html">
                                 ログアウト
                             </a>
                             <hr class="navbar-divider">
@@ -75,14 +116,14 @@
             <ul class="list-group flex-column d-inline-block first-menu">
                 <!-- 学習の進め方 -->
                 <li class="list-group-item pl-3 py-2">
-                    <a href="#" style="display: flex;">
+                    <a href="../../coursetop.html" style="display: flex;">
                         <i class="fab fa-java" aria-hidden="true"></i>
                         <span class="ml-2 align-middle">学習の進め方</span>
                     </a>
                 </li> <!-- /.list-group-item -->
                 <!-- 単元一覧 -->
                 <li class="list-group-item pl-3 py-2">
-                    <a href="courselist.html" style="display: flex;">
+                    <a href="../../courselist.html" style="display: flex;">
                         <i class="fab fa-java" aria-hidden="true"></i>
                         <span class="ml-2 align-middle">単元一覧</span>
                     </a>
@@ -114,7 +155,7 @@
                                 <div class="contents">
                                     <div class="side-menu-text">
                                         <ul class="menu-list mb-3 has-text-left">
-                                            <li><a href="course101.html" class="is-size-7">第1部 プログラムの書き方</a></li>
+                                            <li><a href="../../course101.html" class="is-size-7">第1部 プログラムの書き方</a></li>
                                             <li><a class="is-size-7">第2部 式と演算子</a></li>
                                             <li><a class="is-size-7">第3部 条件分岐と繰り返し</a></li>
                                         </ul>
@@ -124,7 +165,7 @@
                                             <li><a class="is-size-7">非公開3</a></li>
                                         </ul>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </li> <!-- end 教材一覧 -->
@@ -150,7 +191,7 @@
                                 <div class="contents">
                                     <div class="side-menu-text">
                                         <ul class="menu-list mb-3 has-text-left">
-                                            <li><a class="is-size-7" href="course101.html">第1部 プログラムの書き方</a></li>
+                                            <li><a class="is-size-7" href="../../course101.html">第1部 プログラムの書き方</a></li>
                                             <li><a class="is-size-7">第2部 式と演算子</a></li>
                                             <li><a class="is-size-7">第3部 条件分岐と繰り返し</a></li>
                                         </ul>
@@ -162,7 +203,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </li> <!-- end テスト一覧 -->
 
                     </ul> <!-- /.submenu -->
@@ -171,100 +212,47 @@
             </ul> <!-- /.first-menu -->
         </div> <!-- /.sidebar -->
     </div>
-    <div class="wp-content section course-top__section">
-        <div class="container-fluid">
-            <div class="tile is-parent">
-                <div class="tile is-child pl-4">
-                    <div style="text-align: center;">
-                        <p class="title section__title">学習の進め方</p>
-                        <p class="subtitle is-6">- 本気でエンジニアを目指すあなたへ -</p>
-                        <p class="mb-6">
-                            Entranceは、「完全未経験者からIT業界へ挑戦する方の窓口」になることをコンセプトにサービスを開始しました。<br />
-                            動画教材やテスト等のサービスを提供し、あなたのプログラミング学習をサポートしていきます。
-                            そうして、完全未経験の方でも、プログラミングの楽しさを知ってもらい、IT業界に挑戦できるよう私たちがサポートします。
-                        </p>
+    <div class="wp-content">
+        <!--********** MAIN-CONTENT__TILE NEW **********-->
+        <div class="columns">
+            <div class="container-fluid section">
+                <div class="column pl-5">
+                    <p class="title">第1章 プログラムの書き方</p><br />
+                    <!-- video -->
+                    <img src="../../images/01.png" class="mb-6" />
+                    <!--<video src="../../images/course/videos/course-sample.mp4" class="coursevideo" id="courseVideo" controls></video>-->
+                    <!-- video-info -->
+                    <p class="title has-text-weight-normal is-4 mb-3">動画情報</p>
+                    <hr class="dropdown-divider">
+                    <p class="subtitle is-5">01 Javaによる開発の流れ</p>
+                    <p class="pb-6 mb-6">動画情報の本文を記載する場所になります。ここは、動画情報欄になります。</p>
+                    <br />
+                    <!-- video-info.end -->
+                    <!-- memo -->
+                    <p class="title has-text-weight-normal is-4 mb-3">メモ欄</p>
+                    <hr class="dropdown-divider">
+                    <div class="control">
+                        <textarea class="textarea has-fixed-size" placeholder="メモ欄" rows="7"></textarea>
                     </div>
-                    
-
-                    <!--********** MAIN-CONTENT__TILE NEW **********-->
-                    <div class="step-wrap">
-                        <!-- Step 1 -->
-                        <div class="step-content">
-                            <div class="step-label"></div>
-                            <div class="step-title">まずは動画を視聴しよう</div>
-                            <div class="step-body">
-                                <p style="border-bottom: dotted 2px #ddd;">1動画約10分で手軽に学べます。</p>
-                                <!-- Content-Text -->
-                                <div class="columns mt-4">
-                                    <div class="column p-0 is-5">
-                                        <figure class="image is-16by9">
-                                            <img src="images/java.jpg">
-                                        </figure>
-                                    </div>
-                                    <div class="column">
-                                        <p>
-                                            Entranceはプログラミング未経験者でも楽しく学べる学習サービスです。<br />
-                                            Entranceのサービスに登録していただくことで動画教材でJavaの学習をすることができます。<br />
-                                            1章が10分程度なのでテンポよく学習できます。
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Step 2 -->
-                        <div class="step-content">
-                            <div class="step-label"></div>
-                            <div class="step-title">テストで理解度を確認しよう</div>
-                            <div class="step-body">
-                                <p style="border-bottom: dotted 2px #ddd;">テストで今の理解度を把握しましょう。</p>
-                                <!-- Content-Text -->
-                                <div class="columns mt-4">
-                                    <div class="column p-0 is-5">
-                                        <figure class="image is-16by9">
-                                            <img src="images/2.jpg">
-                                        </figure>
-                                    </div>
-                                    <div class="column">
-                                        <p>
-                                            動画教材で学習したら、どこまで理解できたのか把握するためにテストを受けてみましょう。<br />
-                                            実際に、コードを編集して試してみましょう。<br />
-                                            自由に編集し、実際にどのような動きをするのか確かめることで、より理解を深めることが出来ます。<br />
-                                            現在の苦手な箇所を洗い出して、復習しましょう。
-                                        </p>
-                                        <p class="point-text my-6">全てを完璧に覚えるまで頑張るよりも一周したら先へ進み、行き詰まったら復習するやり方をお勧めします。</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Step 3 -->
-                        <div class="step-content">
-                            <div class="step-label"></div>
-                            <div class="step-title">困ったときは質問しよう</div>
-                            <div class="step-body">
-                                <p style="border-bottom: dotted 2px #ddd;">困ったときはQ&Aで解決しましょう。</p>
-                                <!-- Content-Text -->
-                                <div class="columns mt-4">
-                                    <div class="column p-0 is-5">
-                                        <figure class="image is-16by9">
-                                            <img src="images/qa.jpg">
-                                        </figure>
-                                    </div>
-                                    <div class="column">
-                                        <p>
-                                            あなたと同じ悩みを抱えるユーザーがいるかも知れません。<br />
-                                            Q&Aのページではみんなの質問をまとめているので役に立つはずです。<br />
-                                            Q&Aを有効活用して、さらに理解を深めることができます。<br />
-                                            それでも分からないことがあれば、気楽にチューターに質問しましょう。
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--********** MAIN-CONTENT__TILE END **********-->
+                    <!-- memo.end -->
+                    <!-- Monaco Editor -->
+                </div>
+            </div>
+            <div class="column code-area">
+                
+                <div class="tile is-parent is-vertical">
+                    <article class="tile is-child notification is-primary">
+                        <p class="title is-size-6">コードコンテンツ</p>
+                        <div id="editor" class="mt-6"></div>
+                    </article>
+                    <article class="tile is-child notification is-warning">
+                        <p>別コンテンツ配置</p>
+                    </article>
                 </div>
             </div>
         </div>
+        
+        <!--********** MAIN-CONTENT__TILE END **********-->
     </div>
     <!-- footer -->
     <footer class="footer has-background-white-ter pb-3">
@@ -275,7 +263,7 @@
                 <!-- left-content -->
                 <div class="column is-two-fifths">
                     <a class="tile box is-5 p-2 ml-6" href="top.html">
-                        <img src="images/logo.png">
+                        <img src="../../images/logo.png">
                     </a>
                 </div>
                 <!-- left-content.end -->

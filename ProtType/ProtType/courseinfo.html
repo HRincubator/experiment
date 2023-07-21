@@ -19,6 +19,55 @@
     <!-- js -->
     <script src="js/main.js" defer></script>
 
+    <!-- Monaco Editor -->
+    <style>
+        #editor {
+            width: 800px;
+            height: 400px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.27.0/min/vs/loader.js"></script>
+    <script>
+        // Monaco Editorの読み込みが完了した後にエディタを作成
+        require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.27.0/min/vs' } });
+        require(['vs/editor/editor.main'], function () {
+            monaco.editor.defineTheme('dark', {
+                base: 'vs-dark',
+                inherit: true,
+                rules: [{ token: '', background: '1e1e1e' }],
+                colors: {
+                    'editor.foreground': '#F8F8F8',
+                    'editor.background': '#1e1e1e',
+                    'editorCursor.foreground': '#A7A7A7',
+                    'editor.lineHighlightBackground': '#222',
+                    'editorLineNumber.foreground': '#ccc',
+                    'editor.selectionBackground': '#D4D4D4',
+                    'editor.inactiveSelectionBackground': '#7A7A7A',
+                    'editor.selectionHighlightBackground': '#ADD6FF26'
+                }
+            });
+
+            monaco.editor.create(document.getElementById('editor'), {
+                value: [
+                    'public class Main {',
+                    '    public static void main(String[] args) {',
+                    '        System.out.println("Hello World");',
+                    '        // メモとして使用予定',
+                    '    }',
+                    '}'
+                ].join('\n'),
+                language: 'java',
+                theme: 'dark',
+                automaticLayout: true,
+                wordBasedSuggestions: true,
+                quickSuggestions: true,
+                quickSuggestionsDelay: 50,
+                snippetSuggestions: 'inline',
+                contextmenu: false
+            });
+        });
+    </script>
+
     <title>Entrance | 講座視聴</title>
 </head>
 <body>
@@ -208,6 +257,10 @@
                         <textarea class="textarea has-fixed-size" placeholder="メモ欄" rows="7"></textarea>
                     </div>
                     <!-- memo.end -->
+                    <!-- Monaco Editor -->
+
+                    <div id="editor" class="mt-6 pt-6"></div>
+
                 </div>
             </div>
             <!-- main-title.end -->
