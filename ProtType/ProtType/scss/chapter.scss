@@ -1,4 +1,10 @@
-﻿@media screen and (max-width:768px) {
+﻿.hero-content {
+    &_body {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:768px) {
     .fv__hero img {
         display: block;
         margin: 0 auto;

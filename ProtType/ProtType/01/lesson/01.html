@@ -17,7 +17,8 @@
     <link rel="stylesheet" type="text/css" href="../../css/common.css" />
     <link rel="stylesheet" type="text/css" href="../../css/lesson.css" />
     <link rel="stylesheet" type="text/css" href="../../css/coursetop.css" />
-    <title></title>
+    
+    <title>Entrance | 第1章 プログラムの書き方</title>
     <!-- js -->
     <script src="../../js/main.js" defer></script>
     <!-- Monaco Editor -->
@@ -44,6 +45,7 @@
 
             monaco.editor.create(document.getElementById('editor'), {
                 value: [
+                    '// 自由にコードを編集してみましょう。',
                     'public class Main {',
                     '    public static void main(String[] args) {',
                     '        System.out.println("Hello World");',
@@ -66,7 +68,7 @@
     <header class="header custom__header">
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a class="navbar-item" href="top.html">
+                <a class="navbar-item" href="../../top.html">
                     <img src="../../images/logo.png">
                 </a>
 
@@ -115,17 +117,17 @@
         <div class="sidebar">
             <ul class="list-group flex-column d-inline-block first-menu">
                 <!-- 学習の進め方 -->
-                <li class="list-group-item pl-3 py-2">
+                <li class="list-group-item pl-3 py-4">
                     <a href="../../coursetop.html" style="display: flex;">
                         <i class="fab fa-java" aria-hidden="true"></i>
-                        <span class="ml-2 align-middle">学習の進め方</span>
+                        <span class="ml-3 align-middle">学習の進め方</span>
                     </a>
                 </li> <!-- /.list-group-item -->
                 <!-- 単元一覧 -->
                 <li class="list-group-item pl-3 py-2">
                     <a href="../../courselist.html" style="display: flex;">
                         <i class="fab fa-java" aria-hidden="true"></i>
-                        <span class="ml-2 align-middle">単元一覧</span>
+                        <span class="ml-3 align-middle">単元一覧</span>
                     </a>
 
                     <!-- サブメニュー -->
@@ -213,46 +215,193 @@
         </div> <!-- /.sidebar -->
     </div>
     <div class="wp-content">
-        <!--********** MAIN-CONTENT__TILE NEW **********-->
         <div class="columns">
+            <!--********** MAIN-CONTENT__TILE NEW **********-->
             <div class="container-fluid section">
-                <div class="column pl-5">
-                    <p class="title">第1章 プログラムの書き方</p><br />
+                <div class="column pl-6">
                     <!-- video -->
                     <img src="../../images/01.png" class="mb-6" />
                     <!--<video src="../../images/course/videos/course-sample.mp4" class="coursevideo" id="courseVideo" controls></video>-->
+                    
                     <!-- video-info -->
-                    <p class="title has-text-weight-normal is-4 mb-3">動画情報</p>
-                    <hr class="dropdown-divider">
-                    <p class="subtitle is-5">01 Javaによる開発の流れ</p>
-                    <p class="pb-6 mb-6">動画情報の本文を記載する場所になります。ここは、動画情報欄になります。</p>
-                    <br />
+                    <div class="video-info__section">
+                        <div class="columns mb-0">
+                            <div class="column pb-0">
+                                <h1 class="video-title">
+                                    <span class="icon is-large"><i class="fab fa-youtube"></i></span>
+                                    <span class="name">第1章 プログラムの書き方</span>
+                                </h1>
+                            </div>
+                            <div class="column mt-2 is-2 pb-0">
+                                <button class="favorite-button button is-small is-primary has-text-weight-semibold">
+                                    <span class="icon">
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class="pl-1">お気に入り</span>
+                                </button>
+                            </div>
+                        </div>
+                        <hr class="dropdown-divider">
+                        <div class="video-info_body box">
+                            <h2 id="01">1. Javaによる開発の流れ</h2>
+                            <p>
+                                Javaによる開発の流れを説明します。まず、Javaの文法に従って「ソースコード」を記述します。<br />
+                                しかし、ソースコードは、そのままでは実行できません。そこで、「コンパイル」という処理を行い、ソースファイルをバイトコードに変換します。バイトコードとはソースコードの命令をコンピュータが実行しやすいように変換したものです。<br />
+                                変換されたバイトコードは「.class」という拡張子のため「クラスファイル」と呼ばれます。その「バイトコード」を「JVM(Java仮想マシン)」が読み込んで実行可能な形式のコードに変換してプログラムが実行されます。
+                            </p>
+                            <h2 id="02">2. Javaの特徴</h2>
+                            <p class="pb-2">Javaの特徴として、</p>
+                            <ul class="pl-3">
+                                <li>・ソースコードがコンパイラによってバイトコードに変換される。</li>
+                                <li>・バイトコードがJVM(Java仮想マシン)によって実行される。</li>
+                                <li>・JVMにより実行されるためOSを問わない。</li>
+                            </ul>
+                            <p class="pt-2">
+                                という点が挙げられます。<br />
+                                続いて、Javaプログラムの全体像を見てみます。Javaのプログラムでは、大文字と小文字の区別があり、単語の間には空白や改行を自由に設定できます。<br />
+                                System～と書かれた4行が処理・命令の部分です。基本的にはここにコードを書いていきます。<br />
+                                Javaのプログラムは波括弧で囲まれた部分が多く登場します。この波括弧で囲まれた部分を「ブロック」と呼びます。<br />
+                                外側のブロックを「クラスブロック」、内側のブロックを「メソッドブロック」と呼びます。
+                            </p>
+                            <h2 id="03">3. プログラムの基本構造</h2>
+                            <p class="pb-2">
+                                Javaのプログラムは基本的にこのような構造になっています。先頭業はクラスブロックの宣言文です。「public class クラス名」と記述します。<br />
+                                「クラス名」とは「プログラム名」のようなものです。クラス名には、
+                            </p>
+                            <ul class="pl-3">
+                                <li>・頭文字はアルファベットの大文字</li>
+                                <li>・複数の単語で構成される場合、単語の区切りは大文字</li>
+                            </ul>
+                            <p class="pt-2">
+                                という命名規則があります。<br />
+                                そして、クラスブロックの中にあるメソッドブロックに命令文を記述します。メソッドブロックの宣言文である「public static void main (String[] args)」は現時点では「お決まりの文章」として覚えておいて下さい。<br />
+                                また、作成されたソースファイルは「クラス名.java」という名前である必要があります。
+                            </p>
+                            <h2 id="04">4. インデント</h2>
+                            <p>
+                                ブロックの括弧の対応と多重構造の見通しを良くする字下げのことを「インデント」と言います。<br />
+                                ブロックの開始と終了を同じインデントとし、ブロック内の行は1段インデントを下げることで、ブロックがどこからどこまでかわかりやすくします。
+                            </p>
+                            <h2 id="05">5. コメント</h2>
+                            <p>
+                                ソースコード中に解説文を書くことが出来ます。この解説文を「コメント」といいます。<br />
+                                コメントはコンパイル時と実行時には無視されます。コメントには「複数行コメント」と「単一行コメント」の2種類あります。<br />
+                                複数行コメントでは。コメント本文を「/*～*/」で囲い、単一行コメントは、コメント本文の前に「//」を記述します。<br />
+                                複数行をコメントにする場合でも、単一行のコメントを使用する場合が多いです。
+                            </p>
+                            <h2 id="06">6. mainメソッドの中身</h2>
+                            <p>
+                                Javaの命令を書く場所はメソッドブロックの内部です。<br />
+                                メソッドブロックの宣言文であるお決まりの文章「public static void main (String[] args)」に「main」の表記がありますが、この部分がメソッドの名前になるため、このメソッドのことを「メインメソッド」といいます。<br />
+                                メソッドブロックの中には「文」を順番に書きます。プログラム実行時には、文は上から順に1行ずつ処理されます。<br />
+                                文の終わりにはセミコロン(;)を付けます。
+                            </p>
+                            <h2 id="07">7. 変数</h2>
+                            <p class="pb-2">
+                                データを格納するための入れ物を「変数」といいます。変数を用意することを「変数宣言」、変数に値を入れることを「代入」、変数の中を見ることを「参照」といいます。<br />
+                                変数の宣言では、データを入れる箱の名前を表す「変数名」と、データを入れる箱の種類や大きさを表す「型」の2つを指定します。プログラム上では「型名 変数名;」という形で宣言します。<br />
+                                変数名は、
+                            </p>
+                            <ul class="pl-3">
+                                <li>・英字、数字、記号としてアンダースコア、ドルマークが使用可能</li>
+                                <li>・先頭の文字に数字は使用不可</li>
+                                <li>・大文字と小文字を区別する</li>
+                                <li>・予約語の使用不可</li>
+                                <li>・先頭は小文字</li>
+                                <li>・複数の単語で構成される場合、単語の区切りは大文字</li>
+                            </ul>
+                            <p class="pt-2">
+                                という規約があります。<br />
+                                最も重要なのは「変数の内容がわかるような名前をつける」ということです。<br />
+                                自分だけでなく、第三者が見て分かる名前をつけるようにしましょう。
+                            </p>
+                            <h2 id="08">8. データ型</h2>
+                            <p>
+                                Javaのデータ型は「基本型」と「参照型」の2種類があり、8つの「基本型」以外は、すべて「参照型」となります。<br />
+                                基本型は、整数のbyte,short,int,long、少数のfloat,double、真偽値のboolean、文字のcharの8つです。<br />
+                                Javaでは、整数は基本的にintで扱われます。byteやshortを積極的に使用する状況はあまりなく、通常intを使用、intで桁が足りなければlongを使用します。<br />
+                                少数は、通常doubleを使用します。<br />
+                                文字は、1文字を表すchar型は基本型ですが、文字列を表すString型は参照型になりますので注意して下さい。また、char型に設定する値は引用符、String型に設定する値は二重引用符で括る必要があります。<br />
+                                0文字の文字列を「空文字」といい、二重引用符2つ("")で表現します。
+                            </p>
+                            <h2 id="09">9. 変数の初期化</h2>
+                            <p>
+                                変数に初期値を代入することを変数の初期化といいます。これまでは変数の宣言と初期値の代入を分けて考えていましたが、1文で行うことが出来ます。<br />
+                                初期化されていない変数を参照しようとするとコンパイルエラーが発生しますので注意して下さい。<br />
+                                データを格納する入れ物でも、変数と違い、値の変更ができないものを「定数」といいます。<br />
+                                定数は、宣言時に「final」修飾子を付与します。後から値が変更できないため、宣言と同時に初期値を設定する必要があります。<br />
+                                また、名前はすべて大文字で記述し、複数単語で構成される場合は、アンダースコアでつなぎます。
+                            </p>
+                        </div>
+                    </div>
                     <!-- video-info.end -->
+
                     <!-- memo -->
                     <p class="title has-text-weight-normal is-4 mb-3">メモ欄</p>
                     <hr class="dropdown-divider">
-                    <div class="control">
+                    <div class="control mb-6">
                         <textarea class="textarea has-fixed-size" placeholder="メモ欄" rows="7"></textarea>
                     </div>
                     <!-- memo.end -->
-                    <!-- Monaco Editor -->
+
+                    <!-- Complete -->
+                    <div class="tile is-parent is-vertical has-background-black is-justify-content-center box" style="text-align: center;">
+                        <p class="title py-5 is-size-4 has-text-primary">Complete!</p>
+                        <div class="complete-body pb-3 has-text-weight-semibold has-text-white">
+                            <p>お疲れさまでした。</p>
+                            <p>内容をしっかり確認したら次のステップに進んでみましょう。</p>
+                        </div>
+                        <div class="complete-footer py-6">
+                            <a class="button is-success mr-6 is-rounded" href="#">
+                                <strong>次の講義へ</strong>
+                            </a>
+                            <a class="button is-light has-text-weight-semibold is-rounded ml-5" href="#" style="color: #00bc6a;">
+                                <span>テストへ</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Complete END -->
                 </div>
             </div>
+            <!--********** MAIN-CONTENT__TILE END **********-->
+            <!--********** SIDE-CONTENT__TILE END **********-->
             <div class="column code-area">
-                
                 <div class="tile is-parent is-vertical">
-                    <article class="tile is-child notification is-primary">
-                        <p class="title is-size-6">コードコンテンツ</p>
-                        <div id="editor" class="mt-6"></div>
+                    <!-- Code Area START -->
+                    <article class="tile is-child notification is-theme" style="max-height: 510px;">
+                        <p class="title is-5 mb-3">
+                            <span class="icon"><i class="fas fa-code"></i></span>
+                            <span class="name">コードエディタ</span>
+                        </p>
+                        <hr class="dropdown-divider">
+                        <div id="editor" class="mt-4 pt-1"></div>
                     </article>
-                    <article class="tile is-child notification is-warning">
-                        <p>別コンテンツ配置</p>
+                    <!-- Code Area END -->
+                    <!-- 目次 START -->
+                    <article class="tile is-child">
+                        <div class="toc">
+                            <div>
+                                <p>目次</p>
+                            </div>
+                            <ol>
+                                <li><a href="#01">Javaによる開発の流れ</a></li>
+                                <li><a href="#02">Javaの特徴</a></li>
+                                <li><a href="#03">プログラムの基本構造</a></li>
+                                <li><a href="#04">インデント</a></li>
+                                <li><a href="#05">コメント</a></li>
+                                <li><a href="#06">mainメソッドの中身</a></li>
+                                <li><a href="#07">変数</a></li>
+                                <li><a href="#08">データ型</a></li>
+                                <li><a href="#09">変数の初期化</a></li>
+                            </ol>
+                        </div>
                     </article>
+                    <!-- 目次 END -->
                 </div>
             </div>
+            <!--********** SIDE-CONTENT__TILE END **********-->
         </div>
-        
-        <!--********** MAIN-CONTENT__TILE END **********-->
+
     </div>
     <!-- footer -->
     <footer class="footer has-background-white-ter pb-3">
@@ -298,6 +447,8 @@
         <!-- content.end -->
     </footer>
     <!-- footer.end -->
+    
+    <!--自作のJS-->
     <script src="js/main.js" defer></script>
 </body>
 </html>

@@ -1,304 +1,5 @@
 ﻿@import "variables";
 
-// Custom utility classes
-$spacer: 5px;
-
-$padding-1: 5px;
-$padding-2: 15px;
-$padding-4: 35px;
-$padding-5: 45px;
-
-$spacer-1: $spacer * 1;
-$spacer-2: $spacer * 2;
-$spacer-3: $spacer * 3;
-$spacer-4: $spacer * 5;
-$spacer-5: $spacer * 7;
-
-.p-1 {
-    padding: $padding-1 !important;
-}
-
-.p-2 {
-    padding: $padding-2 !important;
-}
-
-
-.p-4 {
-    padding: $padding-4 !important;
-}
-
-.p-5 {
-    padding: $padding-5 !important;
-}
-
-//left
-.pl-1 {
-    padding-left: $padding-1 !important;
-}
-
-.pl-2 {
-    padding-left: $padding-2 !important;
-}
-
-.pl-4 {
-    padding-left: $padding-4 !important;
-}
-
-.pl-5 {
-    padding-left: $padding-5 !important;
-}
-
-//right
-.pr-1 {
-    padding-right: $padding-1 !important;
-}
-
-.pr-2 {
-    padding-right: $padding-2 !important;
-}
-
-.pr-4 {
-    padding-right: $padding-4 !important;
-}
-
-.pr-5 {
-    padding-right: $padding-5 !important;
-}
-
-//top
-.pt-1 {
-    padding-top: $padding-1 !important;
-}
-
-.pt-2 {
-    padding-top: $padding-2 !important;
-}
-
-.pt-4 {
-    padding-top: $padding-4 !important;
-}
-
-.pt-5 {
-    padding-top: $padding-5 !important;
-}
-
-//bottom
-.pb-1 {
-    padding-bottom: $padding-1 !important;
-}
-
-.pb-2 {
-    padding-bottom: $padding-2 !important;
-}
-
-
-.pb-4 {
-    padding-bottom: $padding-4 !important;
-}
-
-.pb-5 {
-    padding-bottom: $padding-5 !important;
-}
-
-//left & right
-.px-1 {
-    padding-left: $padding-1 !important;
-    padding-right: $padding-1 !important;
-}
-
-.px-2 {
-    padding-left: $padding-2 !important;
-    padding-right: $padding-2 !important;
-}
-
-
-.px-4 {
-    padding-left: $padding-4 !important;
-    padding-right: $padding-4 !important;
-}
-
-.px-5 {
-    padding-left: $padding-5 !important;
-    padding-right: $padding-5 !important;
-}
-
-//top & bottom
-.py-1 {
-    padding-top: $padding-1 !important;
-    padding-bottom: $padding-1 !important;
-}
-
-.py-2 {
-    padding-top: $padding-2 !important;
-    padding-bottom: $padding-2 !important;
-}
-
-.py-4 {
-    padding-top: $padding-4 !important;
-    padding-bottom: $padding-4 !important;
-}
-
-.py-5 {
-    padding-top: $padding-5 !important;
-    padding-bottom: $padding-5 !important;
-}
-
-.m-1 {
-    margin: $spacer-1 !important;
-}
-
-.m-2 {
-    margin: $spacer-2 !important;
-}
-
-.m-3 {
-    margin: $spacer-3 !important;
-}
-
-.m-4 {
-    margin: $spacer-4 !important;
-}
-
-.m-5 {
-    margin: $spacer-5 !important;
-}
-
-//left
-.ml-1 {
-    margin-left: $spacer-1 !important;
-}
-
-.ml-2 {
-    margin-left: $spacer-2 !important;
-}
-
-.ml-3 {
-    margin-left: $spacer-3 !important;
-}
-
-.ml-4 {
-    margin-left: $spacer-4 !important;
-}
-
-.ml-5 {
-    margin-left: $spacer-5 !important;
-}
-
-//right
-.mr-1 {
-    margin-right: $spacer-1 !important;
-}
-
-.mr-2 {
-    margin-right: $spacer-2 !important;
-}
-
-.mr-3 {
-    margin-right: $spacer-3 !important;
-}
-
-.mr-4 {
-    margin-right: $spacer-4 !important;
-}
-
-.mr-5 {
-    margin-right: $spacer-5 !important;
-}
-
-//top
-.mt-1 {
-    margin-top: $spacer-1 !important;
-}
-
-.mt-2 {
-    margin-top: $spacer-2 !important;
-}
-
-.mt-3 {
-    margin-top: $spacer-3 !important;
-}
-
-.mt-4 {
-    margin-top: $spacer-4 !important;
-}
-
-.mt-5 {
-    margin-top: $spacer-5 !important;
-}
-
-//bottom
-.mb-1 {
-    margin-bottom: $spacer-1 !important;
-}
-
-.mb-2 {
-    margin-bottom: $spacer-2 !important;
-}
-
-.mb-3 {
-    margin-bottom: $spacer-3 !important;
-}
-
-.mb-4 {
-    margin-bottom: $spacer-4 !important;
-}
-
-.mb-5 {
-    margin-bottom: $spacer-5 !important;
-}
-
-//left & right
-.mx-1 {
-    margin-left: $spacer-1 !important;
-    margin-right: $spacer-1 !important;
-}
-
-.mx-2 {
-    margin-left: $spacer-2 !important;
-    margin-right: $spacer-2 !important;
-}
-
-.mx-3 {
-    margin-left: $spacer-3 !important;
-    margin-right: $spacer-3 !important;
-}
-
-.mx-4 {
-    margin-left: $spacer-4 !important;
-    margin-right: $spacer-4 !important;
-}
-
-.mx-5 {
-    margin-left: $spacer-5 !important;
-    margin-right: $spacer-5 !important;
-}
-
-//top & bottom
-.my-1 {
-    margin-top: $spacer-1 !important;
-    margin-bottom: $spacer-1 !important;
-}
-
-.my-2 {
-    margin-top: $spacer-2 !important;
-    margin-bottom: $spacer-2 !important;
-}
-
-.my-3 {
-    margin-top: $spacer-3 !important;
-    margin-bottom: $spacer-3 !important;
-}
-
-.my-4 {
-    margin-top: $spacer-4 !important;
-    margin-bottom: $spacer-4 !important;
-}
-
-.my-5 {
-    margin-top: $spacer-5 !important;
-    margin-bottom: $spacer-5 !important;
-}
-
 $secondary-color: #81ff74;
 $background: #eee;
 
@@ -502,7 +203,41 @@ button, a {
     width: 100%;
     min-height: 110.5px;
 }
+.video-info__section {
+    padding-bottom: 3rem;
+    letter-spacing: .1rem;
 
+    h1, h2 {
+        font-weight: bold;
+    }
+
+    h2 {
+        padding-bottom: 1rem;
+    }
+
+    h2:first-letter {
+        font-size: 1.5em;
+        color: $theme-color;
+    }
+
+    p {
+        padding-bottom: 1.5rem;
+    }
+
+    .video-title {
+        font-size: 1.5rem;
+        color: $theme-color;
+    }
+
+    .video-info_body {
+        height: 400px;
+        overflow: auto;
+    }
+}
+
+.section {
+    padding: 1rem 1.5rem 3rem 1.5rem;
+}
 .course-top__section {
     display: flex;
     justify-content: center;
@@ -514,9 +249,10 @@ button, a {
 #editor {
     height: 100%;
     width: 100%;
-    max-height: 300px;
+    max-height: 400px;
     max-width: 550px;
 }
+
 
 @media screen and (max-width:768px) {
     .code-area {
@@ -534,3 +270,62 @@ button, a {
         padding: 1.25rem 1.5rem 1.25rem 1.5rem;
     }
 }
+
+/* 目次 START */
+.toc {
+    margin-bottom: 30px;
+    border: 2px solid #262626;
+    border-radius: 3px;
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 10px 0;
+        background-color: #4a4a4a;
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.1em;
+
+        &::before {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            margin-right: 5px;
+            background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%23fff%22%3E%3Cpath%20d%3D%22M3.8%2017.2h-3c-.5%200-.8.4-.8.8v3c0%20.4.3.8.8.8h3c.4%200%20.8-.3.8-.8v-3c-.1-.4-.4-.8-.8-.8zm0-15h-3c-.5%200-.8.4-.8.8v3c0%20.4.3.8.8.8h3c.4%200%20.8-.3.8-.8V3c-.1-.4-.4-.8-.8-.8zm0%207.6h-3c-.5%200-.8.3-.8.7v3c0%20.4.3.8.8.8h3c.4%200%20.8-.3.8-.8v-3c-.1-.4-.4-.7-.8-.7zM23.2%2018h-15c-.4%200-.8.3-.8.8v1.5c0%20.4.3.8.8.8h15c.4%200%20.8-.3.8-.8v-1.5c0-.5-.3-.8-.8-.8zm0-15h-15c-.4%200-.7.3-.7.8v1.5c0%20.4.3.7.7.7h15c.5%200%20.8-.3.8-.8V3.8c0-.5-.3-.8-.8-.8zm0%207.5h-15c-.4%200-.8.3-.8.8v1.5c0%20.4.3.8.8.8h15c.4%200%20.8-.3.8-.8v-1.5c0-.5-.3-.8-.8-.8z%22%2F%3E%3C%2Fsvg%3E');
+            content: '';
+        }
+    }
+
+    ol {
+        list-style-type: decimal;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    & > ol {
+        padding: 1em 1em 1em 3em;
+    }
+
+    ol ol {
+        margin-top: 5px;
+        padding-left: 1.1em;
+
+        li {
+            font-weight: 500;
+            font-size: .9em;
+        }
+    }
+
+    li {
+        padding: 5px 0;
+        font-weight: 600;
+    }
+
+    a {
+        color: #333;
+        text-decoration: none;
+    }
+}
+/* 目次 END */

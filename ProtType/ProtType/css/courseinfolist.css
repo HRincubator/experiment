@@ -72,6 +72,7 @@
   z-index: 2;
   padding: 0 10px;
   color: #77c9d4;
+  cursor: pointer;
 }
 .readmore-label::before {
   font-family: "Font Awesome 5 Free";

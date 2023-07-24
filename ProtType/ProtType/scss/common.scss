@@ -1,5 +1,11 @@
 ﻿@import "variables";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;600&display=swap');
+
+.is-theme {
+    background: $theme-color;
+    color: #fff;
+}
+
 /* common css */
 body {
     font-family: $text-font;
@@ -57,7 +63,7 @@ body {
 }
 
 .favorite-button {
-    background-color: transparent;
+    /*background-color: transparent;*/ // is-primaryを設定しない場合は解除
     cursor: pointer;
     position: relative;
     display: inline-flex;
