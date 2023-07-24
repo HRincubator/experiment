@@ -74,7 +74,7 @@
         </nav>
     </header>
     <!-- section -->
-    <section class="section pb-0 pl-0">
+    <section class="section pb-0">
         <!-- パンくずリスト -->
         <nav class="breadcrumb is-size-7" aria-label="breadcrumbs">
             <ul>
@@ -101,7 +101,7 @@
         <section class="messagelist__section ml-0">
             <div class="columns" id="mail-app">
                 <!-- sidebar -->
-                <aside class="column is-2 aside hero is-fullheight">
+                <aside class="column is-2 aside hero is-fullheight is-hidden-mobile">
                     <button class="button is-fullwidth is-primary has-text-weight-semibold mt-3 ml-1 js-modal-trigger" data-target="new-message-modal">
                         <span class="icon pr-2"><i class="fas fa-pen"></i></span><span class="name">新規作成</span>
                     </button>
@@ -201,7 +201,7 @@
                 <div class="column">
                     <p class="title is-size-5 has-text-success mb-0">受信トレイ</p>
                     <!-- search -->
-                    <div class="field has-addons m-5 is-justify-content-right">
+                    <div class="field has-addons m-5 is-justify-content-right is-hidden-mobile">
                         <div class="control">
                             <input class="input" type="text" placeholder="メールを検索">
                         </div>
@@ -212,7 +212,8 @@
                         </div>
                     </div>
                     <!-- search.end -->
-                    <div class="inbox-messages" id="inbox-messages">
+                    <!-- WINDOWS MESSAGE LIST AREA -->
+                    <div class="inbox-messages is-hidden-mobile" id="inbox-messages">
                         <div v-for="(msg, index) in messages" class="card" v-bind:id="'msg-card-'+index" v-on:click="showMessage(msg,index)" v-bind:data-preview-id="index">
                             <div class="box content p-0">
                                 <article class="post p-3">
@@ -298,6 +299,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- WINDOWS MESSAGE LIST END -->
                 </div>
             </div>
             <!-- main.end -->
@@ -305,5 +307,135 @@
         <!-- messagelist__section.end -->
     </section>
     <!-- section.end -->
+    <!-- mobile messagelist start -->
+    <div class="is-hidden-tablet mt-4">
+        <!-- mobile-content1 -->
+        <div class="card">
+            <div class="card-content px-2 py-0">
+                <!-- Content1 -->
+                <div class="mobile-messagelist">
+                    <a>
+                        <p class="has-text-black">
+                            Entranceにご登録いただきありがとうございます。
+                        </p>
+                        <p class="has-text-grey is-size-7">
+                            こんにちは。このたびはEntranceに登録していただき誠にありがとうございます。
+                            本メールでは登録されて間もない
+                            ...
+                        </p>
+                    </a>
+                </div>
+                <!-- Content2 -->
+                <div class="mobile-messagelist">
+                    <a>
+                        <p class="has-text-black">
+                            プロトタイプ作成中のお知らせ
+                        </p>
+                        <p class="has-text-grey is-size-7">
+                            こんにちは。このたびはEntranceに登録していただき誠にありがとうございます。
+                            本メールでは登録されて間もない
+                            ...
+                        </p>
+                    </a>
+                </div>
+                <!-- Content3 -->
+                <div class="mobile-messagelist">
+                    <a>
+                        <p class="has-text-black">
+                            二段階認証完了のお知らせ
+                        </p>
+                        <p class="has-text-grey is-size-7">
+                            こんにちは。このたびはEntranceに登録していただき誠にありがとうございます。
+                            本メールでは登録されて間もない
+                            ...
+                        </p>
+                    </a>
+                </div>
+                <!-- Content4 -->
+                <div class="mobile-messagelist">
+                    <a>
+                        <p class="has-text-black">
+                            ソースコードを画面上で実行できるようになりま...
+                        </p>
+                        <p class="has-text-grey is-size-7">
+                            こんにちは。このたびはEntranceに登録していただき誠にありがとうございます。
+                            本メールでは登録されて間もない
+                            ...
+                        </p>
+                    </a>
+                </div>
+                <!-- Content5 -->
+                <div class="mobile-messagelist">
+                    <a>
+                        <p class="has-text-black">
+                            最新情報お知らせ
+                        </p>
+                        <p class="has-text-grey is-size-7">
+                            こんにちは。このたびはEntranceに登録していただき誠にありがとうございます。
+                            本メールでは登録されて間もない
+                            ...
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- mobile messagelist end -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="ms-nav-container">
+                    <ul class="ms-nav">
+                        <input type="checkbox" id="ms-menu" class="ms-menu-toggle" name="ms-menu-toggle" />
+                        <!-- 新規作成 -->
+                        <li class="ms-li ms-li6 ms-li-last">
+                            <a href="javascript:void(0)">
+                                <span class="icon"><i class="fas fa-pen"></i></span>
+                            </a>
+                        </li>
+                        <!-- 受信トレイ -->
+                        <li class="ms-li ms-li5">
+                            <a href="javascript:void(0)">
+                                <span class="icon"><i class="fa fa-inbox"></i></span>
+                            </a>
+                        </li>
+                        <!-- 送信済み -->
+                        <li class="ms-li ms-li4">
+                            <a href="javascript:void(0)">
+                                <span class="icon"><i class="fas fa-paper-plane"></i></span>
+                            </a>
+                        </li>
+                        <!-- 星付き -->
+                        <li class="ms-li ms-li3">
+                            <a href="javascript:void(0)">
+                                <span class="icon"><i class="fas fa-star"></i></span>
+                            </a>
+                        </li>
+                        <!-- 下書き -->
+                        <li class="ms-li ms-li2">
+                            <a href="javascript:void(0)">
+                                <span class="icon"><i class="fas fa-file"></i></span>
+                            </a>
+                        </li>
+                        <!-- ゴミ箱 -->
+                        <li class="ms-li ms-li1 ms-li-first">
+                            <a href="javascript:void(0)">
+                                <span class="icon"><i class="fas fa-trash-alt"></i></span>
+                            </a>
+                        </li>
+                        <!-- +マーク変形後 -->
+                        <li class="ms-main">
+                            <a href="javascript:void(0)">
+                                <label class="ms-menu-toggle-lbl" for="ms-menu">
+                                    <span class="fa fa-plus"></span>
+                                </label>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
