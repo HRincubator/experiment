@@ -255,6 +255,9 @@ button, a {
 
 
 @media screen and (max-width:768px) {
+    .section {
+        padding: 1rem 0 3rem 0.7rem !important;
+    }
     .code-area {
         padding-left: 55px !important;
     }
@@ -268,6 +271,30 @@ button, a {
         border-radius: 4px;
         position: relative;
         padding: 1.25rem 1.5rem 1.25rem 1.5rem;
+    }
+    .complete {
+        margin: 1rem .5rem 0 .3rem;
+    }
+    .video-title {
+        font-size: 1.1rem;
+        color: #57bc90;
+        font-weight: bold;
+    }
+    .mb-6 {
+        margin-bottom: 0 !important;
+    }
+    .mt-2 {
+        margin-top: .75rem !important;
+    }
+    img {
+        padding-right: .2rem;
+    }
+    .column {
+        padding-top:0;
+    }
+    .video-info__section .video-info_body {
+        height: 460px;
+        overflow: auto;
     }
 }
 

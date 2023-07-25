@@ -218,16 +218,61 @@
         <div class="columns">
             <!--********** MAIN-CONTENT__TILE NEW **********-->
             <div class="container-fluid section">
+                
                 <div class="column pl-6">
+                    <!-- パンくずリスト -->
+                    <div class="container pb-3 is-hidden-mobile">
+                        <nav class="breadcrumb is-size-7" aria-label="breadcrumbs">
+                            <ul>
+                                <li>
+                                    <a href="../top.html">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-home" aria-hidden="true"></i>
+                                        </span>
+                                        <span>トップ</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../courselist.html">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-book" aria-hidden="true"></i>
+                                        </span>
+                                        <span>単元一覧</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="01/chapter.html">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-bookmark" aria-hidden="true"></i>
+                                        </span>
+                                        <span>第1部 ようこそJavaの世界へ</span>
+                                    </a>
+                                </li>
+                                <li class="is-active">
+                                    <a href="lesson/01.html">
+                                        <span class="icon is-small">
+                                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                                        </span>
+                                        <span>第1章 プログラムの書き方</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- パンくずリスト.end -->
+                    <!-- モバイル用タイトル -->
+                    <h1 class="video-title is-hidden-tablet">
+                        <span class="icon is-large"><i class="fab fa-youtube"></i></span>
+                        <span class="name">第1章 プログラムの書き方</span>
+                    </h1>
                     <!-- video -->
                     <img src="../../images/01.png" class="mb-6" />
                     <!--<video src="../../images/course/videos/course-sample.mp4" class="coursevideo" id="courseVideo" controls></video>-->
-                    
                     <!-- video-info -->
                     <div class="video-info__section">
                         <div class="columns mb-0">
                             <div class="column pb-0">
-                                <h1 class="video-title">
+                                <h1 class="video-title is-hidden-mobile">
                                     <span class="icon is-large"><i class="fab fa-youtube"></i></span>
                                     <span class="name">第1章 プログラムの書き方</span>
                                 </h1>
@@ -335,7 +380,6 @@
                         </div>
                     </div>
                     <!-- video-info.end -->
-
                     <!-- memo -->
                     <p class="title has-text-weight-normal is-4 mb-3">メモ欄</p>
                     <hr class="dropdown-divider">
@@ -343,21 +387,26 @@
                         <textarea class="textarea has-fixed-size" placeholder="メモ欄" rows="7"></textarea>
                     </div>
                     <!-- memo.end -->
-
                     <!-- Complete -->
-                    <div class="tile is-parent is-vertical has-background-black is-justify-content-center box" style="text-align: center;">
+                    <div class="tile is-parent is-vertical has-background-black is-justify-content-center box complete" style="text-align: center;">
                         <p class="title py-5 is-size-4 has-text-primary">Complete!</p>
                         <div class="complete-body pb-3 has-text-weight-semibold has-text-white">
                             <p>お疲れさまでした。</p>
                             <p>内容をしっかり確認したら次のステップに進んでみましょう。</p>
                         </div>
                         <div class="complete-footer py-6">
-                            <a class="button is-success mr-6 is-rounded" href="#">
-                                <strong>次の講義へ</strong>
-                            </a>
-                            <a class="button is-light has-text-weight-semibold is-rounded ml-5" href="#" style="color: #00bc6a;">
-                                <span>テストへ</span>
-                            </a>
+                            <div class="columns is-justify-content-center">
+                                <div class="column is-4">
+                                    <a class="button is-success is-rounded" href="#">
+                                        <strong>次の講義へ</strong>
+                                    </a>
+                                </div>
+                                <div class="column is-4">
+                                    <a class="button is-light has-text-weight-semibold is-rounded" href="#" style="color: #00bc6a;">
+                                        <span>テストへ</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- Complete END -->
@@ -365,7 +414,7 @@
             </div>
             <!--********** MAIN-CONTENT__TILE END **********-->
             <!--********** SIDE-CONTENT__TILE END **********-->
-            <div class="column code-area">
+            <div class="column code-area is-hidden-mobile">
                 <div class="tile is-parent is-vertical">
                     <!-- Code Area START -->
                     <article class="tile is-child notification is-theme" style="max-height: 510px;">

@@ -1,4 +1,5 @@
-﻿@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;600&display=swap");
+﻿@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;600&display=swap");
 /*** Step Bar ***/
 .step-wrap {
   counter-reset: count;
@@ -80,5 +81,73 @@
     z-index: -1;
     border-radius: 20px;
     margin-left: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* 学習の進め方モバイルUI */
+  .section {
+    padding: 3rem 0 3rem 0.7rem;
+    padding-right: 0;
+  }
+  .step-content {
+    padding: 0 0 1.3em 1.2em;
+    margin: 0;
+    position: relative;
+  }
+  .step-content::after {
+    content: "";
+    display: block;
+    height: calc(100% - 80px);
+    border-left: solid 2px #ddd;
+    position: absolute;
+    top: 68px;
+    left: 5px;
+  }
+  .step-title {
+    font-weight: bold;
+    font-size: 100%;
+    margin-left: 2.5em;
+    padding-top: 1rem;
+  }
+  .step-body {
+    margin-top: 1.5em;
+    margin-left: 0;
+    padding: 0 0 1em;
+  }
+  /* 単元一覧画面モバイルUI */
+  .courselist__section {
+    margin: 1rem;
+    padding-right: 0.5rem;
+    padding-top: 1rem;
+  }
+  .courselist__section .column {
+    padding: 0 0.75rem 0 0.75rem;
+  }
+  .courselist__section .column p {
+    padding: 0.5rem 0 0.5rem 0;
+  }
+  .courselist__section .column a {
+    display: inline-block;
+    margin: 1rem 0 1rem 6rem;
+  }
+  .courselist__section .column .is-size-5 {
+    font-size: 1.25rem;
+  }
+  .courselist__section .column .title {
+    color: #363636;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.125;
+    font-size: 1.1rem !important;
+  }
+  .is-custom {
+    height: 100%;
+    width: 100%;
+    min-height: 75px;
+  }
+  .courselist_time {
+    padding: 0 0.6em;
+    border-left: 2px solid #dedede;
+    color: #333333;
   }
 }

@@ -90,3 +90,77 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    /* 学習の進め方モバイルUI */
+    .section {
+        padding: 3rem 0 3rem .7rem;
+        padding-right: 0;
+    }
+    .step-content {
+        padding: 0 0 1.3em 1.2em;
+        margin: 0;
+        position: relative;
+    }
+    .step-content::after {
+        content: "";
+        display: block;
+        height: calc(100% - 80px);
+        border-left: solid 2px #ddd;
+        position: absolute;
+        top: 68px;
+        left: 5px;
+    }
+    .step-title {
+        font-weight: bold;
+        font-size: 100%;
+        margin-left: 2.5em;
+        padding-top: 1rem;
+    }
+    .step-body {
+        margin-top: 1.5em;
+        margin-left: 0;
+        padding: 0 0 1em;
+    }
+
+    /* 単元一覧画面モバイルUI */
+    .courselist__section {
+        margin: 1rem;
+        padding-right: .5rem;
+        padding-top: 1rem;
+
+        .column {
+            padding: 0 .75rem 0 .75rem;
+
+            p {
+                padding: .5rem 0 .5rem 0;
+            }
+
+            a {
+                display: inline-block;
+                margin: 1rem 0 1rem 6rem;
+            }
+
+            .is-size-5 {
+                font-size: 1.25rem;
+            }
+
+            .title {
+                color: #363636;
+                font-size: 2rem;
+                font-weight: 600;
+                line-height: 1.125;
+                font-size: 1.1rem !important;
+            }
+        }
+    }
+    .is-custom {
+        height: 100%;
+        width: 100%;
+        min-height: 75px;
+    }
+    .courselist_time {
+        padding: 0 .6em;
+        border-left: 2px solid #dedede;
+        color: #333333;
+    }
+}
