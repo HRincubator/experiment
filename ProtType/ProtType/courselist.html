@@ -15,7 +15,7 @@
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
     <!-- css -->
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/1.css" />
+    <link rel="stylesheet" type="text/css" href="css/lesson.css" />
     <link rel="stylesheet" href="css/coursetop.css" />
     <title></title>
     <!-- js -->
@@ -74,19 +74,18 @@
         <div class="sidebar">
             <ul class="list-group flex-column d-inline-block first-menu">
                 <!-- 学習の進め方 -->
-                <li class="list-group-item pl-3 py-2">
+                <li class="list-group-item pl-3 py-4 mt-3">
                     <a href="coursetop.html" style="display: flex;">
-                        <i class="fab fa-java" aria-hidden="true"></i>
+                        <i class="fas fa-shoe-prints" aria-hidden="true"></i>
                         <span class="ml-2 align-middle">学習の進め方</span>
                     </a>
                 </li> <!-- /.list-group-item -->
                 <!-- 単元一覧 -->
-                <li class="list-group-item pl-3 py-2">
+                <li class="list-group-item pl-3 py-4">
                     <a href="courselist.html" style="display: flex;">
-                        <i class="fab fa-java" aria-hidden="true"></i>
-                        <span class="ml-2 align-middle">単元一覧</span>
+                        <i class="fas fa-book" aria-hidden="true"></i>
+                        <span class="ml-4 align-middle">単元一覧</span>
                     </a>
-
                     <!-- サブメニュー -->
                     <ul class="list-group flex-column d-inline-block submenu">
                         <!-- 教材一覧 -->
@@ -96,32 +95,57 @@
                                 <button class="menu js-menu has-text-white">
                                     <div class="media sidemenu-title">
                                         <div class="media-left">
-                                            <span class="icon"><i class="fab fa-youtube" aria-hidden="true"></i></span>
+                                            <span class="icon"><i class="fab fa-java" aria-hidden="true"></i></span>
                                         </div>
                                         <div class="media-content">
                                             <div class="content">
-                                                <span>教材一覧</span>
+                                                <span>第1部</span>
                                             </div>
                                         </div>
                                         <div class="media-right">
-                                            <div class="content" style="padding-left: 12px;">
+                                            <div class="content">
                                                 <span class="icon"><i class="fas fa-chevron-down"></i></span>
                                             </div>
                                         </div>
                                     </div>
                                 </button>
-
                                 <div class="contents">
                                     <div class="side-menu-text">
                                         <ul class="menu-list mb-3 has-text-left">
                                             <li><a href="01/lesson/01.html" class="is-size-7">第1章 プログラムの書き方</a></li>
                                             <li><a class="is-size-7">第2章 式と演算子</a></li>
                                             <li><a class="is-size-7">第3章 条件分岐と繰り返し</a></li>
-                                        </ul>
-                                        <ul class="menu-list lock_content has-text-left">
                                             <li><a class="is-size-7">第4章 配列</a></li>
                                             <li><a class="is-size-7">第5章 メソッド</a></li>
                                             <li><a class="is-size-7">第6章 複数クラスを用いた開発</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li> <!-- end 教材一覧 -->
+                        <li class="list-group-item px-3">
+                            <div class="accordion side-menu-text">
+                                <!-- accodion menu -->
+                                <button class="menu js-menu has-text-white">
+                                    <div class="media sidemenu-title">
+                                        <div class="media-left">
+                                            <span class="icon"><i class="fab fa-java" aria-hidden="true"></i></span>
+                                        </div>
+                                        <div class="media-content">
+                                            <div class="content">
+                                                <span>第2部</span>
+                                            </div>
+                                        </div>
+                                        <div class="media-right">
+                                            <div class="content">
+                                                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                                <div class="contents">
+                                    <div class="side-menu-text">
+                                        <ul class="menu-list lock_content has-text-left">
                                             <li><a class="is-size-7">第7章 オブジェクト指向</a></li>
                                             <li><a class="is-size-7">第8章 インスタンスとクラス</a></li>
                                             <li><a class="is-size-7">第9章 さまざまなクラス機構</a></li>
@@ -129,51 +153,46 @@
                                             <li><a class="is-size-7">第11章 高度な継承</a></li>
                                             <li><a class="is-size-7">第12章 多態性</a></li>
                                             <li><a class="is-size-7">第13章 カプセル化</a></li>
-                                            <li><a class="is-size-7">第14章 Javaを支えるクラスたち</a></li>
-                                            <li><a class="is-size-7">第15章 文字列と日付</a></li>
-                                            <li><a class="is-size-7">第16章 コレクション</a></li>
-                                            <li><a class="is-size-7">第17章 例外</a></li>
                                         </ul>
                                     </div>
-
                                 </div>
                             </div>
                         </li> <!-- end 教材一覧 -->
-                        <!-- テスト一覧 -->
                         <li class="list-group-item px-3">
                             <div class="accordion side-menu-text">
                                 <!-- accodion menu -->
                                 <button class="menu js-menu has-text-white">
                                     <div class="media sidemenu-title">
                                         <div class="media-left">
-                                            <span class="icon is-small"><i class="fas fa-edit custom_icon"></i></span>
+                                            <span class="icon"><i class="fab fa-java" aria-hidden="true"></i></span>
                                         </div>
                                         <div class="media-content">
-                                            <div class="content pl-1">
-                                                <span>テスト一覧</span>
+                                            <div class="content">
+                                                <span>第3部</span>
                                             </div>
                                         </div>
                                         <div class="media-right">
-                                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                                            <div class="content">
+                                                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </button>
                                 <div class="contents">
                                     <div class="side-menu-text">
                                         <ul class="menu-list lock_content has-text-left">
-                                            <li><a class="is-size-7">非公開1</a></li>
-                                            <li><a class="is-size-7">非公開2</a></li>
-                                            <li><a class="is-size-7">非公開3</a></li>
+                                            <li><a class="is-size-7">第14章 Javaを支えるクラスたち</a></li>
+                                            <li><a class="is-size-7">第15章 文字列と日付</a></li>
+                                            <li><a class="is-size-7">第16章 コレクション</a></li>
+                                            <li><a class="is-size-7">第17章 例外</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-
-                        </li> <!-- end テスト一覧 -->
+                        </li> <!-- end 教材一覧 -->
 
                     </ul> <!-- /.submenu -->
                 </li> <!-- /.list-group-item -->
-
             </ul> <!-- /.first-menu -->
         </div> <!-- /.sidebar -->
     </div>
@@ -225,7 +244,7 @@
                             </div>
                             <!-- btn column -->
                             <div class="column is-4">
-                                <a class="button is-primary has-text-weight-semibold" href="01/chapter.html">レッスン詳細へ</a>
+                                <a class="button is-primary has-text-weight-semibold" href="01/chapter.html">詳細を見る</a>
                             </div>
                         </div>
                         <!-- 第2部 -->
@@ -267,7 +286,7 @@
                             </div>
                             <!-- btn column -->
                             <div class="column is-4">
-                                <a class="button is-primary has-text-weight-semibold" href="02/chapter.html">レッスン詳細へ</a>
+                                <a class="button is-primary has-text-weight-semibold" href="02/chapter.html">詳細を見る</a>
                             </div>
                         </div>
                         <!-- 第3部 -->
@@ -310,7 +329,7 @@
                             </div>
                             <!-- btn column -->
                             <div class="column is-4">
-                                <a class="button is-primary has-text-weight-semibold" href="03/chapter.html">レッスン詳細へ</a>
+                                <a class="button is-primary has-text-weight-semibold" href="03/chapter.html">詳細を見る</a>
                             </div>
                         </div>
                     </div>

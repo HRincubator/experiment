@@ -28,10 +28,6 @@
     "outputFile": "css/coursetop.css"
   },
   {
-    "inputFile": "scss/1.scss",
-    "outputFile": "css/1.css"
-  },
-  {
     "inputFile": "scss/lesson.scss",
     "outputFile": "css/lesson.css"
   },
