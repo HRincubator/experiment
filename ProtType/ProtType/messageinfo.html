@@ -76,7 +76,7 @@
     <!-- header.end -->
     <section class="section pb-0 pl-0">
         <!-- パンくずリスト -->
-        <nav class="breadcrumb is-size-7" aria-label="breadcrumbs">
+        <nav class="breadcrumb is-size-7 is-hidden-mobile" aria-label="breadcrumbs">
             <ul>
                 <li>
                     <a href="top.html">
@@ -107,7 +107,7 @@
         <!-- パンくずリスト.end -->
         <div class="columns" id="mail-app">
             <!-- sidebar -->
-            <aside class="column is-2 aside hero is-fullheight">
+            <aside class="column is-2 aside hero is-fullheight is-hidden-mobile">
                 <button class="button is-fullwidth is-primary mt-3 ml-1">
                     <span class="icon pr-2"><i class="fas fa-pen"></i></span><span class="name">新規作成</span>
                 </button>
@@ -156,7 +156,7 @@
                     </div>
                 </header>
                 <div class="container">
-                    <div class="icoming-mail box">
+                    <div class="icoming-mail box is-hidden-mobile">
                         <div class="field has-horizontal">
                             <div class="media">
                                 <div class="media-left">
@@ -196,6 +196,10 @@
                     <!-- mail-text -->
                     <div class="section">
                         <div class="field has-horizontal">
+                            <div class="mobile_message-title is-hidden-tablet">
+                                <p class="has-text-weight-semibold">プロトタイプを作成中のお知らせ</p>
+                                <hr />
+                            </div>
                             <p>User_1さん</p><br />
                             <p>
                                 こんにちは。このたびはEntranceに登録していただき誠にありがとうございます。<br />
@@ -244,7 +248,7 @@
                             <div class="field-body">
                                 <div class="field">
                                     <div class="control has-text-weight-semibold">
-                                        <input class="input" type="text" placeholder="Text input">
+                                        <input class="input" type="text" placeholder="件名を入力">
                                     </div>
                                 </div>
                             </div>
@@ -256,7 +260,7 @@
                             <div class="field-body">
                                 <div class="field">
                                     <div class="control">
-                                        <textarea class="textarea" placeholder="textarea"></textarea>
+                                        <textarea class="textarea" placeholder="メッセージ内容を入力"></textarea>
                                     </div>
                                 </div>
                             </div>

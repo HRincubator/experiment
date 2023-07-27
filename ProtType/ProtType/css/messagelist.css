@@ -255,8 +255,8 @@ article.post:last-child {
   transition: all .5s ease;
 }*/
 .ms-nav {
-  position: absolute;
-  bottom: -30px;
+  position: fixed;
+  bottom: 30px;
   left: 10px;
 }
 .ms-nav > .ms-main {
@@ -351,93 +351,6 @@ article.post:last-child {
     .ms-nav .ms-menu-toggle:checked ~ .ms-li6:before {
       animation: border-top-animation .5s ease .4s;
     }
-  
-    /* 押下時の雫のようなアニメーションを設定 */
-    /*.ms-nav .ms-menu-toggle ~ .ms-li:before {
-      content: '';
-      width: 45px;
-      display: block;
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
-      border-top: 0px solid #337ab7;
-    }
-    .ms-nav .ms-menu-toggle ~ .ms-li:before {
-      content: '';
-      width: 45px;
-      display: block;
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
-      border-top: 0px solid #337ab7;
-    }
-    .ms-nav .ms-menu-toggle:checked ~ .ms-li:before {
-      content: '';
-      width: 45px;
-      display: block;
-      position: absolute;
-      bottom: 0px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      border-left: 24px solid transparent;
-      border-right: 24px solid transparent;
-      border-top: 25px solid #337ab7;
-      z-index: 11;
-    }
-    .ms-nav .ms-menu-toggle:checked ~ .ms-li:after {
-      content: '';
-      width: 45px;
-      display: block;
-      position: absolute;
-      top: 0px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      border-left: 24px solid transparent;
-      border-right: 24px solid transparent;
-      border-bottom: 25px solid #337ab7;
-      transition: border-bottom .3s ease;
-      z-index: 11;
-    }
-
-    .ms-nav .ms-menu-toggle:checked ~ .ms-main:after {
-      content: '';
-      width: 60px;
-      display: block;
-      position: absolute;
-      top: 0px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      border-left: 24px solid transparent;
-      border-right: 24px solid transparent;
-      border-bottom: 45px solid #337ab7;
-      transition: border-bottom .3s ease;
-      z-index: 11;
-    }
-    .ms-nav .ms-menu-toggle:checked ~ .ms-li-last:after {
-      content: '';
-      width: 45px;
-      display: block;
-      position: absolute;
-      top: -5px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      border-left: 0px solid transparent;
-      border-right: 0px solid transparent;
-      border-bottom: 0px solid #337ab7;
-    }*/
-    /* 雫のアニメーション CSS END */
 
 /* ボタン */
 .ms-nav .ms-menu-toggle:checked ~ .ms-main span {
@@ -488,36 +401,11 @@ article.post:last-child {
       opacity: 0;
       z-index: 12;
     }
-/*@keyframes border-top-animation {
-  0% {
-    bottom: 0px;
-  }
-  50% {
-    bottom: -14px;
-  }
-  100% {
-    bottom: 0px;
-  }
+
+
+@media screen and (max-width: 768px) {
+    
+    .section {
+        padding: 1rem 1rem !important;
+    }
 }
-@keyframes border-bottom-animation {
-  0% {
-    top: 0px;
-  }
-  50% {
-    top: -13px;
-  }
-  100% {
-    top: 0px;
-  }
-}
-@keyframes big-border-bottom-animation {
-  0% {
-    top: 0px;
-  }
-  50% {
-    top: -30px;
-  }
-  100% {
-    top: 0px;
-  }
-}*/
