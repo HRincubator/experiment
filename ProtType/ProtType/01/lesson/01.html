@@ -426,13 +426,40 @@
                                     </a>
                                 </div>
                                 <div class="column is-4">
-                                    <a class="button is-light has-text-weight-semibold is-rounded" href="#" style="color: #00bc6a;">
+                                    <a class="button is-light has-text-weight-semibold is-rounded js-modal-trigger" data-target="send-modal" href="#" style="color: #00bc6a;">
                                         <span>テストへ</span>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- send-modal -->
+                    <div id="send-modal" class="modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                            <header class="modal-card-head">
+                                <p class="modal-card-title">テストには制限時間があります。</p>
+                                <button class="delete" aria-label="close"></button>
+                            </header>
+                            <section class="modal-card-body">
+                                <!-- Content ... -->
+                                <div class="content">
+                                    <p>
+                                        テストの制限時間は10分です。<br />
+                                        開始してもよろしいですか？
+                                    </p>
+                                </div>
+                            </section>
+                            <footer class="modal-card-foot">
+                                <a class="button is-primary" href="../test/01.html">
+                                    <span class="icon"><i class="fas fa-graduation-cap"></i></span>
+                                    <span class="name has-text-weight-bold">テストを受ける</span>
+                                </a>
+                                <button class="button">キャンセル</button>
+                            </footer>
+                        </div>
+                    </div>
+                    <!-- send-modal.end -->
                     <!-- Complete END -->
                 </div>
             </div>

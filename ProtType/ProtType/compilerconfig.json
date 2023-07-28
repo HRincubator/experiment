@@ -34,5 +34,9 @@
   {
     "inputFile": "scss/chapter.scss",
     "outputFile": "css/chapter.css"
+  },
+  {
+    "inputFile": "scss/test.scss",
+    "outputFile": "css/test.css"
   }
 ]
