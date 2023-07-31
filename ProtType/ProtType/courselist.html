@@ -198,10 +198,34 @@
     </div>
 
     <div class="wp-content section courselist__section">
+        <!-- パンくずリスト -->
+        <div class="container is-hidden-mobile">
+            <nav class="breadcrumb is-size-7" aria-label="breadcrumbs">
+                <ul>
+                    <li>
+                        <a href="top.html">
+                            <span class="icon is-small">
+                                <i class="fas fa-home" aria-hidden="true"></i>
+                            </span>
+                            <span>トップ</span>
+                        </a>
+                    </li>
+                    <li class="is-active">
+                        <a href="courselist.html">
+                            <span class="icon is-small">
+                                <i class="fas fa-book" aria-hidden="true"></i>
+                            </span>
+                            <span>単元一覧</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- パンくずリスト.end -->
         <div>
             <p class="title section__title pl-4">Java基礎編</p>
         </div>
-        <div class="tile is-ancestor is-justify-content-center pl-1">
+        <div class="tile is-ancestor is-justify-content-center">
             <div class="tile is-vertical is-parent is-8 mt-4">
                 <div class="tile is-child">
                     <div class="container-fluid container pl-4">
@@ -243,7 +267,7 @@
                                 </div>
                             </div>
                             <!-- btn column -->
-                            <div class="column is-4">
+                            <div class="column is-2">
                                 <a class="button is-primary has-text-weight-semibold" href="01/chapter.html">詳細を見る</a>
                             </div>
                         </div>
@@ -285,7 +309,7 @@
                                 </div>
                             </div>
                             <!-- btn column -->
-                            <div class="column is-4">
+                            <div class="column is-2">
                                 <a class="button is-primary has-text-weight-semibold" href="02/chapter.html">詳細を見る</a>
                             </div>
                         </div>
@@ -328,7 +352,7 @@
                                 </div>
                             </div>
                             <!-- btn column -->
-                            <div class="column is-4">
+                            <div class="column is-2">
                                 <a class="button is-primary has-text-weight-semibold" href="03/chapter.html">詳細を見る</a>
                             </div>
                         </div>
@@ -336,7 +360,7 @@
                 </div>
             </div>
         </div>
-            
+
     </div>
         <!-- footer -->
         <footer class="footer has-background-white-ter pb-3">

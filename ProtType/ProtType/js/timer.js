@@ -25,7 +25,9 @@ window.onload = function () {
             localStorage.setItem('timeRemaining', timeRemaining.toString());
             setTimeout(startTimer, updateInterval);
         } else {
-            alert('Time Up!');
+            // タイマー終了時、問題文を非表示にするクラスを付与
+            document.getElementById("time_over").classList.add("is-hidden");
+            document.getElementById("end_text").classList.remove("is-hidden");
             // タイマーが終了したらローカルストレージから残り時間を削除
             localStorage.removeItem('timeRemaining');
         }

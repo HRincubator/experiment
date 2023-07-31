@@ -42,7 +42,7 @@
         </div>
     </header>
     <!-- 問題に関するコンテンツを配置 -->
-    <main class="question-content">
+    <main class="question-content" id="time_over">
         <div class="question-content__section tab-container">
             <!-- Tab Content 1 -->
             <div class="question-content__section_body tab-content active">
@@ -285,6 +285,12 @@
             </div>
         </div>
     </main>
+    <section class="is-hidden" id="end_text">
+        <p class="end_test has-text-centered py-6">
+            テスト終了時間です。<br />
+            回答を送信して下さい。
+        </p>
+    </section>
     <!-- ボタンを配置 -->
     <footer class="test-btns_area">
         <div class="columns">
@@ -302,10 +308,6 @@
                 </nav>
             </div>
             <div class="column btns">
-                <a class="button has-background-light" href="../../01/chapter.html">
-                    <span class="icon"><i class="fas fa-list"></i></span>
-                    <span class="name">一覧画面へ</span>
-                </a>
                 <a class="button is-primary has-text-weight-bold js-modal-trigger" data-target="send-modal">
                     <span class="icon"><i class="fas fa-check"></i></span>
                     <span class="name">回答送信</span>

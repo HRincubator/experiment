@@ -16,14 +16,16 @@
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
     <!-- common css -->
     <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/lesson.css" />
+    <link rel="stylesheet" href="css/test.css" />
+    <link rel="stylesheet" href="css/coursetop.css" />
     <!-- js -->
     <script src="js/main.js" defer></script>
 
-    <title>Entrance | テストトップ</title>
+    <title>Entrance | テストの受け方</title>
 </head>
 <body>
-    <!-- header -->
-    <header class="header">
+    <header class="header custom__header">
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="top.html">
@@ -45,7 +47,7 @@
                 <div class="navbar-end">
                     <!-- ユーザーアイコンnavbar -->
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">
+                        <a class="navbar-link is-hidden-mobile">
                             <img src="images/index/user-icon.png" />User_1
                         </a>
 
@@ -71,126 +73,322 @@
             </div>
         </nav>
     </header>
-    <!-- header.end -->
+    <div data-component="sidebar">
+        <div class="sidebar">
+            <ul class="list-group flex-column d-inline-block first-menu">
+                <!-- 学習の進め方 -->
+                <li class="list-group-item pl-3 py-4 mt-3">
+                    <a href="coursetop.html" style="display: flex;">
+                        <i class="fas fa-shoe-prints" aria-hidden="true"></i>
+                        <span class="ml-2 align-middle">学習の進め方</span>
+                    </a>
+                </li> <!-- /.list-group-item -->
+                <!-- 単元一覧 -->
+                <li class="list-group-item pl-3 py-4">
+                    <a href="courselist.html" style="display: flex;">
+                        <i class="fas fa-book" aria-hidden="true"></i>
+                        <span class="ml-4 align-middle">単元一覧</span>
+                    </a>
+                    <!-- サブメニュー -->
+                    <ul class="list-group flex-column d-inline-block submenu">
+                        <!-- 教材一覧 -->
+                        <li class="list-group-item px-3">
+                            <div class="accordion side-menu-text">
+                                <!-- accodion menu -->
+                                <button class="menu js-menu has-text-white">
+                                    <div class="media sidemenu-title">
+                                        <div class="media-left">
+                                            <span class="icon"><i class="fab fa-java" aria-hidden="true"></i></span>
+                                        </div>
+                                        <div class="media-content">
+                                            <div class="content">
+                                                <span>第1部</span>
+                                            </div>
+                                        </div>
+                                        <div class="media-right">
+                                            <div class="content">
+                                                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                                <div class="contents">
+                                    <div class="side-menu-text">
+                                        <ul class="menu-list mb-3 has-text-left">
+                                            <li><a href="01/lesson/01.html" class="is-size-7">第1章 プログラムの書き方</a></li>
+                                            <li><a class="is-size-7">第2章 式と演算子</a></li>
+                                            <li><a class="is-size-7">第3章 条件分岐と繰り返し</a></li>
+                                            <li><a class="is-size-7">第4章 配列</a></li>
+                                            <li><a class="is-size-7">第5章 メソッド</a></li>
+                                            <li><a class="is-size-7">第6章 複数クラスを用いた開発</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li> <!-- end 教材一覧 -->
+                        <li class="list-group-item px-3">
+                            <div class="accordion side-menu-text">
+                                <!-- accodion menu -->
+                                <button class="menu js-menu has-text-white">
+                                    <div class="media sidemenu-title">
+                                        <div class="media-left">
+                                            <span class="icon"><i class="fab fa-java" aria-hidden="true"></i></span>
+                                        </div>
+                                        <div class="media-content">
+                                            <div class="content">
+                                                <span>第2部</span>
+                                            </div>
+                                        </div>
+                                        <div class="media-right">
+                                            <div class="content">
+                                                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                                <div class="contents">
+                                    <div class="side-menu-text">
+                                        <ul class="menu-list lock_content has-text-left">
+                                            <li><a class="is-size-7">第7章 オブジェクト指向</a></li>
+                                            <li><a class="is-size-7">第8章 インスタンスとクラス</a></li>
+                                            <li><a class="is-size-7">第9章 さまざまなクラス機構</a></li>
+                                            <li><a class="is-size-7">第10章 継承</a></li>
+                                            <li><a class="is-size-7">第11章 高度な継承</a></li>
+                                            <li><a class="is-size-7">第12章 多態性</a></li>
+                                            <li><a class="is-size-7">第13章 カプセル化</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li> <!-- end 教材一覧 -->
+                        <li class="list-group-item px-3">
+                            <div class="accordion side-menu-text">
+                                <!-- accodion menu -->
+                                <button class="menu js-menu has-text-white">
+                                    <div class="media sidemenu-title">
+                                        <div class="media-left">
+                                            <span class="icon"><i class="fab fa-java" aria-hidden="true"></i></span>
+                                        </div>
+                                        <div class="media-content">
+                                            <div class="content">
+                                                <span>第3部</span>
+                                            </div>
+                                        </div>
+                                        <div class="media-right">
+                                            <div class="content">
+                                                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                                <div class="contents">
+                                    <div class="side-menu-text">
+                                        <ul class="menu-list lock_content has-text-left">
+                                            <li><a class="is-size-7">第14章 Javaを支えるクラスたち</a></li>
+                                            <li><a class="is-size-7">第15章 文字列と日付</a></li>
+                                            <li><a class="is-size-7">第16章 コレクション</a></li>
+                                            <li><a class="is-size-7">第17章 例外</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li> <!-- end 教材一覧 -->
 
-    <section class="section">
-        <!-- パンくずリスト -->
-        <nav class="breadcrumb is-size-7" aria-label="breadcrumbs">
-            <ul>
-                <li>
-                    <a href="top.html">
-                        <span class="icon is-small">
-                            <i class="fas fa-home" aria-hidden="true"></i>
-                        </span>
-                        <span>トップ</span>
-                    </a>
-                </li>
-                <li class="is-active">
-                    <a href="#">
-                        <span class="icon is-small">
-                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-                        </span>
-                        <span>テストトップ</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <!-- パンくずリスト.end -->
-        <!-- tile -->
-        <div class="tile is-ancestor">
-            <!--  side__tile -->
-            <div class="tile is-3 is-vertical is-parent  side__tile">
-                <!-- tabs -->
-                <div class="tabs is-boxed">
-                    <ul class="tab-list is-size-7">
-                        <li class="tab-item is-active">
-                            <a>
-                                <span class="icon is-small"><i class="fas fa-book"></i></span>
-                                <span>単元一覧</span>
-                            </a>
-                        </li>
-                        <li class="tab-item">
-                            <a>
-                                <span class="icon is-small"><i class="fas fa-graduation-cap"></i></span>
-                                <span>テスト一覧</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- tabs.end -->
-                <!-- tabcontainer -->
-                <div class="tab-container">
-                    <!-- tab1 -->
-                    <div class="tab-content active">
-                        <div class="tile is-child box">
-                            <ul class="menu-list">
-                                <li>
-                                    <a class="is-active has-background-primary">公開</a>
-                                    <ul>
-                                        <li><a href="courseinfo.html">公開1</a></li>
-                                        <li><a>公開2</a></li>
-                                        <li><a>公開3</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a class="is-active has-background-primary">非公開 <i class='fas fa-lock fa-sm'></i></a>
-                                    <ul>
-                                        <li><a>非公開1</a></li>
-                                        <li><a>非公開2</a></li>
-                                        <li><a>非公開3</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- tab2 -->
-                    <div class="tab-content">
-                        <div class="tile is-child box">
-                            <ul class="menu-list">
-                                <li>
-                                    <a class="is-active has-background-primary">公開</a>
-                                    <ul>
-                                        <li><a href="test.html">テスト1</a></li>
-                                        <li><a>テスト2</a></li>
-                                        <li><a>テスト3</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a class="is-active has-background-primary">非公開 <i class='fas fa-lock fa-sm'></i></a>
-                                    <ul>
-                                        <li><a>テスト1</a></li>
-                                        <li><a>テスト2</a></li>
-                                        <li><a>テスト3</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--  side__tile.end -->
-            <!-- main-tile -->
+                    </ul> <!-- /.submenu -->
+                </li> <!-- /.list-group-item -->
+            </ul> <!-- /.first-menu -->
+        </div> <!-- /.sidebar -->
+    </div>
+    <div class="wp-content section course-top__section">
+        <div class="container-fluid">
             <div class="tile is-parent">
                 <div class="tile is-child pl-4">
-                    <p class="title">テストトップページ</p><br />
-                    <p class="title has-text-weight-normal is-4 mb-3">テストの進め方</p>
-                    <hr class="dropdown-divider">
-                    <p class="subtitle is-5">目立たせたい文があれば、ここに記載します。</p>
-                    <p>テストの進め方についての文章を記載します。</p><br />
-                    <ul class="pb-6">
-                        <li><a href="test.html">自動採点のテスト</a></li>
-                        <li><a href="tutoranswer.html">手動採点のテスト</a></li>
-                    </ul>
-                    <br />
+                    <div style="text-align: center;">
+                        <p class="title section__title">テストの受け方</p>
+                        <p class="mb-6">
+                            確認テストは一度しか受けることが出来ないので注意して下さい。<br />
+                            また、テストを実施すると自動的に10分間のタイマーが開始されます。
+                        </p>
+                    </div>
 
-                    <p class="title has-text-weight-normal is-4 mb-3">テスト一覧</p>
-                    <hr class="dropdown-divider">
-                    <p>テスト一覧について</p>
+
+                    <!--********** MAIN-CONTENT__TILE NEW **********-->
+                    <div class="step-wrap">
+                        <!-- Step 1 -->
+                        <div class="step-content">
+                            <div class="step-label"></div>
+                            <div class="step-title">テストと問題文が表示されます。</div>
+                            <div class="step-body">
+                                <!-- Content-Text -->
+                                <div class="columns mt-4">
+                                    <div class="column p-0 is-5">
+                                        <figure class="image is-16by9">
+                                            <img src="images/testtop/01.png">
+                                        </figure>
+                                    </div>
+                                    <div class="column">
+                                        <p>
+                                            問題文が表示されます。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="step-content">
+                            <div class="step-label"></div>
+                            <div class="step-title">問題は基本的に4択問題で行われます。</div>
+                            <div class="step-body">
+                                <!-- Content-Text -->
+                                <div class="columns mt-4">
+                                    <div class="column p-0 is-5">
+                                        <figure class="image is-16by9">
+                                            <img src="images/testtop/02.png">
+                                        </figure>
+                                    </div>
+                                    <div class="column">
+                                        <p>
+                                            問題は4択なので正しいと思う選択肢のボタンをクリックして回答して下さい。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="step-content">
+                            <div class="step-label"></div>
+                            <div class="step-title">クリックして問題に移動できます。</div>
+                            <div class="step-body">
+                                <!-- Content-Text -->
+                                <div class="columns mt-4">
+                                    <div class="column p-0 is-5">
+                                        <figure class="image is-16by9">
+                                            <img src="images/testtop/03.png">
+                                        </figure>
+                                    </div>
+                                    <div class="column">
+                                        <p>
+                                            問題の切り替えを行うことができます。<br />
+                                            もう一度問題を解きたい場合や、問題を一旦飛ばす場合に利用してみて下さい。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="step-content">
+                            <div class="step-label"></div>
+                            <div class="step-title">テストは10分間の時間制限があります。</div>
+                            <div class="step-body">
+                                <!-- Content-Text -->
+                                <div class="columns mt-4">
+                                    <div class="column p-0 is-5">
+                                        <figure class="image is-16by9">
+                                            <img src="images/testtop/04.png">
+                                        </figure>
+                                    </div>
+                                    <div class="column">
+                                        <p>
+                                            確認テストは自動的にタイマーが開始されるので、時間配分を考えて取り組んで下さい。<br />
+                                            確認テストは一度しか受ける事ができないので注意が必要です。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Step 5 -->
+                        <div class="step-content">
+                            <div class="step-label"></div>
+                            <div class="step-title">10分経過後、回答ができなくなります。</div>
+                            <div class="step-body">
+                                <!-- Content-Text -->
+                                <div class="columns mt-4">
+                                    <div class="column p-0 is-5">
+                                        <figure class="image is-16by9">
+                                            <img src="images/testtop/05.png">
+                                        </figure>
+                                    </div>
+                                    <div class="column">
+                                        <p>
+                                            テスト実施から10分が経過すると、問題を解いている途中でも、問題を受けることができなくなってしまいます。<br />
+                                            10分経過してしまった場合でも回答送信ボタンをクリックして結果を確認しましょう。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Step 6 -->
+                        <div class="step-content">
+                            <div class="step-label"></div>
+                            <div class="step-title">回答送信ボタンをクリックすると内容確認のポップアップが表示されます。</div>
+                            <div class="step-body">
+                                <!-- Content-Text -->
+                                <div class="columns mt-4">
+                                    <div class="column p-0 is-5">
+                                        <figure class="image is-16by9">
+                                            <img src="images/testtop/06.png">
+                                        </figure>
+                                    </div>
+                                    <div class="column">
+                                        <p>
+                                            回答内容が正しい場合はそのまま回答送信ボタンをクリックしましょう。<br />
+                                            もし、違った場合でもキャンセルをクリックして問題に戻ることが出来ます。<br />
+                                            回答送信後、テスト結果が表示されます。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--********** MAIN-CONTENT__TILE END **********-->
                 </div>
             </div>
-            <!-- main-title.end -->
         </div>
-        <!-- tile.end -->
-    </section>
+    </div>
+    <!-- footer -->
+    <footer class="footer has-background-white-ter pb-3">
+        <!-- content -->
+        <div class="content has-text-derk">
+            <!-- columns -->
+            <div class="columns">
+                <!-- left-content -->
+                <div class="column is-two-fifths">
+                    <a class="tile box is-5 p-2 ml-6" href="top.html">
+                        <img src="images/logo.png">
+                    </a>
+                </div>
+                <!-- left-content.end -->
+                <!-- right-content -->
+                <div class="column">
+                    <p class="title is-6">サービス</p>
+                    <div class="is-size-7 ml-3">
+                        <p>動画教材一覧</p>
+                        <p>テスト一覧</p>
+                        <p>ヘルプ</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <p class="title is-6">サポート</p>
+                    <div class="is-size-7 ml-3">
+                        <p>運営会社</p>
+                        <p>採用情報</p>
+                        <p>利用規約</p>
+                        <p>特定商取引法に基づく表示</p>
+                        <p>プライバシーポリシー</p>
+                    </div>
+                </div>
+                <!-- right-content.end -->
+            </div>
+            <!-- columns.end -->
+            <!-- copylight -->
+            <p class="has-text-centered mt-6">
+                <small>© Entrance Co. Ltd. 2023</small>
+            </p>
+            <!-- copylight.end -->
+        </div>
+        <!-- content.end -->
+    </footer>
+    <!-- footer.end -->
+    <script src="js/main.js" defer></script>
 </body>
 </html>
