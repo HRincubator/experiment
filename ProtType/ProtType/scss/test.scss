@@ -141,3 +141,18 @@
 }
 
 /***** テストトップ画面 *****/
+@media screen and (max-width: 768px) {
+    .modal-card-title {
+        color: #363636;
+        flex-grow: 1;
+        flex-shrink: 0;
+        font-size: 0.9rem;
+        line-height: 1;
+    }
+
+    .content {
+        p {
+            font-size: 0.9rem;
+        }
+    }
+}
