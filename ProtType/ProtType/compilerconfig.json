@@ -38,5 +38,9 @@
   {
     "inputFile": "scss/test.scss",
     "outputFile": "css/test.css"
+  },
+  {
+    "inputFile": "scss/support.scss",
+    "outputFile": "css/support.css"
   }
 ]

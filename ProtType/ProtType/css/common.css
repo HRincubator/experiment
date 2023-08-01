@@ -292,6 +292,16 @@ body {
   color: #57bc90;
 }
 
+.footer a {
+  display: block;
+  color: #656565;
+  padding: 0.3rem 0;
+}
+.footer a:hover {
+  color: #00ff90;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 768px) {
   .mobile_box {
     background-color: #fff;
@@ -299,5 +309,13 @@ body {
     box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.02);
     color: #4a4a4a;
     display: block;
+  }
+  .table {
+    display: block;
+    overflow-x: scroll;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    border-collapse: collapse;
+    border-spacing: 0;
   }
 }

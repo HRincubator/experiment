@@ -310,6 +310,17 @@ body {
     color: $theme-color;
 }
 
+.footer a {
+    display: block;
+    color: #656565;
+    padding: .3rem 0;
+
+    &:hover {
+        color: #00ff90;
+        font-weight: bold;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .mobile_box {
         background-color: #fff;
@@ -317,5 +328,14 @@ body {
         box-shadow: 0 .5em 1em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);
         color: #4a4a4a;
         display: block;
+    }
+
+    .table {
+        display: block;
+        overflow-x: scroll;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        border-collapse: collapse;
+        border-spacing: 0;
     }
 }
