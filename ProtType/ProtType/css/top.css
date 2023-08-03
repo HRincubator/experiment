@@ -39,6 +39,10 @@
   max-width: 70vmax;
   margin: 0 auto;
 }
+.service__section .service_content .service-column:hover {
+  transform: translateY(-5px);
+  transition: all 0.5s;
+}
 .service__section .card_text p {
   font-size: 17px;
 }

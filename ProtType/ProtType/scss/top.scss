@@ -41,6 +41,11 @@
     .service_content {
         max-width: 70vmax;
         margin: 0 auto;
+
+        .service-column:hover {
+            transform: translateY(-5px);
+            transition: all .5s;
+        }
     }
 
     .card_text {
