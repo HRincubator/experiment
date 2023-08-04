@@ -429,7 +429,7 @@
                         <input type="checkbox" id="ms-menu" class="ms-menu-toggle" name="ms-menu-toggle" />
                         <!-- 新規作成 -->
                         <li class="ms-li ms-li6 ms-li-last">
-                            <a href="javascript:void(0)">
+                            <a href="javascript:void(0)" class="js-modal-trigger" data-target="new-message-modal2">
                                 <span class="icon"><i class="fas fa-pen"></i></span>
                             </a>
                         </li>
@@ -441,13 +441,13 @@
                         </li>
                         <!-- 送信済み -->
                         <li class="ms-li ms-li4">
-                            <a href="javascript:void(0)">
+                            <a href="#send">
                                 <span class="icon"><i class="fas fa-paper-plane"></i></span>
                             </a>
                         </li>
                         <!-- 星付き -->
                         <li class="ms-li ms-li3">
-                            <a href="javascript:void(0)">
+                            <a href="#star">
                                 <span class="icon"><i class="fas fa-star"></i></span>
                             </a>
                         </li>
@@ -459,7 +459,7 @@
                         </li>
                         <!-- ゴミ箱 -->
                         <li class="ms-li ms-li1 ms-li-first">
-                            <a href="javascript:void(0)">
+                            <a href="trash">
                                 <span class="icon"><i class="fas fa-trash-alt"></i></span>
                             </a>
                         </li>
@@ -472,6 +472,85 @@
                             </a>
                         </li>
                     </ul>
+                    <!-- new-message-modal -->
+                    <div id="new-message-modal2" class="modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                            <header class="modal-card-head">
+                                <p class="modal-card-title is-size-6">新規作成メッセージ</p>
+                                <button class="delete" aria-label="close"></button>
+                            </header>
+                            <section class="modal-card-body">
+                                <!-- Content ... -->
+                                <div class="field">
+                                    <div class="dropdown">
+                                        <div class="dropdown-trigger">
+                                            <button class="button is-size-7" aria-haspopup="true" aria-controls="dropdown-menu3">
+                                                <span>メッセージタイプを選択して下さい<span class="has-text-danger is-size-6">*</span></span>
+                                                <span class="icon is-small">
+                                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+                                            <div class="dropdown-content">
+                                                <a href="#" class="dropdown-item">
+                                                    質問
+                                                </a>
+                                                <hr class="dropdown-divider">
+                                                <a href="#" class="dropdown-item">
+                                                    相談
+                                                </a>
+                                                <hr class="dropdown-divider">
+                                                <a href="#" class="dropdown-item">
+                                                    不具合報告
+                                                </a>
+                                                <hr class="dropdown-divider">
+                                                <a href="#" class="dropdown-item">
+                                                    その他
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="control has-text-weight-semibold">
+                                        <input class="input" type="text" placeholder="件名">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="control">
+                                        <textarea class="textarea" placeholder="メッセージ記入欄"></textarea>
+                                    </div>
+                                </div>
+                            </section>
+                            <footer class="modal-card-foot has-background-white">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <button class="button is-primary">
+                                            <span class="icon"><i class="fas fa-paper-plane"></i></span>
+                                            <span>送信</span>
+                                        </button>
+                                    </div>
+                                    <div class="media-content">
+                                        <div class="content is-size-5">
+                                            <button class="messageicon-button">
+                                                <span class="icon">
+                                                    <i class="fas fa-paperclip has-text-grey"></i>
+                                                </span>
+                                                <span class="messageicon-text">ファイルを選択</span>
+                                            </button>
+                                            <button class="messageicon-button">
+                                                <span class="icon"><i class="fas fa-image has-text-grey"></i></span>
+                                                <span class="messageicon-text">画像を選択</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                    <!-- modal.end -->
                 </div>
             </div>
         </div>
