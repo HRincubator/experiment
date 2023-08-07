@@ -299,8 +299,9 @@
                         <span class="name">第1章 プログラムの書き方</span>
                     </h1>
                     <!-- video -->
-                    <img src="../../images/01.png" class="mb-6" />
-                    <!--<video src="../../images/course/videos/course-sample.mp4" class="coursevideo" id="courseVideo" controls></video>-->
+                    <video src="../../images/course/videos/course-sample.mp4" class="coursevideo" poster="../../images/01.png" id="courseVideo" controls></video>
+
+
                     <!-- video-info -->
                     <div class="video-info__section">
                         <div class="columns mb-0">
@@ -422,7 +423,7 @@
                                 <div class="level-item has-text-centered">
                                     <div>
                                         <p class="heading pb-0">最終視聴日</p>
-                                        <p class="title is-size-5">8月1日</p>
+                                        <p class="title is-size-5" id="modDay"></p>
                                     </div>
                                 </div>
                             </nav>
@@ -486,7 +487,7 @@
                                 <p>目次</p>
                             </div>
                             <ol>
-                                <li><a href="#01">Javaによる開発の流れ</a></li>
+                                <li><button class="lesson_01" id="01">Javaによる開発の流れ</button></li>
                                 <li><a href="#02">Javaの特徴</a></li>
                                 <li><a href="#03">プログラムの基本構造</a></li>
                                 <li><a href="#04">インデント</a></li>
@@ -551,5 +552,27 @@
     <!-- footer.end -->
     <!--自作のJS-->
     <script src="js/main.js" defer></script>
+    <script>
+        // 日付を取得
+        var day = new Date(document.lastModified);
+        /*var y = day.getFullYear();*/
+        var m = day.getMonth() + 1;
+        var d = day.getDate();
+
+        // 曜日を指定して出力
+        var week = new Array("日", "月", "火", "水", "木", "金", "土");
+        var w = week[day.getDay()];
+
+        //日にちの整形
+        if (m < 10) m = m;
+        if (d < 10) d = d;
+
+        // modDayに出力
+        /*modDay.innerHTML += "<span>更新日 </span>" + y + "年" + m + "月" + d + "日 (" + w + ")";*/
+
+        // modDayに出力
+        modDay.innerHTML += m + "月" + d + "日";
+
+    </script>
 </body>
 </html>

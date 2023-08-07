@@ -205,3 +205,54 @@ function toggle() {
 for (let i = 0; i < menu.length; i++) {
     menu[i].addEventListener("click", toggle);
 }
+// ローディングアニメーション
+const keyName = 'loadingviewed';
+const keyValue = true;
+
+if (!sessionStorage.getItem(keyName)) {
+    sessionStorage.setItem(keyName, keyValue);
+    // 初回閲覧時
+    window.onload = function () {
+        var popup = document.getElementById('firstTimeModal');
+        if (!popup) return;
+        popup.classList.add('is-show'); // モーダルにis-showのclassを付与
+    }
+    const loadinglogo = document.getElementById("loadingLogo"); // 
+    window.addEventListener('DOMContentLoaded', () => { //ロード完了後イベント開始
+        loadinglogo.className = "show";
+        setTimeout(function () { loadinglogo.className = loadinglogo.className.replace("show", ""); }, 3500); // 3.5秒後非表示
+    });
+
+} else {
+    // 2回目以降の処理内容
+
+}
+
+// 動画視聴画面
+
+
+
+// 新規登録画面
+/* 登録ボタンの活性条件 */
+const form = document.getElementById("form")
+const button = document.getElementById("submit")
+button.disabled = true;
+button.classList.add('is-inactive');
+
+form.addEventListener("input", update)
+form.addEventListener("change", update)
+
+function update() {
+    const isRequired = form.checkValidity()
+
+    if (isRequired) {
+        button.disabled = false;
+        button.classList.remove('is-inactive');
+        button.classList.add('is-active');
+        return
+    } else {
+        button.disabled = true;
+        button.classList.remove('is-active');
+        button.classList.add('is-inactive');
+    }
+}
