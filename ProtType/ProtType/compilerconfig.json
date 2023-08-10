@@ -42,5 +42,9 @@
   {
     "inputFile": "scss/support.scss",
     "outputFile": "css/support.css"
+  },
+  {
+    "inputFile": "js/main.js",
+    "outputFile": "js/main.min.js"
   }
 ]

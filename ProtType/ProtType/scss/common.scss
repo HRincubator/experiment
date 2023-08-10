@@ -344,3 +344,32 @@ body {
         border-spacing: 0;
     }
 }
+
+
+/* スクロールCSS */
+.fade-in {
+    opacity: 0;
+    transition-duration: 500ms;
+    transition-property: opacity, transform;
+
+    &-up {
+        transform: translate(0, 50px);
+    }
+
+    &-down {
+        transform: translate(0, -50px);
+    }
+
+    &-left {
+        transform: translate(-50px, 0);
+    }
+
+    &-right {
+        transform: translate(50px, 0);
+    }
+}
+
+.scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
+}

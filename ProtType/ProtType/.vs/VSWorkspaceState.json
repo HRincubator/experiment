@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\01",
-    "\\01\\lesson"
+    "\\01\\lesson",
+    "\\01\\test",
+    "\\css"
   ],
-  "SelectedNode": "\\top.html",
+  "SelectedNode": "\\css\\test.min.css",
   "PreviewInSolutionExplorer": false
 }

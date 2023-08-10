@@ -228,8 +228,6 @@ if (!sessionStorage.getItem(keyName)) {
 
 }
 
-// “®‰æ‹’®‰æ–Ê
-
 
 
 // V‹K“o˜^‰æ–Ê
@@ -256,3 +254,10 @@ function update() {
         button.classList.add('is-inactive');
     }
 }
+
+
+// “®‰æ‹’®‰æ–Ê
+var v = document.getElementById('courseVideo');
+
+
+
