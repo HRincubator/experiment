@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.chapter .box:hover {
+  transform: translateY(-5px);
+  transition: all 0.5s;
+}
+
 @media screen and (max-width: 768px) {
   .fv__hero img {
     display: block;
