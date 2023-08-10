@@ -313,6 +313,10 @@ body {
     max-width: 18rem;
     margin: auto;
   }
+  .mobile_box:hover {
+    transform: translateY(-5px);
+    transition: all 0.5s;
+  }
   .table {
     display: block;
     overflow-x: scroll;

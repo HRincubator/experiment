@@ -333,6 +333,11 @@ body {
         width: 100%;
         max-width: 18rem;
         margin: auto;
+
+        &:hover {
+            transform: translateY(-5px);
+            transition: all .5s;
+        }
     }
 
     .table {
