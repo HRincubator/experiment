@@ -16,9 +16,9 @@
     <!-- reset css -->
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
     <!-- css -->
-    <link rel="stylesheet" href="css/common.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.min.css" />
     <link rel="stylesheet" type="text/css" href="css/lesson.min.css" />
-    <link rel="stylesheet" href="css/coursetop.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/coursetop.min.css" />
     <title>Entrance | 単元一覧</title>
     <!-- js -->
     <script src="js/main.min.js" defer></script>
@@ -233,13 +233,9 @@
         </div>
         <!-- パンくずリスト.end -->
 
-        <!-- section title -->
-        <div class="mb-6">
-            <p class="title section__title">Java基礎編</p>
-        </div>
-
-        <div class="tile is-ancestor is-justify-content-center my-3">
-            <div class="tile is-vertical is-parent is-8 mt-4">
+        <div class="tile is-ancestor is-justify-content-center mb-3">
+            <div class="tile is-vertical is-parent is-8">
+                <div class="mt-6 is-hidden-mobile"></div>
                 <div class="tile is-child">
                     <div class="container-fluid container pl-4">
                         <!-- 第1部 -->
@@ -247,7 +243,7 @@
                             <!-- img -->
                             <div class="column is-2 p-0 custom_content-info course01">
                                 <span class="icon is-custom">
-                                    <i class="fab fa-java fa-customx"></i>
+                                    <i class="fas fa-medal fa-customx" style="color: #fff;"></i>
                                 </span>
                             </div>
 
@@ -290,7 +286,7 @@
                             <!-- img -->
                             <div class="column is-2 p-0 custom_content-info course02">
                                 <span class="icon is-custom">
-                                    <i class="fab fa-java fa-customx"></i>
+                                    <i class="fas fa-medal fa-customx" style="color: #fff;"></i>
                                 </span>
                                 
                             </div>
@@ -334,7 +330,7 @@
                             <div class="column is-2 p-0 custom_content-info course03">
 
                                 <span class="icon is-custom">
-                                    <i class="fab fa-java fa-customx"></i>
+                                    <i class="fas fa-medal fa-customx" style="color: #fff;"></i>
                                 </span>
                             </div>
                             <!-- course-info -->
@@ -421,6 +417,6 @@
         <!-- content.end -->
     </footer>
     <!-- footer.end -->
-    <script src="js/main.min.js" defer></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

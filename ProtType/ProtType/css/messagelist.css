@@ -402,6 +402,9 @@ article.post:last-child {
       z-index: 12;
     }
 
+.section {
+    padding: 3rem 1.5rem 3rem 0;
+}
 
 @media screen and (max-width: 768px) {
     

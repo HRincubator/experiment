@@ -100,9 +100,88 @@
         <div class="columns" id="mail-app">
             <!-- sidebar -->
             <aside class="column is-2 aside hero is-fullheight">
-                <button class="button is-fullwidth is-primary mt-3 ml-1">
+                <button class="button is-fullwidth is-primary has-text-weight-semibold mt-3 ml-1 js-modal-trigger" data-target="new-message-modal">
                     <span class="icon pr-2"><i class="fas fa-pen"></i></span><span class="name">新規作成</span>
                 </button>
+                <!-- new-message-modal -->
+                <div id="new-message-modal" class="modal">
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                        <header class="modal-card-head">
+                            <p class="modal-card-title is-size-6">新規作成メッセージ</p>
+                            <button class="delete" aria-label="close"></button>
+                        </header>
+                        <section class="modal-card-body">
+                            <!-- Content ... -->
+                            <div class="field">
+                                <div class="dropdown">
+                                    <div class="dropdown-trigger">
+                                        <button class="button is-size-7" aria-haspopup="true" aria-controls="dropdown-menu3">
+                                            <span>メッセージタイプを選択して下さい<span class="has-text-danger is-size-6">*</span></span>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+                                        <div class="dropdown-content">
+                                            <a href="#" class="dropdown-item">
+                                                質問
+                                            </a>
+                                            <hr class="dropdown-divider">
+                                            <a href="#" class="dropdown-item">
+                                                相談
+                                            </a>
+                                            <hr class="dropdown-divider">
+                                            <a href="#" class="dropdown-item">
+                                                不具合報告
+                                            </a>
+                                            <hr class="dropdown-divider">
+                                            <a href="#" class="dropdown-item">
+                                                その他
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control has-text-weight-semibold">
+                                    <input class="input" type="text" placeholder="件名">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <textarea class="textarea" placeholder="メッセージ記入欄"></textarea>
+                                </div>
+                            </div>
+                        </section>
+                        <footer class="modal-card-foot has-background-white">
+                            <div class="media">
+                                <div class="media-left">
+                                    <button class="button is-primary">
+                                        <span class="icon"><i class="fas fa-paper-plane"></i></span>
+                                        <span>送信</span>
+                                    </button>
+                                </div>
+                                <div class="media-content">
+                                    <div class="content is-size-5">
+                                        <button class="messageicon-button">
+                                            <span class="icon">
+                                                <i class="fas fa-paperclip has-text-grey"></i>
+                                            </span>
+                                            <span class="messageicon-text">ファイルを選択</span>
+                                        </button>
+                                        <button class="messageicon-button">
+                                            <span class="icon"><i class="fas fa-image has-text-grey"></i></span>
+                                            <span class="messageicon-text">画像を選択</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+                <!-- modal.end -->
                 <div>
                     <div class="has-text-centered">
                     </div>
@@ -150,14 +229,14 @@
                                                     <span class="msg-subject">
                                                         <strong id="fake-subject-1">
                                                             <!--{{ msg.subject }}-->
-                                                            動画が再生されない不具合について
+                                                            変数と定数の違いについて
                                                         </strong>
                                                     </span>
                                                 </div>
                                                 <div class="msg-snippet">
                                                     <p id="fake-snippet-1" class="subtitle is-size-7">
                                                         <!--{{ msg.snippet }}-->
-                                                        第1章の動画教材視聴画面にて、動画が再生されないのですが、不具合の可能性があるため、確認・修正をお願いします。
+                                                        変数と定数の違いやどう使い分ければよいのかわかりません。
                                                         ...
                                                     </p>
                                                 </div>
@@ -166,8 +245,8 @@
                                     </div>
                                     <div class="media-right">
                                         <p class="is-size-7">
-                                            6月29日 &nbsp;
-                                            <span class="tag">不具合</span>
+                                            8月15日 &nbsp;
+                                            <span class="tag">質問</span>
                                         </p>
                                     </div>
                                 </div>

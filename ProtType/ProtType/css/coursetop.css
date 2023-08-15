@@ -69,50 +69,6 @@
   margin-left: 12px;
 }
 
-@media screen and (min-width: 1080px) {
-  .custom_content-info::before {
-    content: "Level";
-    position: absolute;
-    background: #57bc90;
-    background-size: auto;
-    background-size: cover;
-    width: 120px;
-    height: 120px;
-    z-index: -1;
-    border-radius: 20px;
-    margin-left: 20px;
-    color: #fff;
-    text-align: center;
-    padding-top: 0.7rem;
-    font-weight: bold;
-    font-size: 1.1rem;
-  }
-  .course {
-    border: 3.5px solid #fff;
-  }
-  .course:hover {
-    border: 3.5px solid #00d1b2;
-    border-radius: 1rem;
-    transform: scale(1.1, 1.1);
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
-    padding: 0.7rem 0 !important;
-  }
-  .course01::before {
-    content: "Level1";
-  }
-  .course02::before {
-    content: "Level2";
-  }
-  .course03::before {
-    content: "Level3";
-  }
-  .fa-customx {
-    font-size: 3.5rem;
-    padding-right: 0.5rem;
-    padding-top: 1rem;
-  }
-}
 @media screen and (max-width: 768px) {
   /* 学習の進め方モバイルUI */
   .section {
@@ -142,41 +98,5 @@
     margin-top: 1.5em;
     margin-left: 0;
     padding: 0 0 1em;
-  }
-  /* 単元一覧画面モバイルUI */
-  .courselist__section {
-    margin: 1rem;
-    padding-right: 0.5rem;
-    padding-top: 1rem;
-  }
-  .courselist__section .column {
-    padding: 0 0.75rem 0 0.75rem;
-  }
-  .courselist__section .column p {
-    padding: 0.5rem 0 0.5rem 0;
-  }
-  .courselist__section .column a {
-    display: inline-block;
-    margin: 1rem 0 1rem 4.5rem;
-  }
-  .courselist__section .column .is-size-5 {
-    font-size: 1.25rem;
-  }
-  .courselist__section .column .title {
-    color: #363636;
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 1.125;
-    font-size: 1.1rem !important;
-  }
-  .is-custom {
-    height: 100%;
-    width: 100%;
-    min-height: 75px;
-  }
-  .courselist_time {
-    padding: 0 0.6em;
-    border-left: 2px solid #dedede;
-    color: #333333;
   }
 }
