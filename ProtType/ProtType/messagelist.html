@@ -2,6 +2,7 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <!-- sc0007 -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
@@ -200,18 +201,6 @@
                 <!-- main -->
                 <div class="column">
                     <p class="title is-size-5 has-text-success mb-0">受信トレイ</p>
-                    <!-- search -->
-                    <div class="field has-addons m-5 is-justify-content-right is-hidden-mobile">
-                        <div class="control">
-                            <input class="input" type="text" placeholder="メールを検索">
-                        </div>
-                        <div class="control">
-                            <a class="button is-info">
-                                検索
-                            </a>
-                        </div>
-                    </div>
-                    <!-- search.end -->
                     <!-- WINDOWS MESSAGE LIST AREA -->
                     <div class="inbox-messages is-hidden-mobile" id="inbox-messages">
                         <div v-for="(msg, index) in messages" class="card" v-bind:id="'msg-card-'+index" v-on:click="showMessage(msg,index)" v-bind:data-preview-id="index">

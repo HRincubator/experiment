@@ -89,27 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// 文字起こしを表示
-/*document.addEventListener("DOMContentLoaded", function () {
-    var video = document.getElementById("courseVideo");
-    var transcriptionElement = document.getElementById("transcription");
-
-    video.addEventListener("timeupdate", function () {
-        var currentTime = video.currentTime;
-
-        // 時間に応じて表示するテキストを設定
-        var textToShow = "";
-        if (currentTime >= 0 && currentTime < 5) {
-            textToShow = "text1";
-        } else if (currentTime >= 5 && currentTime < 10) {
-            textToShow = "text2";
-        }
-
-        // テキストを表示
-        transcriptionElement.textContent = textToShow;
-    });
-});*/
-
 
 // お気に入りボタンをクリックしたときの処理
 const favoriteButtons = document.querySelectorAll('.favorite-button');
@@ -254,10 +233,3 @@ function update() {
         button.classList.add('is-inactive');
     }
 }
-
-
-// 動画視聴画面
-var v = document.getElementById('courseVideo');
-
-
-

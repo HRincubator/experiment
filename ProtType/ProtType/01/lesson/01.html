@@ -2,6 +2,7 @@
 
 <html lang="ja">
 <head>
+    <!-- sc0013 -->
     <meta charset="utf-8" />
     <!-- モバイル表示でレスポンシブデザインを反映させるmetaタグ -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,7 +22,6 @@
 
     <title>Entrance | 第1章 プログラムの書き方</title>
     <!-- js -->
-    <script src="../../js/main.min.js" defer></script>
     <!-- Monaco Editor -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.27.0/min/vs/loader.js"></script>
     <script>
@@ -299,10 +299,10 @@
                         <span class="name">第1章 プログラムの書き方</span>
                     </h1>
                     <!-- video -->
-                    <video src="../../images/course/videos/course-sample.mp4" class="coursevideo" poster="../../images/01.png" id="courseVideo" controls>
+                    <video poster="../../images/01.png" id="video" controls>
+                        <source src="../../images/course/videos/course-sample.mp4" type="video/mp4" />
                         <p>ご使用のブラウザでは動画再生に対応していません</p>
                     </video>
-
 
                     <!-- video-info -->
                     <div class="video-info__section">
@@ -489,9 +489,9 @@
                                 <p>目次</p>
                             </div>
                             <ol>
-                                <li><button class="lesson_01" id="01">Javaによる開発の流れ</button></li>
-                                <li><a href="#02">Javaの特徴</a></li>
-                                <li><a href="#03">プログラムの基本構造</a></li>
+                                <li><button onclick="seekToTime(3)">Javaによる開発の流れ</button></li>
+                                <li><button onclick="seekToTime(10)">Javaの特徴</button></li>
+                                <li><button>プログラムの基本構造</button></li>
                                 <li><a href="#04">インデント</a></li>
                                 <li><a href="#05">コメント</a></li>
                                 <li><a href="#06">mainメソッドの中身</a></li>
@@ -506,7 +506,29 @@
             </div>
             <!--********** SIDE-CONTENT__TILE END **********-->
         </div>
+        <script>
+            const video = document.getElementById('video');
 
+            function seekToTime(seconds) {
+                if (video) {
+                    if (typeof video.currentTime !== "undefrined") {
+                        video.currentTime = seconds;
+                        video.play();
+                        videoOverlay.style.display = 'none';
+                    }
+                    
+                }
+                
+            }
+            video.addEventListener('timeupdate', function () {
+                if (video.currentTime >= 3 && video.currentTime < 10) {
+                    videoOverlay.style.display = 'flex';
+                } else {
+                    videoOverlay.style.display = 'none';
+                }
+            });
+
+        </script>
     </div>
     <!-- footer -->
     <footer class="footer has-background-white-ter pb-3">
@@ -552,8 +574,6 @@
         <!-- content.end -->
     </footer>
     <!-- footer.end -->
-    <!--自作のJS-->
-    <script src="js/main.js" defer></script>
     <script>
         // 日付を取得
         var day = new Date(document.lastModified);
