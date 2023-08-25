@@ -157,27 +157,29 @@
   z-index: -2; /*重なり順序を一番下にしておく*/
 }
 
+.hero-body {
+  /*&::after {
+      content: "";
+      position: absolute;
+      top: 190px;
+      left: 40px;
+      right: 950px;
+      bottom: 315px;
+      background-color: #000;
+      opacity: .3;
+      z-index: -1;
+  }*/
+}
 .hero-body::before {
   content: "";
   position: absolute;
-  top: 190px;
-  left: 50px;
-  right: 1025px;
-  bottom: 350px;
+  top: 0;
+  left: 0;
+  right: 900px;
+  bottom: 0;
   background-color: #000;
   opacity: 0.3;
   z-index: -2;
-}
-.hero-body::after {
-  content: "";
-  position: absolute;
-  top: 230px;
-  left: 90px;
-  right: 950px;
-  bottom: 300px;
-  background-color: #000;
-  opacity: 0.3;
-  z-index: -1;
 }
 
 .about-content-block {

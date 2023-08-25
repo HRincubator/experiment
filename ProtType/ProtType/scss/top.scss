@@ -178,26 +178,26 @@
     &::before {
         content: "";
         position: absolute;
-        top: 190px;
-        left: 50px;
-        right: 1025px;
-        bottom: 350px;
+        top: 0;
+        left: 0;
+        right: 900px;
+        bottom: 0;
         background-color: #000;
         opacity: .3;
         z-index: -2;
     }
 
-    &::after {
+    /*&::after {
         content: "";
         position: absolute;
-        top: 230px;
-        left: 90px;
+        top: 190px;
+        left: 40px;
         right: 950px;
-        bottom: 300px;
+        bottom: 315px;
         background-color: #000;
         opacity: .3;
         z-index: -1;
-    }
+    }*/
 }
 
 .about-content-block {
