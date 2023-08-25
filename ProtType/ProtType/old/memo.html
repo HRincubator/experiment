@@ -701,5 +701,24 @@
             </div>
         </div>
     </section>
+    <form name="userForm">
+        <input type="radio" name="age" value="20代">20代
+        <input type="radio" name="age" value="30代">30代
+        <input type="radio" name="age" value="40代">40代
+    </form>
+
+    <button id="btn">取得</button>
+
+    <p id="result"></p>
+    <script>
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener('click', () => {
+            const form = document.forms.userForm;
+            const result = document.getElementById('result');
+
+            result.textContent = '年齢は' + form.age.value + 'です。';
+        })
+    </script>
 </body>
 </html>

@@ -130,6 +130,17 @@
   position: relative;
   z-index: 0;
   overflow: hidden;
+  /*&::after {
+      content:'';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom : 0;
+      background-color: black;
+      opacity: 0.3;
+      z-index: -1;
+  }*/
 }
 .fv__hero:before {
   content: "";
@@ -145,14 +156,26 @@
   bottom: -5px;
   z-index: -2; /*重なり順序を一番下にしておく*/
 }
-.fv__hero::after {
+
+.hero-body::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: black;
+  top: 190px;
+  left: 50px;
+  right: 1025px;
+  bottom: 350px;
+  background-color: #000;
+  opacity: 0.3;
+  z-index: -2;
+}
+.hero-body::after {
+  content: "";
+  position: absolute;
+  top: 230px;
+  left: 90px;
+  right: 950px;
+  bottom: 300px;
+  background-color: #000;
   opacity: 0.3;
   z-index: -1;
 }

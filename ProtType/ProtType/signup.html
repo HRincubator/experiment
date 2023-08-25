@@ -38,7 +38,7 @@
                             <div class="field my-2">
                                 <p class="control has-icons-left has-icons-right">
                                     <input class="input" type="text" placeholder="ユーザー名" required>
-                                    <span class="icon is-small is-left">
+                                    <span class="icon is-left">
                                         <i class="fas fa-user"></i>
                                     </span>
                                 </p>
@@ -46,8 +46,8 @@
                             <!-- Birth -->
                             <div class="field my-2">
                                 <p class="control has-icons-left has-icons-right">
-                                    <input class="input" type="text" placeholder="生年月日">
-                                    <span class="icon is-small is-left">
+                                    <input class="input" type="text" placeholder="生年月日：YYYY-MM-DD" required>
+                                    <span class="icon is-left">
                                         <i class="fas fa-birthday-cake"></i>
                                     </span>
                                 </p>
@@ -55,8 +55,8 @@
                             <!-- Email -->
                             <div class="field my-2">
                                 <p class="control has-icons-left has-icons-right">
-                                    <input class="input" type="email" placeholder="メールアドレス">
-                                    <span class="icon is-small is-left">
+                                    <input class="input" type="email" placeholder="メールアドレス" required>
+                                    <span class="icon is-left">
                                         <i class="fas fa-envelope"></i>
                                     </span>
                                 </p>
@@ -64,9 +64,28 @@
                             <!-- Password -->
                             <div class="field my-2">
                                 <p class="control has-icons-left">
-                                    <input class="input" type="password" placeholder="パスワード">
-                                    <span class="icon is-small is-left">
+                                    <input class="input" type="password" placeholder="英数字半角8文字以上12文字以下" pattern="^[a-zA-Z0-9]" maxlength="12" required>
+                                    <span class="icon is-left">
                                         <i class="fas fa-lock"></i>
+                                    </span>
+                                </p>
+                            </div>
+                            <!-- Secret Question -->
+                            <div class="field my-2">
+                                <div class="select">
+                                    <select>
+                                        <option>あなたが最も思い出に残っている場所どこですか？</option>
+                                        <option>あなたが最も尊敬する人物は誰ですか？</option>
+                                        <option>あなたが最も感動した本や映画は何ですか？</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Secret Answer -->
+                            <div class="field my-2">
+                                <p class="control has-icons-left">
+                                    <input class="input" type="text" placeholder="秘密の質問" required>
+                                    <span class="icon is-left">
+                                        <i class="fas fa-question"></i>
                                     </span>
                                 </p>
                             </div>

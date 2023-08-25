@@ -412,3 +412,9 @@ article.post:last-child {
         padding: 1rem 1rem !important;
     }
 }
+.ellipsis {
+    width: 960px; /* 省略せずに表示するサイズを指定 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

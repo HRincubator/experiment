@@ -20,7 +20,7 @@
     <!-- css -->
     <link rel="stylesheet" href="../../css/test.min.css" />
     <!-- js -->
-    <script src="../../js/main.min.js" defer></script>
+    <script src="../../js/main.js" defer></script>
 
     <title>Entrance | 確認テスト 第1章 プログラムの書き方</title>
 </head>
@@ -71,30 +71,40 @@
                 <div class="answer">
                     <div class="columns">
                         <div class="column has-text-right">
-                            <a class="button is-primary px-6">
-                                A. Main class public
-                            </a>
+                            <input type="checkbox" name="answer" class="check" value="Q1" id="q1" />
+                            <label name="answer" for="q1" class="button is-primary px-6">A. Main class public</label>
                         </div>
                         <div class="column has-text-left">
-                            <a class="button is-primary px-6">
-                                B. public Main class
-                            </a>
+                            <input type="checkbox" name="answer" class="check" value="Q2" id="q2" />
+                            <label name="answer" for="q2" class="button is-primary px-6">B. public Main class</label>
                         </div>
                     </div>
                     <div class="columns">
                         <div class="column has-text-right">
-                            <a class="button is-primary px-6">
-                                C. class public Main
-                            </a>
+                            <input type="checkbox" name="answer" class="check" value="Q3" id="q3" />
+                            <label name="answer" for="q3" class="button is-primary px-6">C. class public Main</label>
                         </div>
                         <div class="column has-text-left">
-                            <a class="button is-primary px-6">
-                                D. public class Main
-                            </a>
+                            <input type="checkbox" name="answer" class="check" value="Q4" id="q4" />
+                            <label name="answer" for="q4" class="button is-primary px-6">D. public class Main</label>
                         </div>
                     </div>
+                    <script>
+                        const inputClass = document.getElementsByClassName("check");
+                        // 指定したクラスを持つすべてのinputにonclickを追加
+                        // onclickで、一度全てのinputのチェックを外し、onclickが発動したinputだけチェックを付与
+                        for (let i = 0; i < inputClass.length; i++) {
+                            inputClass[i].onclick = function () {
+                                for (let u = 0; u < inputClass.length; u++) {
+                                    inputClass[u].checked = false;
+                                    this.checked = true;
+                                }
+                            }
+                        }
+                    </script>
                 </div>
             </div>
+            
             <!-- Tab Content 2 -->
             <div class="question-content__section_body tab-content">
                 <!-- 問題文 -->
@@ -348,6 +358,6 @@
         </div>
     </div>
     <!-- send-modal.end -->
-    <script src="../../js/timer.js" defer></script>
+    <!--<script src="../../js/timer.js" defer></script>-->
 </body>
 </html>

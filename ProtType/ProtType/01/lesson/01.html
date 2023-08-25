@@ -425,7 +425,7 @@
                                 <div class="level-item has-text-centered">
                                     <div>
                                         <p class="heading pb-0">最終視聴日</p>
-                                        <p class="title is-size-5" id="modDay"></p>
+                                        <p class="title is-size-5">8月24日</p>
                                     </div>
                                 </div>
                             </nav>
@@ -506,7 +506,8 @@
             </div>
             <!--********** SIDE-CONTENT__TILE END **********-->
         </div>
-        <script>
+        <!-- 目次時間遷移js（未完成・実装例↓) -->
+        <!--<script>
             const video = document.getElementById('video');
 
             function seekToTime(seconds) {
@@ -516,9 +517,9 @@
                         video.play();
                         videoOverlay.style.display = 'none';
                     }
-                    
+
                 }
-                
+
             }
             video.addEventListener('timeupdate', function () {
                 if (video.currentTime >= 3 && video.currentTime < 10) {
@@ -528,7 +529,7 @@
                 }
             });
 
-        </script>
+        </script>-->
     </div>
     <!-- footer -->
     <footer class="footer has-background-white-ter pb-3">
@@ -574,27 +575,5 @@
         <!-- content.end -->
     </footer>
     <!-- footer.end -->
-    <script>
-        // 日付を取得
-        var day = new Date(document.lastModified);
-        /*var y = day.getFullYear();*/
-        var m = day.getMonth() + 1;
-        var d = day.getDate();
-
-        // 曜日を指定して出力
-        var week = new Array("日", "月", "火", "水", "木", "金", "土");
-        var w = week[day.getDay()];
-
-        //日にちの整形
-        if (m < 10) m = m;
-        if (d < 10) d = d;
-
-        // modDayに出力
-        /*modDay.innerHTML += "<span>更新日 </span>" + y + "年" + m + "月" + d + "日 (" + w + ")";*/
-
-        // modDayに出力
-        modDay.innerHTML += m + "月" + d + "日";
-
-    </script>
 </body>
 </html>

@@ -73,6 +73,17 @@
   margin: 3rem;
   font-weight: bold;
 }
+.question-content__section_body .answer input {
+  display: none;
+}
+.question-content__section_body .answer input:hover {
+  cursor: pointer;
+}
+.question-content__section_body .answer input[type=checkbox]:checked + label {
+  background-color: #fff;
+  box-shadow: 2px 2px 4px -2px gray;
+  color: #333;
+}
 
 /* Footer */
 .test-btns_area {
