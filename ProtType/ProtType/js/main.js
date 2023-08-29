@@ -17,7 +17,7 @@ const tabContent = document.querySelectorAll(".tab-content");
 // クリックした時にtabToggle関数を発火
 for (let i = 0; i < tabItem.length; i++) {
     tabItem[i].addEventListener("click", tabToggle);
-}
+};
 
 function tabToggle() {
     // tabItemとtabContentの.activeを削除する
@@ -41,7 +41,7 @@ function tabToggle() {
 
     // インデックスに対応したtabContentに.activeを追加
     tabContent[index].classList.add("active");
-}
+};
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -170,7 +170,7 @@ function handleProfileImageSelect(event) {
 
         reader.readAsDataURL(file); // フィルのデータをDataURLとして読み込む
     }
-}
+};
 
 // アコーディオンカーテン
 const menu = document.querySelectorAll(".js-menu");
@@ -179,11 +179,11 @@ function toggle() {
     const content = this.nextElementSibling;
     this.classList.toggle("is-active");
     content.classList.toggle("is-open");
-}
+};
 
 for (let i = 0; i < menu.length; i++) {
     menu[i].addEventListener("click", toggle);
-}
+};
 // ローディングアニメーション
 const keyName = 'loadingviewed';
 const keyValue = true;
@@ -205,19 +205,19 @@ if (!sessionStorage.getItem(keyName)) {
 } else {
     // 2回目以降の処理内容
 
-}
+};
 
 
 
 // 新規登録画面
 /* 登録ボタンの活性条件 */
-const form = document.getElementById("form")
-const button = document.getElementById("submit")
+const form = document.getElementById("form");
+const button = document.getElementById("submit");
 button.disabled = true;
 button.classList.add('is-inactive');
 
-form.addEventListener("input", update)
-form.addEventListener("change", update)
+form.addEventListener("input", update);
+form.addEventListener("change", update);
 
 function update() {
     const isRequired = form.checkValidity()
@@ -232,7 +232,7 @@ function update() {
         button.classList.remove('is-active');
         button.classList.add('is-inactive');
     }
-}
+};
 
 /* テストの選択肢サーバに保存するまでを保持するためのjs */
 // 選択肢を選択していない状態
