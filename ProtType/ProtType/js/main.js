@@ -32,11 +32,11 @@ function tabToggle() {
     this.classList.add("is-active");
 
     // tabItemを配列にする
-    // [<li class="tab-item active">About</li>, <li class="tab-item">Works</li>, <li class="tab-item">Contact</li>]
+    // [<li class="tab-item active">1</li>, <li class="tab-item">2</li>, <li class="tab-item">3</li>...]
     const aryTabs = Array.prototype.slice.call(tabItem);
 
     // 配列に格納したキーワードと最初一致したインデックスを格納
-    // <li class="tab-item active">About</li>の場合は「0」が返ってくる
+    // <li class="tab-item active">1</li>の場合は「0」が返ってくる
     const index = aryTabs.indexOf(this);
 
     // インデックスに対応したtabContentに.activeを追加
