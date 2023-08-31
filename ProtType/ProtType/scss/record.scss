@@ -1,4 +1,8 @@
-﻿.record__section {
+﻿@charset "UTF-8";
+@import "variables";
+
+
+.record__section {
     
 }
 .custom-container {
@@ -7,6 +11,16 @@
 .custom-tabs {
     width: 70%;
     margin: 0 auto 0 auto;
+
+    .tab-list {
+        .tab-item {
+            &.is-active {
+                a {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
 }
 
 .tab-container {
