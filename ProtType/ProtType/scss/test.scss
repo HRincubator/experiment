@@ -90,7 +90,7 @@
                 }
             }
 
-            .answer input[type="checkbox"]:checked + label {
+            .answer input[type="radio"]:checked + label {
                 background-color: #fff;
                 box-shadow: 2px 2px 4px -2px gray;
                 color: #333;

@@ -79,7 +79,7 @@
 .question-content__section_body .answer input:hover {
   cursor: pointer;
 }
-.question-content__section_body .answer input[type=checkbox]:checked + label {
+.question-content__section_body .answer input[type=radio]:checked + label {
   background-color: #fff;
   box-shadow: 2px 2px 4px -2px gray;
   color: #333;

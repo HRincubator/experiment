@@ -234,16 +234,3 @@ function update() {
     }
 };
 
-/* テストの選択肢サーバに保存するまでを保持するためのjs */
-// 選択肢を選択していない状態
-let selectedChoices = [null, null, null, null];
-selectedChoices.forEach((choiceIndex, questionIndex) => {
-    if (choiceIndex != null) {
-        const question = 'Question ${questionIndex + 1}';
-        const choiceText = document.querySelector('#question${questionIndex + 1} .choice:nth-child(${choiceIndex + 1})').textContent;
-        const choiceItem = document.createElemen('li');
-        listItem.textContent = '${question}: ${choiceText}';
-        choiceList.appendChild(listItem);
-    }
-});
-

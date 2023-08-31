@@ -21,353 +21,324 @@
     <title>Entrance | 確認テスト 第1章 プログラムの書き方</title>
 </head>
 <body>
-    <!-- タイトル、制限時間を配置 -->
-    <header class="test px-6">
-        <div class="columns">
-            <div class="column">
-                <div class="test-title">
-                    <p class="has-text-weight-semibold"><span>確認テスト</span> - 第1章 プログラムの書き方</p>
+    <form id="testForm">
+        <!-- タイトル、制限時間を配置 -->
+        <header class="test px-6">
+            <div class="columns">
+                <div class="column">
+                    <div class="test-title">
+                        <p class="has-text-weight-semibold"><span>確認テスト</span> - 第1章 プログラムの書き方</p>
+                        <!--<p class="has-text-weight-semibold"><span>確認テスト</span> - {{ obj.title }}</p>-->
+                    </div>
                 </div>
-            </div>
-            <div class="column is-2 has-text-centered">
-                <div class="test-time box">
-                    <p class="is-size-7 pt-3">残り時間</p>
-                    <div class="test-time_content">
-                        <p class="title is-size-5" id="timer"></p>
+                <div class="column is-2 has-text-centered">
+                    <div class="test-time box">
+                        <p class="is-size-7 pt-3">残り時間</p>
+                        <div class="test-time_content">
+                            <p class="title is-size-5" id="timer"></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <!-- 問題に関するコンテンツを配置 -->
-    <main class="question-content" id="time_over">
-        <div class="question-content__section tab-container">
-            <!-- Tab Content 1 -->
-            <div class="question-content__section_body tab-content active">
-                <!-- 問題文 -->
-                <div class="question">
-                    <div class="content box has-background-light">
-                        <p class="title is-size-6">問題1</p>
-                        <hr />
-                        <p>以下の条件をもとに正しいコードを記述し、穴を埋めなさい</p>
-                        <div class="tile is-ancestor black-box mt-3">
-                            <div class="tile has-background-black has-text-white code-question">
-                                <p class="m-3">
-                                    <span><input class="input is-small" type="text" style="width: 110px;" disabled /> {</span><br />
-                                    <span class="pl-3">public static void main (String[] args) {</span><br />
-                                    <span class="pl-5">System.out.println("Hello World")</span><br />
-                                    <span class="pl-3">}</span><br />
-                                    <span>}</span>
-                                </p>
+        </header>
+        <!-- 問題に関するコンテンツを配置 -->
+        <main class="question-content" id="time_over">
+            <div class="question-content__section tab-container" id="choiceContent">
+
+                <!-- Tab Content 1 -->
+                <div class="question-content__section_body tab-content active">
+                    <!-- 問題文 -->
+                    <div class="question">
+                        <div class="content box has-background-light">
+                            <p class="title is-size-6">問題1</p>
+                            <hr />
+                            <p>以下の条件をもとに正しいコードを記述し、穴を埋めなさい</p>
+                            <div class="tile is-ancestor black-box mt-3">
+                                <div class="tile has-background-black has-text-white code-question">
+                                    <p class="m-3">
+                                        <span><input class="input is-small" type="text" style="width: 110px;" disabled /> {</span><br />
+                                        <span class="pl-3">public static void main (String[] args) {</span><br />
+                                        <span class="pl-5">System.out.println("Hello World")</span><br />
+                                        <span class="pl-3">}</span><br />
+                                        <span>}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 選択肢 -->
+                    <div class="answer">
+                        <div class="columns">
+                            <div class="column has-text-right">
+                                <input type="radio" name="choiceNo1" value="Q1-1" id="q1-1" />
+                                <label name="choiceText" for="q1-1" class="button is-primary px-6">A. Main class public</label>
+                            </div>
+                            <div class="column has-text-left">
+                                <input type="radio" name="choiceNo1" value="Q1-2" id="q1-2" />
+                                <label name="choiceText" for="q1-2" class="button is-primary px-6">B. public Main class</label>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column has-text-right">
+                                <input type="radio" name="choiceNo1" value="Q1-3" id="q1-3" />
+                                <label name="choiceText" for="q1-3" class="button is-primary px-6">C. class public Main</label>
+                            </div>
+                            <div class="column has-text-left">
+                                <input type="radio" name="choiceNo1" value="Q1-4" id="q1-4" />
+                                <label name="choiceText" for="q1-4" class="button is-primary px-6">D. public class Main</label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Tab Content 2 -->
+                <div class="question-content__section_body tab-content">
+                    <!-- 問題文 -->
+                    <div class="question">
+                        <div class="content box has-background-light">
+                            <p class="title is-size-6">問題2</p>
+                            <hr />
+                            <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                        </div>
+                    </div>
+                    <!-- 選択肢 -->
+                    <div class="answer">
+                        <div class="columns">
+                            <div class="column has-text-right">
+                                <input type="radio" name="choiceNo2" value="Q2-1" id="q2-1" />
+                                <label name="choiceText" for="q2-1" class="button is-primary px-6">A. 選択肢</label>
+                            </div>
+                            <div class="column has-text-left">
+                                <input type="radio" name="choiceNo2" value="Q2-2" id="q2-2" />
+                                <label name="choiceText" for="q2-2" class="button is-primary px-6">B. 選択肢</label>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column has-text-right">
+                                <input type="radio" name="choiceNo2" value="Q2-3" id="q2-3" />
+                                <label name="choiceText" for="q2-3" class="button is-primary px-6">C. 選択肢</label>
+                            </div>
+                            <div class="column has-text-left">
+                                <input type="radio" name="choiceNo2" value="Q2-4" id="q2-4" />
+                                <label name="choiceText" for="q2-4" class="button is-primary px-6">D. 選択肢</label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Tab Content 3 -->
+                <div class="question-content__section_body tab-content">
+                    <!-- 問題文 -->
+                    <div class="question">
+                        <div class="content box has-background-light">
+                            <p class="title is-size-6">問題3</p>
+                            <hr />
+                            <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                        </div>
+                    </div>
+                    <!-- 選択肢 -->
+                    <div class="answer">
+                        <div class="columns">
+                            <div class="column has-text-right">
+                                <input type="radio" name="choiceNo3" value="Q3-1" id="q3-1" />
+                                <label name="choiceText" for="q3-1" class="button is-primary px-6">A. 選択肢</label>
+                            </div>
+                            <div class="column has-text-left">
+                                <input type="radio" name="choiceNo3" value="Q3-2" id="q3-2" />
+                                <label name="choiceText" for="q3-2" class="button is-primary px-6">B. 選択肢</label>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column has-text-right">
+                                <input type="radio" name="choiceNo3" value="Q3-3" id="q3-3" />
+                                <label name="choiceText" for="q3-3" class="button is-primary px-6">C. 選択肢</label>
+                            </div>
+                            <div class="column has-text-left">
+                                <input type="radio" name="choiceNo3" value="Q3-4" id="q3-4" />
+                                <label name="choiceText" for="q3-4" class="button is-primary px-6">D. 選択肢</label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Tab Content 4 -->
+                <div class="question-content__section_body tab-content">
+                    <!-- 問題文 -->
+                    <div class="question">
+                        <div class="content box has-background-light">
+                            <p class="title is-size-6">問題4</p>
+                            <hr />
+                            <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                        </div>
+                    </div>
+                    <!-- 選択肢 -->
+                    <div class="answer">
+                        <div class="columns">
+                            <div class="column has-text-right">
+                                <input type="radio" name="choiceNo4" value="Q4-1" id="q4-1" />
+                                <label name="choiceText" for="q4-1" class="button is-primary px-6">A. 選択肢</label>
+                            </div>
+                            <div class="column has-text-left">
+                                <input type="radio" name="choiceNo4" value="Q4-2" id="q4-2" />
+                                <label name="choiceText" for="q4-2" class="button is-primary px-6">B. 選択肢</label>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column has-text-right">
+                                <input type="radio" name="choiceNo4" value="Q4-3" id="q4-3" />
+                                <label name="choiceText" for="q4-3" class="button is-primary px-6">C. 選択肢</label>
+                            </div>
+                            <div class="column has-text-left">
+                                <input type="radio" name="choiceNo4" value="Q4-4" id="q4-4" />
+                                <label name="choiceText" for="q4-4" class="button is-primary px-6">D. 選択肢</label>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- 回答ボタン -->
-                <div class="answer">
-                    <div class="columns">
-                        <div class="column has-text-right">
-                            <input type="checkbox" name="answer" class="check" value="Q1" id="q1" />
-                            <label name="answer" for="q1" class="button is-primary px-6">A. Main class public</label>
-                        </div>
-                        <div class="column has-text-left">
-                            <input type="checkbox" name="answer" class="check" value="Q2" id="q2" />
-                            <label name="answer" for="q2" class="button is-primary px-6">B. public Main class</label>
+                <!-- Tab Content 5 -->
+                <div class="question-content__section_body tab-content">
+                    <!-- 問題文 -->
+                    <div class="question">
+                        <div class="content box has-background-light">
+                            <p class="title is-size-6">問題5</p>
+                            <hr />
+                            <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
                         </div>
                     </div>
-                    <div class="columns">
-                        <div class="column has-text-right">
-                            <input type="checkbox" name="answer" class="check" value="Q3" id="q3" />
-                            <label name="answer" for="q3" class="button is-primary px-6">C. class public Main</label>
+                    <!-- 選択肢 -->
+                    <div class="answer">
+                        <div class="columns">
+                            <div class="column has-text-right">
+                                <input type="radio" name="choiceNo5" value="Q5-1" id="q5-1" />
+                                <label name="choiceText" for="q5-1" class="button is-primary px-6">A. 選択肢</label>
+                            </div>
+                            <div class="column has-text-left">
+                                <input type="radio" name="choiceNo5" value="Q5-2" id="q5-2" />
+                                <label name="choiceText" for="q5-2" class="button is-primary px-6">B. 選択肢</label>
+                            </div>
                         </div>
-                        <div class="column has-text-left">
-                            <input type="checkbox" name="answer" class="check" value="Q4" id="q4" />
-                            <label name="answer" for="q4" class="button is-primary px-6">D. public class Main</label>
-                        </div>
-                    </div>
-                    <script>
-                        const inputClass = document.getElementsByClassName("check");
-                        // 指定したクラスを持つすべてのinputにonclickを追加
-                        // onclickで、一度全てのinputのチェックを外し、onclickが発動したinputだけチェックを付与
-                        for (let i = 0; i < inputClass.length; i++) {
-                            inputClass[i].onclick = function () {
-                                for (let u = 0; u < inputClass.length; u++) {
-                                    inputClass[u].checked = false;
-                                    this.checked = true;
-                                }
-                            }
-                        }
-                    </script>
-                </div>
-            </div>
-            
-            <!-- Tab Content 2 -->
-            <div class="question-content__section_body tab-content">
-                <!-- 問題文 -->
-                <div class="question">
-                    <div class="content box has-background-light">
-                        <p class="title is-size-6">問題2</p>
-                        <hr />
-                        <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                    </div>
-                </div>
-                <!-- 回答ボタン -->
-                <div class="answer">
-                    <div class="columns">
-                        <div class="column has-text-right">
-                            <a class="button is-primary px-6">
-                                A. 選択肢1
-                            </a>
-                        </div>
-                        <div class="column has-text-left">
-                            <a class="button is-primary px-6">
-                                B. 選択肢2
-                            </a>
-                        </div>
-                    </div>
-                    <div class="columns">
-                        <div class="column has-text-right">
-                            <a class="button is-primary px-6">
-                                C. 選択肢3
-                            </a>
-                        </div>
-                        <div class="column has-text-left">
-                            <a class="button is-primary px-6">
-                                D. 選択肢4
-                            </a>
+                        <div class="columns">
+                            <div class="column has-text-right">
+                                <input type="radio" name="choiceNo5" value="Q5-3" id="q5-3" />
+                                <label name="choiceText" for="q5-3" class="button is-primary px-6">C. 選択肢</label>
+                            </div>
+                            <div class="column has-text-left">
+                                <input type="radio" name="choiceNo5" value="Q5-4" id="q5-4" />
+                                <label name="choiceText" for="q5-4" class="button is-primary px-6">D. 選択肢</label>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Tab Content 3 -->
-            <div class="question-content__section_body tab-content">
-                <!-- 問題文 -->
-                <div class="question">
-                    <div class="content box has-background-light">
-                        <p class="title is-size-6">問題3</p>
-                        <hr />
-                        <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                    </div>
-                </div>
-                <!-- 回答ボタン -->
-                <div class="answer">
-                    <div class="columns">
-                        <div class="column has-text-right">
-                            <a class="button is-primary px-6">
-                                A. 選択肢1
-                            </a>
-                        </div>
-                        <div class="column has-text-left">
-                            <a class="button is-primary px-6">
-                                B. 選択肢2
-                            </a>
+                <!-- Tab Content 6 -->
+                <div class="question-content__section_body tab-content">
+                    <!-- 問題文 -->
+                    <div class="question">
+                        <div class="content box has-background-light">
+                            <p class="title is-size-6">問題6</p>
+                            <!--<p class="title is-size-6">問題{{ obj.tab-no }}</p>-->
+                            <hr />
+                            <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                            <!--<p>{{ obj.question }}</p>-->
                         </div>
                     </div>
-                    <div class="columns">
-                        <div class="column has-text-right">
-                            <a class="button is-primary px-6">
-                                C. 選択肢3
-                            </a>
+                    <!-- 選択肢 -->
+                    <div class="answer">
+                        <div class="columns">
+                            <div class="column has-text-right">
+                                <input type="radio" name="choiceNo6" value="Q6-1" id="q6-1" />
+                                <label name="choiceText" for="q6-1" class="button is-primary px-6">A. 選択肢</label>
+                                <!--<input type="radio" name="{{ obj.choiceNo }}" value="{{ obj.choiceText }}" id="{{ obj.choiceNo }}" />-->
+                                <!--<label name="choiceText" for="{{ obj.choiceNo }}" class="button is-primary px-6">{{ obj.choiceText }}</label>-->
+                            </div>
+                            <div class="column has-text-left">
+                                <input type="radio" name="choiceNo6" value="Q6-2" id="q6-2" />
+                                <label name="choiceText" for="q6-2" class="button is-primary px-6">B. 選択肢</label>
+                            </div>
                         </div>
-                        <div class="column has-text-left">
-                            <a class="button is-primary px-6">
-                                D. 選択肢4
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Tab Content 4 -->
-            <div class="question-content__section_body tab-content">
-                <!-- 問題文 -->
-                <div class="question">
-                    <div class="content box has-background-light">
-                        <p class="title is-size-6">問題4</p>
-                        <hr />
-                        <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                    </div>
-                </div>
-                <!-- 回答ボタン -->
-                <div class="answer">
-                    <div class="columns">
-                        <div class="column has-text-right">
-                            <a class="button is-primary px-6">
-                                A. 選択肢1
-                            </a>
-                        </div>
-                        <div class="column has-text-left">
-                            <a class="button is-primary px-6">
-                                B. 選択肢2
-                            </a>
-                        </div>
-                    </div>
-                    <div class="columns">
-                        <div class="column has-text-right">
-                            <a class="button is-primary px-6">
-                                C. 選択肢3
-                            </a>
-                        </div>
-                        <div class="column has-text-left">
-                            <a class="button is-primary px-6">
-                                D. 選択肢4
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Tab Content 5 -->
-            <div class="question-content__section_body tab-content">
-                <!-- 問題文 -->
-                <div class="question">
-                    <div class="content box has-background-light">
-                        <p class="title is-size-6">問題5</p>
-                        <hr />
-                        <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                    </div>
-                </div>
-                <!-- 回答ボタン -->
-                <div class="answer">
-                    <div class="columns">
-                        <div class="column has-text-right">
-                            <a class="button is-primary px-6">
-                                A. 選択肢1
-                            </a>
-                        </div>
-                        <div class="column has-text-left">
-                            <a class="button is-primary px-6">
-                                B. 選択肢2
-                            </a>
-                        </div>
-                    </div>
-                    <div class="columns">
-                        <div class="column has-text-right">
-                            <a class="button is-primary px-6">
-                                C. 選択肢3
-                            </a>
-                        </div>
-                        <div class="column has-text-left">
-                            <a class="button is-primary px-6">
-                                D. 選択肢4
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Tab Content 6 -->
-            <div class="question-content__section_body tab-content">
-                <!-- 問題文 -->
-                <div class="question">
-                    <div class="content box has-background-light">
-                        <p class="title is-size-6">問題6</p>
-                        <hr />
-                        <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                    </div>
-                </div>
-                <!-- 回答ボタン -->
-                <div class="answer">
-                    <div class="columns">
-                        <div class="column has-text-right">
-                            <a class="button is-primary px-6">
-                                A. 選択肢1
-                            </a>
-                        </div>
-                        <div class="column has-text-left">
-                            <a class="button is-primary px-6">
-                                B. 選択肢2
-                            </a>
-                        </div>
-                    </div>
-                    <div class="columns">
-                        <div class="column has-text-right">
-                            <a class="button is-primary px-6">
-                                C. 選択肢3
-                            </a>
-                        </div>
-                        <div class="column has-text-left">
-                            <a class="button is-primary px-6">
-                                D. 選択肢4
-                            </a>
+                        <div class="columns">
+                            <div class="column has-text-right">
+                                <input type="radio" name="choiceNo6" value="Q6-3" id="q6-3" />
+                                <label name="choiceText" for="q6-3" class="button is-primary px-6">C. 選択肢</label>
+                            </div>
+                            <div class="column has-text-left">
+                                <input type="radio" name="choiceNo6" value="Q6-4" id="q6-4" />
+                                <label name="choiceText" for="q6-4" class="button is-primary px-6">D. 選択肢</label>
+                            </div>
                         </div>
                     </div>
                 </div>
 
             </div>
-        </div>
-    </main>
-    <section class="is-hidden" id="end_text">
-        <p class="end_test has-text-centered py-6">
-            テスト終了時間です。
-        </p>
-    </section>
-    <!-- ボタンを配置 -->
-    <footer class="test-btns_area">
-        <div class="columns">
-            <!-- 実装時削除 START -->
-            <div class="column">
-                <!-- 発火ボタンページネーション -->
-                <nav class="pagination is-rounded mt-3 tabs is-toggle" role="navigation" aria-label="pagination">
-                    <ul class="tab-list is-justify-content-center">
-                        <li class="tab-item pagination-link">1</li>
-                        <li class="tab-item pagination-link">2</li>
-                        <li class="tab-item pagination-link">3</li>
-                        <li class="tab-item pagination-link">4</li>
-                        <li class="tab-item pagination-link">5</li>
-                        <li class="tab-item pagination-link">6</li>
-                    </ul>
-                </nav>
-            </div>
-            <!-- 実装時削除 END -->
+        </main>
+        <section class="is-hidden" id="end_text">
+            <p class="end_test has-text-centered py-6">
+                テスト終了時間です。
+            </p>
+        </section>
+        <!-- ボタンを配置 -->
+        <footer class="test-btns_area">
+            <div class="columns">
+                <!-- 実装時削除 START -->
+                <div class="column">
+                    <!-- 発火ボタンページネーション -->
+                    <nav class="pagination is-rounded mt-3 tabs is-toggle" role="navigation" aria-label="pagination">
+                        <ul class="tab-list is-justify-content-center">
+                            <li class="tab-item pagination-link">1</li>
+                            <li class="tab-item pagination-link">2</li>
+                            <li class="tab-item pagination-link">3</li>
+                            <li class="tab-item pagination-link">4</li>
+                            <li class="tab-item pagination-link">5</li>
+                            <li class="tab-item pagination-link">6</li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- 実装時削除 END -->
+                <!--***** 実際の実装形式(タブ番号を取得し、表示していく) *****-->
+                <!--<div class="columns">
+                    <nav class="pagination is-rounded mt-3 tabs is-toggle" role="navigation" aria-label="pagination">
+                        <ul class="tab-list is-justify-content-center">
+                            {% for obj in object_list %}
+                            <li class="tab-item pagination-link">{{ obj.tab-no }}</li>
+                            {% endfor %}
+                        </ul>
+                    </nav>
+                </div>-->
+                <script>
+                    // 初めのタブに"is-activeクラスを付与"
+                    let active = document.getElementsByClassName("tab-item");
+                    active[0].classList.add("is-active");
+                </script>
 
-            <!--***** 実際の実装形式(タブ番号を取得し、表示していく) *****-->
-            <!--<div class="columns">
-                <nav class="pagination is-rounded mt-3 tabs is-toggle" role="navigation" aria-label="pagination">
-                    <ul class="tab-list is-justify-content-center">
-                        {% for obj in object_list %}
-                        <li class="tab-item pagination-link">{{ obj.tab-no }}</li>
-                        {% endfor %}
-                    </ul>
-                </nav>
-            </div>-->
-            <script>
-                // 初めのタブに"is-activeクラスを付与"
-                let active = document.getElementsByClassName("tab-item");
-                active[0].classList.add("is-active");
-            </script>
-
-            <div class="column btns">
-                <a class="button is-primary has-text-weight-bold js-modal-trigger" data-target="send-modal">
-                    <span class="icon"><i class="fas fa-check"></i></span>
-                    <span class="name">回答送信</span>
-                </a>
+                <div class="column btns">
+                    <a id="check_answer" class="button is-primary has-text-weight-bold js-modal-trigger" data-target="send-modal">
+                        <span class="icon"><i class="fas fa-check"></i></span>
+                        <span class="name">解答送信</span>
+                    </a>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </form>
     <!-- send-modal -->
     <div id="send-modal" class="modal">
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
-                <p class="modal-card-title">この内容で回答を送信してもよろしいでしょうか。</p>
+                <p class="modal-card-title">この内容で解答を送信してもよろしいでしょうか。</p>
                 <button class="delete is-hidden-mobile" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
                 <!-- Content ... -->
                 <div class="content">
-                    <p>入力した回答でよろしければ、下記の <strong>[回答送信]</strong> をクリックしてください。</p>
-                    <ul class="custom-list">
-                        <li>A. Main class public</li>
-                        <li>B. public Main class</li>
-                        <li>C. class public Main</li>
-                        <li>D. public class Main</li>
-                        <li>C. class public Main</li>
-                        <li>D. public class Main</li>
-                    </ul>
+                    <p>入力した回答でよろしければ、下記の <strong>[解答送信]</strong> をクリックしてください。</p>
+                    <!--jsで保持している解答を順次取り出して表示していく-->
+                    <ul class="custom-list" id="answers"></ul>
                 </div>
             </section>
             <footer class="modal-card-foot">
                 <a class="button is-primary has-text-weight-bold js-modal-trigger" href="../../answer.html">
                     <span class="icon"><i class="fas fa-check"></i></span>
-                    <span class="name">回答送信</span>
+                    <span class="name">解答送信</span>
                 </a>
                 <button class="button">キャンセル</button>
             </footer>
@@ -375,5 +346,49 @@
     </div>
     <!-- send-modal.end -->
     <!--<script src="../../js/timer.js" defer></script>-->
+    <script>
+        /***** 解答確認表示モーダル用js *****/
+
+        // 空の配列を生成
+        let answerArray = {};
+        // class = "answer"を取得
+        let clickAnswer = document.getElementById('choiceContent');
+        // answerクラス内でクリックしたとき発火
+        clickAnswer.addEventListener('click', function () {
+            // inputタグを取得
+            let inputs = document.getElementsByTagName('input');
+            // inputタグの数だけループ処理
+            for (let i = 0; i < inputs.length; i++) {
+                // inputタグのi番目がradioボタンかつ選択状態
+                if (inputs[i].type === 'radio' && inputs[i].checked) {
+                    // 配列answerArrayに格納
+                    answerArray[inputs[i].name] = inputs[i].value;
+                }
+            }
+        });
+
+
+        // 発火イベント関数(解答送信ボタンクリック時)
+        var check = document.getElementById('check_answer');
+        check.addEventListener('click', function (event) {
+            // リンクのデフォルト動作を無効にする
+            event.preventDefault();
+
+            // ulタグのid取得
+            var answers = document.getElementById('answers');
+            // 表示をクリア
+            answers.innerHTML = '';
+
+            // オブジェクトのキーを取得してループ
+            Object.keys(answerArray).forEach(function (key) {
+                let li = document.createElement('li');
+                // 解答テキストを表示する
+                li.textContent = answerArray[key];
+                // キーと値を表示する
+                // li.textContent = key + ':' + answerArray[key];
+                answers.appendChild(li);
+            });
+        });
+    </script>
 </body>
 </html>
